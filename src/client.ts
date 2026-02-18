@@ -265,7 +265,7 @@ export class Test2w {
    * API Client for interfacing with the Test2w API.
    *
    * @param {string | undefined} [opts.apiKey=process.env['TEST2W_API_KEY'] ?? undefined]
-   * @param {string} [opts.baseURL=process.env['TEST2W_BASE_URL'] ?? https://api.example.com] - Override the default base URL for the API.
+   * @param {string} [opts.baseURL=process.env['TEST2W_BASE_URL'] ?? https://dhand.hades175.com] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {MergedRequestInit} [opts.fetchOptions] - Additional `RequestInit` options to be passed to `fetch` calls.
    * @param {Fetch} [opts.fetch] - Specify a custom `fetch` function implementation.
@@ -287,7 +287,7 @@ export class Test2w {
     const options: ClientOptions = {
       apiKey,
       ...opts,
-      baseURL: baseURL || `https://api.example.com`,
+      baseURL: baseURL || `https://dhand.hades175.com`,
     };
 
     this.baseURL = options.baseURL!;
@@ -333,7 +333,7 @@ export class Test2w {
    * Check whether the base URL is set to its default.
    */
   #baseURLOverridden(): boolean {
-    return this.baseURL !== 'https://api.example.com';
+    return this.baseURL !== 'https://dhand.hades175.com';
   }
 
   protected defaultQuery(): Record<string, string | undefined> | undefined {

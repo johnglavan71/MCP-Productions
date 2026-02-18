@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.0 (2026-02-18)
+
+Full Changelog: [v0.1.0...v0.2.0](https://github.com/johnglavan71/MCP-Productions/compare/v0.1.0...v0.2.0)
+
+### Features
+
+* **api:** fixed docker name... ([ec858c5](https://github.com/johnglavan71/MCP-Productions/commit/ec858c56036cd0012c5a6ac347674363184ed18a))
+
 ## 0.1.0 (2026-02-18)
 
 Full Changelog: [v0.0.1...v0.1.0](https://github.com/johnglavan71/MCP-Productions/compare/v0.0.1...v0.1.0)

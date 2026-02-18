@@ -322,13 +322,13 @@ describe('instantiate client', () => {
     test('empty env variable', () => {
       process.env['TEST2W_BASE_URL'] = ''; // empty
       const client = new Test2w({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.example.com');
+      expect(client.baseURL).toEqual('https://dhand.hades175.com');
     });
 
     test('blank env variable', () => {
       process.env['TEST2W_BASE_URL'] = '  '; // blank
       const client = new Test2w({ apiKey: 'My API Key' });
-      expect(client.baseURL).toEqual('https://api.example.com');
+      expect(client.baseURL).toEqual('https://dhand.hades175.com');
     });
 
     test('in request options', () => {

@@ -8,9 +8,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stainless-sdks/test2w-typescript.git"
+    "url": "git+https://github.com/johnglavan71/MCP-Productions.git"
   },
-  "homepage": "https://github.com/stainless-sdks/test2w-typescript/tree/main/packages/mcp-server#readme",
+  "homepage": "https://github.com/johnglavan71/MCP-Productions/tree/main/packages/mcp-server#readme",
   "server": {
     "type": "node",
     "entry_point": "index.js",

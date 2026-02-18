@@ -9,7 +9,7 @@ import {
   asTextContentResult,
 } from './types';
 import { Tool } from '@modelcontextprotocol/sdk/types.js';
-import { readEnv, requireValue } from './util';
+import { readEnv } from './util';
 import { WorkerInput, WorkerOutput } from './code-tool-types';
 import { SdkMethod } from './methods';
 
@@ -97,10 +97,7 @@ export function codeTool({ blockedMethods }: { blockedMethods: SdkMethod[] | und
         ...(reqContext.stainlessApiKey && { Authorization: reqContext.stainlessApiKey }),
         'Content-Type': 'application/json',
         client_envs: JSON.stringify({
-          TEST2W_API_KEY: requireValue(
-            readEnv('TEST2W_API_KEY') ?? client.apiKey,
-            'set TEST2W_API_KEY environment variable or provide apiKey client option',
-          ),
+          TEST2W_API_KEY: readEnv('TEST2W_API_KEY') ?? client.apiKey ?? undefined,
           TEST2W_BASE_URL: readEnv('TEST2W_BASE_URL') ?? client.baseURL ?? undefined,
         }),
       },

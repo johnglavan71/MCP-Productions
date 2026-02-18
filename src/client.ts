@@ -172,7 +172,7 @@ export interface ClientOptions {
   /**
    * Defaults to process.env['TEST2W_API_KEY'].
    */
-  apiKey?: string | undefined;
+  apiKey?: string | null | undefined;
 
   /**
    * Override the default base URL for the API, e.g., "https://api.example.com/v2/"
@@ -247,7 +247,7 @@ export interface ClientOptions {
  * API Client for interfacing with the Test2w API.
  */
 export class Test2w {
-  apiKey: string;
+  apiKey: string | null;
 
   baseURL: string;
   maxRetries: number;
@@ -264,7 +264,7 @@ export class Test2w {
   /**
    * API Client for interfacing with the Test2w API.
    *
-   * @param {string | undefined} [opts.apiKey=process.env['TEST2W_API_KEY'] ?? undefined]
+   * @param {string | null | undefined} [opts.apiKey=process.env['TEST2W_API_KEY'] ?? null]
    * @param {string} [opts.baseURL=process.env['TEST2W_BASE_URL'] ?? https://dhand.hades175.com] - Override the default base URL for the API.
    * @param {number} [opts.timeout=1 minute] - The maximum amount of time (in milliseconds) the client will wait for a response before timing out.
    * @param {MergedRequestInit} [opts.fetchOptions] - Additional `RequestInit` options to be passed to `fetch` calls.
@@ -275,15 +275,9 @@ export class Test2w {
    */
   constructor({
     baseURL = readEnv('TEST2W_BASE_URL'),
-    apiKey = readEnv('TEST2W_API_KEY'),
+    apiKey = readEnv('TEST2W_API_KEY') ?? null,
     ...opts
   }: ClientOptions = {}) {
-    if (apiKey === undefined) {
-      throw new Errors.Test2wError(
-        "The TEST2W_API_KEY environment variable is missing or empty; either provide it, or instantiate the Test2w client with an apiKey option, like new Test2w({ apiKey: 'My API Key' }).",
-      );
-    }
-
     const options: ClientOptions = {
       apiKey,
       ...opts,
@@ -341,10 +335,22 @@ export class Test2w {
   }
 
   protected validateHeaders({ values, nulls }: NullableHeaders) {
-    return;
+    if (this.apiKey && values.get('authorization')) {
+      return;
+    }
+    if (nulls.has('authorization')) {
+      return;
+    }
+
+    throw new Error(
+      'Could not resolve authentication method. Expected the apiKey to be set. Or for the "Authorization" headers to be explicitly omitted',
+    );
   }
 
   protected async authHeaders(opts: FinalRequestOptions): Promise<NullableHeaders | undefined> {
+    if (this.apiKey == null) {
+      return undefined;
+    }
     return buildHeaders([{ Authorization: `Bearer ${this.apiKey}` }]);
   }
 

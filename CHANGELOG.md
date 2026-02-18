@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0 (2026-02-18)
+
+Full Changelog: [v0.2.0...v0.3.0](https://github.com/johnglavan71/MCP-Productions/compare/v0.2.0...v0.3.0)
+
+### Features
+
+* **api:** manual updates ([2ac76b8](https://github.com/johnglavan71/MCP-Productions/commit/2ac76b8d9bc31c455a03bf4b369373f00fa53744))
+
 ## 0.2.0 (2026-02-18)
 
 Full Changelog: [v0.1.0...v0.2.0](https://github.com/johnglavan71/MCP-Productions/compare/v0.1.0...v0.2.0)

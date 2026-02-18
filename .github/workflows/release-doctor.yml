@@ -18,5 +18,6 @@ jobs:
         run: |
           bash ./bin/check-release-environment
         env:
+          NPM_TOKEN: ${{ secrets.TEST2W_NPM_TOKEN || secrets.NPM_TOKEN }}
           DOCKERHUB_TOKEN: ${{ secrets.TEST2W_DOCKERHUB_TOKEN || secrets.DOCKERHUB_TOKEN }}
 

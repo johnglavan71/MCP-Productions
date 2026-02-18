@@ -42,15 +42,15 @@ If you’d like to use the repository from source, you can either install from g
 To install via git:
 
 ```sh
-$ npm install git+ssh://git@github.com:stainless-sdks/test2w-typescript.git
+$ npm install git+ssh://git@github.com:johnglavan71/MCP-Productions.git
 ```
 
 Alternatively, to link a local copy of the repo:
 
 ```sh
 # Clone
-$ git clone https://www.github.com/stainless-sdks/test2w-typescript
-$ cd test2w-typescript
+$ git clone https://www.github.com/johnglavan71/MCP-Productions
+$ cd MCP-Productions
 
 # With yarn
 $ yarn link

@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource system', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('toggle', async () => {
     const responsePromise = client.schedules.system.toggle('id');
     const rawResponse = await responsePromise.asResponse();

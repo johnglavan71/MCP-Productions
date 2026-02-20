@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource activity', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.activity.list();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource activity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -41,7 +41,7 @@ describe('resource activity', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.activity.delete();
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource activity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listContainers', async () => {
     const responsePromise = client.activity.listContainers();
     const rawResponse = await responsePromise.asResponse();
@@ -65,7 +65,7 @@ describe('resource activity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listContainers: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -76,7 +76,7 @@ describe('resource activity', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listEvents', async () => {
     const responsePromise = client.activity.listEvents();
     const rawResponse = await responsePromise.asResponse();
@@ -88,7 +88,7 @@ describe('resource activity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveStats', async () => {
     const responsePromise = client.activity.retrieveStats();
     const rawResponse = await responsePromise.asResponse();
@@ -100,7 +100,7 @@ describe('resource activity', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveStats: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

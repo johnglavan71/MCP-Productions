@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource networks', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.networks.create();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -42,7 +42,7 @@ describe('resource networks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.networks.retrieve('id');
     const rawResponse = await responsePromise.asResponse();
@@ -54,7 +54,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -62,7 +62,7 @@ describe('resource networks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.networks.list();
     const rawResponse = await responsePromise.asResponse();
@@ -74,7 +74,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.networks.list({ env: 'env' }, { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -82,7 +82,7 @@ describe('resource networks', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.networks.delete('id');
     const rawResponse = await responsePromise.asResponse();
@@ -94,7 +94,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -102,7 +102,7 @@ describe('resource networks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connect', async () => {
     const responsePromise = client.networks.connect('id');
     const rawResponse = await responsePromise.asResponse();
@@ -114,7 +114,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('connect: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -130,7 +130,7 @@ describe('resource networks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('disconnect', async () => {
     const responsePromise = client.networks.disconnect('id');
     const rawResponse = await responsePromise.asResponse();
@@ -142,7 +142,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('disconnect: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -159,7 +159,7 @@ describe('resource networks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('inspect', async () => {
     const responsePromise = client.networks.inspect('id');
     const rawResponse = await responsePromise.asResponse();
@@ -171,7 +171,7 @@ describe('resource networks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('inspect: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

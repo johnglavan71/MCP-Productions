@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource browse', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.volumes.browse.retrieve('name');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource browse', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -32,7 +32,7 @@ describe('resource browse', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('content', async () => {
     const responsePromise = client.volumes.browse.content('name');
     const rawResponse = await responsePromise.asResponse();
@@ -44,7 +44,7 @@ describe('resource browse', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('content: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -56,7 +56,7 @@ describe('resource browse', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('release', async () => {
     const responsePromise = client.volumes.browse.release('name');
     const rawResponse = await responsePromise.asResponse();
@@ -68,7 +68,7 @@ describe('resource browse', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('release: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

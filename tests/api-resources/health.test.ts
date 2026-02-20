@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource health', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('check', async () => {
     const responsePromise = client.health.check();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource health', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkDatabase', async () => {
     const responsePromise = client.health.checkDatabase();
     const rawResponse = await responsePromise.asResponse();

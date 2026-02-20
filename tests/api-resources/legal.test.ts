@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource legal', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveLicense', async () => {
     const responsePromise = client.legal.retrieveLicense();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource legal', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveLicense: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -28,7 +28,7 @@ describe('resource legal', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePrivacy', async () => {
     const responsePromise = client.legal.retrievePrivacy();
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource legal', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrievePrivacy: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

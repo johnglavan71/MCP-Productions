@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource audit', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.audit.retrieve();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource audit', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -44,7 +44,7 @@ describe('resource audit', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('export', async () => {
     const responsePromise = client.audit.export();
     const rawResponse = await responsePromise.asResponse();
@@ -56,7 +56,7 @@ describe('resource audit', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('export: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -75,7 +75,7 @@ describe('resource audit', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listEvents', async () => {
     const responsePromise = client.audit.listEvents();
     const rawResponse = await responsePromise.asResponse();
@@ -87,7 +87,7 @@ describe('resource audit', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('listUsers', async () => {
     const responsePromise = client.audit.listUsers();
     const rawResponse = await responsePromise.asResponse();

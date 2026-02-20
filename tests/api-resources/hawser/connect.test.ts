@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource connect', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.hawser.connect.create();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource connect', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.hawser.connect.retrieve();
     const rawResponse = await responsePromise.asResponse();

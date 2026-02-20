@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource test', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.environments.test.create();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource test', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('run', async () => {
     const responsePromise = client.environments.test.run('id');
     const rawResponse = await responsePromise.asResponse();

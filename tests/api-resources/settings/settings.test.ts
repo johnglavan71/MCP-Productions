@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource settings', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieveTheme', async () => {
     const responsePromise = client.settings.retrieveTheme();
     const rawResponse = await responsePromise.asResponse();

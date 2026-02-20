@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource stacks', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.stacks.create();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -40,7 +40,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.stacks.list();
     const rawResponse = await responsePromise.asResponse();
@@ -52,7 +52,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.stacks.list({ env: 'env' }, { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -60,7 +60,7 @@ describe('resource stacks', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.stacks.delete('name');
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -80,7 +80,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('adopt', async () => {
     const responsePromise = client.stacks.adopt();
     const rawResponse = await responsePromise.asResponse();
@@ -92,7 +92,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('adopt: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -103,7 +103,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkPathChange', async () => {
     const responsePromise = client.stacks.checkPathChange('name');
     const rawResponse = await responsePromise.asResponse();
@@ -115,7 +115,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkPathChange: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -127,7 +127,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('down', async () => {
     const responsePromise = client.stacks.down('name');
     const rawResponse = await responsePromise.asResponse();
@@ -139,7 +139,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('down: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -151,7 +151,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getBasePath', async () => {
     const responsePromise = client.stacks.getBasePath();
     const rawResponse = await responsePromise.asResponse();
@@ -163,7 +163,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getDefaultPath', async () => {
     const responsePromise = client.stacks.getDefaultPath();
     const rawResponse = await responsePromise.asResponse();
@@ -175,7 +175,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getDefaultPath: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -190,7 +190,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getPathHints', async () => {
     const responsePromise = client.stacks.getPathHints();
     const rawResponse = await responsePromise.asResponse();
@@ -202,7 +202,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getPathHints: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -210,7 +210,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getSources', async () => {
     const responsePromise = client.stacks.getSources();
     const rawResponse = await responsePromise.asResponse();
@@ -222,7 +222,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getSources: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -230,7 +230,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('relocate', async () => {
     const responsePromise = client.stacks.relocate('name');
     const rawResponse = await responsePromise.asResponse();
@@ -242,7 +242,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('relocate: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -259,7 +259,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('restart', async () => {
     const responsePromise = client.stacks.restart('name');
     const rawResponse = await responsePromise.asResponse();
@@ -271,7 +271,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('restart: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -279,7 +279,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scan', async () => {
     const responsePromise = client.stacks.scan();
     const rawResponse = await responsePromise.asResponse();
@@ -291,7 +291,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('scan: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.stacks.scan({ path: 'path' }, { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -299,7 +299,7 @@ describe('resource stacks', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('start', async () => {
     const responsePromise = client.stacks.start('name');
     const rawResponse = await responsePromise.asResponse();
@@ -311,7 +311,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('start: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -319,7 +319,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('stop', async () => {
     const responsePromise = client.stacks.stop('name');
     const rawResponse = await responsePromise.asResponse();
@@ -331,7 +331,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('stop: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -339,7 +339,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('validatePath', async () => {
     const responsePromise = client.stacks.validatePath();
     const rawResponse = await responsePromise.asResponse();
@@ -351,7 +351,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('validatePath: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

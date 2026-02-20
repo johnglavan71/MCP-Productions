@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource stacks', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.git.stacks.create();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -48,7 +48,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.git.stacks.retrieve('id');
     const rawResponse = await responsePromise.asResponse();
@@ -60,7 +60,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.git.stacks.update('id');
     const rawResponse = await responsePromise.asResponse();
@@ -72,7 +72,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -95,7 +95,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list', async () => {
     const responsePromise = client.git.stacks.list();
     const rawResponse = await responsePromise.asResponse();
@@ -107,7 +107,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('list: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -115,7 +115,7 @@ describe('resource stacks', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('delete', async () => {
     const responsePromise = client.git.stacks.delete('id');
     const rawResponse = await responsePromise.asResponse();
@@ -127,7 +127,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deploy', async () => {
     const responsePromise = client.git.stacks.deploy('id');
     const rawResponse = await responsePromise.asResponse();
@@ -139,7 +139,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('deployStream', async () => {
     const responsePromise = client.git.stacks.deployStream('id');
     const rawResponse = await responsePromise.asResponse();
@@ -151,7 +151,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('sync', async () => {
     const responsePromise = client.git.stacks.sync('id');
     const rawResponse = await responsePromise.asResponse();
@@ -163,7 +163,7 @@ describe('resource stacks', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('test', async () => {
     const responsePromise = client.git.stacks.test('id');
     const rawResponse = await responsePromise.asResponse();

@@ -60,7 +60,7 @@ $ yarn link test2w
 # With pnpm
 $ pnpm link --global
 $ cd ../my-package
-$ pnpm link -—global test2w
+$ pnpm link --global test2w
 ```
 
 ## Running tests

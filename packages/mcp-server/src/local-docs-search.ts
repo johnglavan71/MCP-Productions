@@ -71,6 +71,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## list\n\n`client.activity.list(actions?: string, containerId?: string, containerName?: string, environmentId?: string, fromDate?: string, labels?: string, limit?: string, offset?: string, toDate?: string): void`\n\n**get** `/api/activity`\n\nGET /api/activity\n\n### Parameters\n\n- `actions?: string`\n\n- `containerId?: string`\n\n- `containerName?: string`\n\n- `environmentId?: string`\n\n- `fromDate?: string`\n\n- `labels?: string`\n\n- `limit?: string`\n\n- `offset?: string`\n\n- `toDate?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.activity.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/activity \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.activity.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.list();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -82,6 +93,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.activity.delete',
     markdown:
       "## delete\n\n`client.activity.delete(): void`\n\n**delete** `/api/activity`\n\nDELETE /api/activity\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.activity.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/activity \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.activity.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.delete();",
+      },
+    },
   },
   {
     name: 'list_containers',
@@ -94,6 +116,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['environment_id?: string;'],
     markdown:
       "## list_containers\n\n`client.activity.listContainers(environment_id?: string): void`\n\n**get** `/api/activity/containers`\n\nGET /api/activity/containers\n\n### Parameters\n\n- `environment_id?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.activity.listContainers()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/activity/containers \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.activity.listContainers',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.listContainers();",
+      },
+    },
   },
   {
     name: 'list_events',
@@ -105,6 +138,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.activity.listEvents',
     markdown:
       "## list_events\n\n`client.activity.listEvents(): void`\n\n**get** `/api/activity/events`\n\nGET /api/activity/events\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.activity.listEvents()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/activity/events \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.activity.listEvents',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.listEvents();",
+      },
+    },
   },
   {
     name: 'retrieve_stats',
@@ -117,6 +161,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['environment_id?: string;'],
     markdown:
       "## retrieve_stats\n\n`client.activity.retrieveStats(environment_id?: string): void`\n\n**get** `/api/activity/stats`\n\nGET /api/activity/stats\n\n### Parameters\n\n- `environment_id?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.activity.retrieveStats()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/activity/stats \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.activity.retrieveStats',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.retrieveStats();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -142,6 +197,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## retrieve\n\n`client.audit.retrieve(action?: string, actions?: string, entityType?: string, entityTypes?: string, environmentId?: string, fromDate?: string, labels?: string, limit?: string, offset?: string, toDate?: string, username?: string, usernames?: string): void`\n\n**get** `/api/audit`\n\nGET /api/audit\n\n### Parameters\n\n- `action?: string`\n\n- `actions?: string`\n\n- `entityType?: string`\n\n- `entityTypes?: string`\n\n- `environmentId?: string`\n\n- `fromDate?: string`\n\n- `labels?: string`\n\n- `limit?: string`\n\n- `offset?: string`\n\n- `toDate?: string`\n\n- `username?: string`\n\n- `usernames?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.audit.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/audit \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.audit.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.audit.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'list_events',
+    endpoint: '/api/audit/events',
+    httpMethod: 'get',
+    summary: 'GET /api/audit/events',
+    description: 'GET /api/audit/events',
+    stainlessPath: '(resource) audit > (method) list_events',
+    qualified: 'client.audit.listEvents',
+    markdown:
+      "## list_events\n\n`client.audit.listEvents(): void`\n\n**get** `/api/audit/events`\n\nGET /api/audit/events\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.audit.listEvents()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/audit/events \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.audit.listEvents',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.audit.listEvents();",
+      },
+    },
   },
   {
     name: 'export',
@@ -162,17 +250,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## export\n\n`client.audit.export(action?: string, entityType?: string, environmentId?: string, format?: string, fromDate?: string, toDate?: string, username?: string): void`\n\n**get** `/api/audit/export`\n\nGET /api/audit/export\n\n### Parameters\n\n- `action?: string`\n\n- `entityType?: string`\n\n- `environmentId?: string`\n\n- `format?: string`\n\n- `fromDate?: string`\n\n- `toDate?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.audit.export()\n```",
-  },
-  {
-    name: 'list_events',
-    endpoint: '/api/audit/events',
-    httpMethod: 'get',
-    summary: 'GET /api/audit/events',
-    description: 'GET /api/audit/events',
-    stainlessPath: '(resource) audit > (method) list_events',
-    qualified: 'client.audit.listEvents',
-    markdown:
-      "## list_events\n\n`client.audit.listEvents(): void`\n\n**get** `/api/audit/events`\n\nGET /api/audit/events\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.audit.listEvents()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/audit/export \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.audit.export',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.audit.export();",
+      },
+    },
   },
   {
     name: 'list_users',
@@ -184,17 +272,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.audit.listUsers',
     markdown:
       "## list_users\n\n`client.audit.listUsers(): void`\n\n**get** `/api/audit/users`\n\nGET /api/audit/users\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.audit.listUsers()\n```",
-  },
-  {
-    name: 'list_providers',
-    endpoint: '/api/auth/providers',
-    httpMethod: 'get',
-    summary: 'GET /api/auth/providers',
-    description: 'GET /api/auth/providers',
-    stainlessPath: '(resource) auth > (method) list_providers',
-    qualified: 'client.auth.listProviders',
-    markdown:
-      "## list_providers\n\n`client.auth.listProviders(): void`\n\n**get** `/api/auth/providers`\n\nGET /api/auth/providers\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.listProviders()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/audit/users \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.audit.listUsers',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.audit.listUsers();",
+      },
+    },
   },
   {
     name: 'login',
@@ -212,6 +300,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## login\n\n`client.auth.login(mfaToken?: string, password?: string, provider = 'local'?: string, username?: string): void`\n\n**post** `/api/auth/login`\n\nPOST /api/auth/login\n\n### Parameters\n\n- `mfaToken?: string`\n\n- `password?: string`\n\n- `provider = 'local'?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.login()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/login \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.login',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.login();",
+      },
+    },
   },
   {
     name: 'logout',
@@ -223,6 +322,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.auth.logout',
     markdown:
       "## logout\n\n`client.auth.logout(): void`\n\n**post** `/api/auth/logout`\n\nPOST /api/auth/logout\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.logout()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/logout \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.logout',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.logout();",
+      },
+    },
+  },
+  {
+    name: 'list_providers',
+    endpoint: '/api/auth/providers',
+    httpMethod: 'get',
+    summary: 'GET /api/auth/providers',
+    description: 'GET /api/auth/providers',
+    stainlessPath: '(resource) auth > (method) list_providers',
+    qualified: 'client.auth.listProviders',
+    markdown:
+      "## list_providers\n\n`client.auth.listProviders(): void`\n\n**get** `/api/auth/providers`\n\nGET /api/auth/providers\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.listProviders()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/providers \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.listProviders',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.listProviders();",
+      },
+    },
   },
   {
     name: 'retrieve_session',
@@ -234,6 +366,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.auth.retrieveSession',
     markdown:
       "## retrieve_session\n\n`client.auth.retrieveSession(): void`\n\n**get** `/api/auth/session`\n\nGET /api/auth/session\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.retrieveSession()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/session \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.retrieveSession',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.retrieveSession();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/auth/ldap',
+    httpMethod: 'get',
+    summary: 'GET /api/auth/ldap',
+    description: 'GET /api/auth/ldap',
+    stainlessPath: '(resource) auth.ldap > (method) list',
+    qualified: 'client.auth.ldap.list',
+    markdown:
+      "## list\n\n`client.auth.ldap.list(): void`\n\n**get** `/api/auth/ldap`\n\nGET /api/auth/ldap\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -263,6 +428,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.auth.ldap.create(adminGroup?: string, baseDn?: string, bindDn?: string, bindPassword?: string, displayNameAttribute?: string, emailAttribute?: string, enabled?: string, groupBaseDn?: string, groupFilter?: string, name?: string, roleMappings?: string, serverUrl?: string, tlsCa?: string, tlsEnabled?: string, userFilter?: string, usernameAttribute?: string): void`\n\n**post** `/api/auth/ldap`\n\nPOST /api/auth/ldap\n\n### Parameters\n\n- `adminGroup?: string`\n\n- `baseDn?: string`\n\n- `bindDn?: string`\n\n- `bindPassword?: string`\n\n- `displayNameAttribute?: string`\n\n- `emailAttribute?: string`\n\n- `enabled?: string`\n\n- `groupBaseDn?: string`\n\n- `groupFilter?: string`\n\n- `name?: string`\n\n- `roleMappings?: string`\n\n- `serverUrl?: string`\n\n- `tlsCa?: string`\n\n- `tlsEnabled?: string`\n\n- `userFilter?: string`\n\n- `usernameAttribute?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -275,6 +451,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.auth.ldap.retrieve(id: string): void`\n\n**get** `/api/auth/ldap/{id}`\n\nGET /api/auth/ldap/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -305,17 +492,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.auth.ldap.update(id: string, adminGroup?: string, baseDn?: string, bindDn?: string, bindPassword?: string, displayNameAttribute?: string, emailAttribute?: string, enabled?: string, groupBaseDn?: string, groupFilter?: string, name?: string, roleMappings?: string, serverUrl?: string, tlsCa?: string, tlsEnabled?: string, userFilter?: string, usernameAttribute?: string): void`\n\n**put** `/api/auth/ldap/{id}`\n\nPUT /api/auth/ldap/{id}\n\n### Parameters\n\n- `id: string`\n\n- `adminGroup?: string`\n\n- `baseDn?: string`\n\n- `bindDn?: string`\n\n- `bindPassword?: string`\n\n- `displayNameAttribute?: string`\n\n- `emailAttribute?: string`\n\n- `enabled?: string`\n\n- `groupBaseDn?: string`\n\n- `groupFilter?: string`\n\n- `name?: string`\n\n- `roleMappings?: string`\n\n- `serverUrl?: string`\n\n- `tlsCa?: string`\n\n- `tlsEnabled?: string`\n\n- `userFilter?: string`\n\n- `usernameAttribute?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/auth/ldap',
-    httpMethod: 'get',
-    summary: 'GET /api/auth/ldap',
-    description: 'GET /api/auth/ldap',
-    stainlessPath: '(resource) auth.ldap > (method) list',
-    qualified: 'client.auth.ldap.list',
-    markdown:
-      "## list\n\n`client.auth.ldap.list(): void`\n\n**get** `/api/auth/ldap`\n\nGET /api/auth/ldap\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -328,6 +515,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.auth.ldap.delete(id: string): void`\n\n**delete** `/api/auth/ldap/{id}`\n\nDELETE /api/auth/ldap/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.delete('id');",
+      },
+    },
   },
   {
     name: 'test',
@@ -340,6 +538,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## test\n\n`client.auth.ldap.test(id: string): void`\n\n**post** `/api/auth/ldap/{id}/test`\n\nPOST /api/auth/ldap/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.ldap.test('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/ldap/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.ldap.test',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.ldap.test('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/auth/oidc',
+    httpMethod: 'get',
+    summary: 'GET /api/auth/oidc',
+    description: 'GET /api/auth/oidc',
+    stainlessPath: '(resource) auth.oidc > (method) list',
+    qualified: 'client.auth.oidc.list',
+    markdown:
+      "## list\n\n`client.auth.oidc.list(): void`\n\n**get** `/api/auth/oidc`\n\nGET /api/auth/oidc\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -367,6 +598,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.auth.oidc.create(adminClaim?: string, adminValue?: string, clientId?: string, clientSecret?: string, displayNameClaim?: string, emailClaim?: string, enabled?: string, issuerUrl?: string, name?: string, redirectUri?: string, roleMappings?: string, roleMappingsClaim?: string, scopes?: string, usernameClaim?: string): void`\n\n**post** `/api/auth/oidc`\n\nPOST /api/auth/oidc\n\n### Parameters\n\n- `adminClaim?: string`\n\n- `adminValue?: string`\n\n- `clientId?: string`\n\n- `clientSecret?: string`\n\n- `displayNameClaim?: string`\n\n- `emailClaim?: string`\n\n- `enabled?: string`\n\n- `issuerUrl?: string`\n\n- `name?: string`\n\n- `redirectUri?: string`\n\n- `roleMappings?: string`\n\n- `roleMappingsClaim?: string`\n\n- `scopes?: string`\n\n- `usernameClaim?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.create();",
+      },
+    },
+  },
+  {
+    name: 'callback',
+    endpoint: '/api/auth/oidc/callback',
+    httpMethod: 'get',
+    summary: 'GET /api/auth/oidc/callback',
+    description: 'GET /api/auth/oidc/callback',
+    stainlessPath: '(resource) auth.oidc > (method) callback',
+    qualified: 'client.auth.oidc.callback',
+    params: ['code?: string;', 'error?: string;', 'error_description?: string;', 'state?: string;'],
+    markdown:
+      "## callback\n\n`client.auth.oidc.callback(code?: string, error?: string, error_description?: string, state?: string): void`\n\n**get** `/api/auth/oidc/callback`\n\nGET /api/auth/oidc/callback\n\n### Parameters\n\n- `code?: string`\n\n- `error?: string`\n\n- `error_description?: string`\n\n- `state?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.callback()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/callback \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.callback',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.callback();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -379,6 +644,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.auth.oidc.retrieve(id: string): void`\n\n**get** `/api/auth/oidc/{id}`\n\nGET /api/auth/oidc/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -407,17 +683,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.auth.oidc.update(id: string, adminClaim?: string, adminValue?: string, clientId?: string, clientSecret?: string, displayNameClaim?: string, emailClaim?: string, enabled?: string, issuerUrl?: string, name?: string, redirectUri?: string, roleMappings?: string, roleMappingsClaim?: string, scopes?: string, usernameClaim?: string): void`\n\n**put** `/api/auth/oidc/{id}`\n\nPUT /api/auth/oidc/{id}\n\n### Parameters\n\n- `id: string`\n\n- `adminClaim?: string`\n\n- `adminValue?: string`\n\n- `clientId?: string`\n\n- `clientSecret?: string`\n\n- `displayNameClaim?: string`\n\n- `emailClaim?: string`\n\n- `enabled?: string`\n\n- `issuerUrl?: string`\n\n- `name?: string`\n\n- `redirectUri?: string`\n\n- `roleMappings?: string`\n\n- `roleMappingsClaim?: string`\n\n- `scopes?: string`\n\n- `usernameClaim?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/auth/oidc',
-    httpMethod: 'get',
-    summary: 'GET /api/auth/oidc',
-    description: 'GET /api/auth/oidc',
-    stainlessPath: '(resource) auth.oidc > (method) list',
-    qualified: 'client.auth.oidc.list',
-    markdown:
-      "## list\n\n`client.auth.oidc.list(): void`\n\n**get** `/api/auth/oidc`\n\nGET /api/auth/oidc\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -430,18 +706,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.auth.oidc.delete(id: string): void`\n\n**delete** `/api/auth/oidc/{id}`\n\nDELETE /api/auth/oidc/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.delete('id')\n```",
-  },
-  {
-    name: 'callback',
-    endpoint: '/api/auth/oidc/callback',
-    httpMethod: 'get',
-    summary: 'GET /api/auth/oidc/callback',
-    description: 'GET /api/auth/oidc/callback',
-    stainlessPath: '(resource) auth.oidc > (method) callback',
-    qualified: 'client.auth.oidc.callback',
-    params: ['code?: string;', 'error?: string;', 'error_description?: string;', 'state?: string;'],
-    markdown:
-      "## callback\n\n`client.auth.oidc.callback(code?: string, error?: string, error_description?: string, state?: string): void`\n\n**get** `/api/auth/oidc/callback`\n\nGET /api/auth/oidc/callback\n\n### Parameters\n\n- `code?: string`\n\n- `error?: string`\n\n- `error_description?: string`\n\n- `state?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.callback()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.delete('id');",
+      },
+    },
   },
   {
     name: 'test',
@@ -454,18 +729,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## test\n\n`client.auth.oidc.test(id: string): void`\n\n**post** `/api/auth/oidc/{id}/test`\n\nPOST /api/auth/oidc/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.test('id')\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/auth/oidc/{id}/initiate',
-    httpMethod: 'post',
-    summary: 'POST /api/auth/oidc/{id}/initiate',
-    description: 'POST /api/auth/oidc/{id}/initiate',
-    stainlessPath: '(resource) auth.oidc.initiate > (method) create',
-    qualified: 'client.auth.oidc.initiate.create',
-    params: ['id: string;', 'redirect?: string;'],
-    markdown:
-      "## create\n\n`client.auth.oidc.initiate.create(id: string, redirect?: string): void`\n\n**post** `/api/auth/oidc/{id}/initiate`\n\nPOST /api/auth/oidc/{id}/initiate\n\n### Parameters\n\n- `id: string`\n\n- `redirect?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.initiate.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.test',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.test('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -478,6 +752,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'redirect?: string;'],
     markdown:
       "## retrieve\n\n`client.auth.oidc.initiate.retrieve(id: string, redirect?: string): void`\n\n**get** `/api/auth/oidc/{id}/initiate`\n\nGET /api/auth/oidc/{id}/initiate\n\n### Parameters\n\n- `id: string`\n\n- `redirect?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.initiate.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID/initiate \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.initiate.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.initiate.retrieve('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/auth/oidc/{id}/initiate',
+    httpMethod: 'post',
+    summary: 'POST /api/auth/oidc/{id}/initiate',
+    description: 'POST /api/auth/oidc/{id}/initiate',
+    stainlessPath: '(resource) auth.oidc.initiate > (method) create',
+    qualified: 'client.auth.oidc.initiate.create',
+    params: ['id: string;', 'redirect?: string;'],
+    markdown:
+      "## create\n\n`client.auth.oidc.initiate.create(id: string, redirect?: string): void`\n\n**post** `/api/auth/oidc/{id}/initiate`\n\nPOST /api/auth/oidc/{id}/initiate\n\n### Parameters\n\n- `id: string`\n\n- `redirect?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.oidc.initiate.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/oidc/$ID/initiate \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.oidc.initiate.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.oidc.initiate.create('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -489,6 +797,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.auth.settings.retrieve',
     markdown:
       "## retrieve\n\n`client.auth.settings.retrieve(): void`\n\n**get** `/api/auth/settings`\n\nGET /api/auth/settings\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.settings.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/settings \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.settings.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.settings.retrieve();",
+      },
+    },
   },
   {
     name: 'update',
@@ -501,6 +820,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['authEnabled?: string;', 'sessionTimeout?: string;'],
     markdown:
       "## update\n\n`client.auth.settings.update(authEnabled?: string, sessionTimeout?: string): void`\n\n**put** `/api/auth/settings`\n\nPUT /api/auth/settings\n\n### Parameters\n\n- `authEnabled?: string`\n\n- `sessionTimeout?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.auth.settings.update()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auth/settings \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.auth.settings.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.auth.settings.update();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -513,6 +843,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## retrieve\n\n`client.autoUpdate.retrieve(env?: string): void`\n\n**get** `/api/auto-update`\n\nGET /api/auto-update\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.autoUpdate.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auto-update \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.autoUpdate.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.autoUpdate.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'retrieve_container',
+    endpoint: '/api/auto-update/{containerName}',
+    httpMethod: 'get',
+    summary: 'GET /api/auto-update/{containerName}',
+    description: 'GET /api/auto-update/{containerName}',
+    stainlessPath: '(resource) auto_update > (method) retrieve_container',
+    qualified: 'client.autoUpdate.retrieveContainer',
+    params: ['containerName: string;', 'env?: string;'],
+    markdown:
+      "## retrieve_container\n\n`client.autoUpdate.retrieveContainer(containerName: string, env?: string): void`\n\n**get** `/api/auto-update/{containerName}`\n\nGET /api/auto-update/{containerName}\n\n### Parameters\n\n- `containerName: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.autoUpdate.retrieveContainer('containerName')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auto-update/$CONTAINER_NAME \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.autoUpdate.retrieveContainer',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.autoUpdate.retrieveContainer('containerName');",
+      },
+    },
   },
   {
     name: 'create_container',
@@ -533,6 +897,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create_container\n\n`client.autoUpdate.createContainer(containerName: string, env?: string, cron_expression?: string, cronExpression?: string, enabled?: string, vulnerability_criteria?: string, vulnerabilityCriteria?: string): void`\n\n**post** `/api/auto-update/{containerName}`\n\nPOST /api/auto-update/{containerName}\n\n### Parameters\n\n- `containerName: string`\n\n- `env?: string`\n\n- `cron_expression?: string`\n\n- `cronExpression?: string`\n\n- `enabled?: string`\n\n- `vulnerability_criteria?: string`\n\n- `vulnerabilityCriteria?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.autoUpdate.createContainer('containerName')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auto-update/$CONTAINER_NAME \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.autoUpdate.createContainer',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.autoUpdate.createContainer('containerName');",
+      },
+    },
   },
   {
     name: 'delete_container',
@@ -545,18 +920,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['containerName: string;', 'env?: string;'],
     markdown:
       "## delete_container\n\n`client.autoUpdate.deleteContainer(containerName: string, env?: string): void`\n\n**delete** `/api/auto-update/{containerName}`\n\nDELETE /api/auto-update/{containerName}\n\n### Parameters\n\n- `containerName: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.autoUpdate.deleteContainer('containerName')\n```",
-  },
-  {
-    name: 'retrieve_container',
-    endpoint: '/api/auto-update/{containerName}',
-    httpMethod: 'get',
-    summary: 'GET /api/auto-update/{containerName}',
-    description: 'GET /api/auto-update/{containerName}',
-    stainlessPath: '(resource) auto_update > (method) retrieve_container',
-    qualified: 'client.autoUpdate.retrieveContainer',
-    params: ['containerName: string;', 'env?: string;'],
-    markdown:
-      "## retrieve_container\n\n`client.autoUpdate.retrieveContainer(containerName: string, env?: string): void`\n\n**get** `/api/auto-update/{containerName}`\n\nGET /api/auto-update/{containerName}\n\n### Parameters\n\n- `containerName: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.autoUpdate.retrieveContainer('containerName')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/auto-update/$CONTAINER_NAME \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.autoUpdate.deleteContainer',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.autoUpdate.deleteContainer('containerName');",
+      },
+    },
   },
   {
     name: 'create',
@@ -569,6 +943,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## create\n\n`client.batch.create(env?: string): void`\n\n**post** `/api/batch`\n\nPOST /api/batch\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.batch.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/batch \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.batch.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.batch.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -580,6 +965,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.changelog.retrieve',
     markdown:
       "## retrieve\n\n`client.changelog.retrieve(): void`\n\n**get** `/api/changelog`\n\nGET /api/changelog\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.changelog.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/changelog \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.changelog.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.changelog.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/config-sets',
+    httpMethod: 'get',
+    summary: 'GET /api/config-sets',
+    description: 'GET /api/config-sets',
+    stainlessPath: '(resource) config_sets > (method) list',
+    qualified: 'client.configSets.list',
+    markdown:
+      "## list\n\n`client.configSets.list(): void`\n\n**get** `/api/config-sets`\n\nGET /api/config-sets\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/config-sets \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.configSets.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.configSets.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -601,6 +1019,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.configSets.create(description?: string, envVars?: string, labels?: string, name?: string, networkMode?: string, ports?: string, restartPolicy?: string, volumes?: string): void`\n\n**post** `/api/config-sets`\n\nPOST /api/config-sets\n\n### Parameters\n\n- `description?: string`\n\n- `envVars?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n- `networkMode?: string`\n\n- `ports?: string`\n\n- `restartPolicy?: string`\n\n- `volumes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/config-sets \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.configSets.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.configSets.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -613,6 +1042,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.configSets.retrieve(id: string): void`\n\n**get** `/api/config-sets/{id}`\n\nGET /api/config-sets/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/config-sets/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.configSets.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.configSets.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -635,17 +1075,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.configSets.update(id: string, description?: string, envVars?: string, labels?: string, name?: string, networkMode?: string, ports?: string, restartPolicy?: string, volumes?: string): void`\n\n**put** `/api/config-sets/{id}`\n\nPUT /api/config-sets/{id}\n\n### Parameters\n\n- `id: string`\n\n- `description?: string`\n\n- `envVars?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n- `networkMode?: string`\n\n- `ports?: string`\n\n- `restartPolicy?: string`\n\n- `volumes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/config-sets',
-    httpMethod: 'get',
-    summary: 'GET /api/config-sets',
-    description: 'GET /api/config-sets',
-    stainlessPath: '(resource) config_sets > (method) list',
-    qualified: 'client.configSets.list',
-    markdown:
-      "## list\n\n`client.configSets.list(): void`\n\n**get** `/api/config-sets`\n\nGET /api/config-sets\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/config-sets/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.configSets.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.configSets.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -658,6 +1098,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.configSets.delete(id: string): void`\n\n**delete** `/api/config-sets/{id}`\n\nDELETE /api/config-sets/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.configSets.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/config-sets/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.configSets.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.configSets.delete('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/containers',
+    httpMethod: 'get',
+    summary: 'GET /api/containers',
+    description: 'GET /api/containers',
+    stainlessPath: '(resource) containers > (method) list',
+    qualified: 'client.containers.list',
+    params: ['all?: string;', 'env?: string;'],
+    markdown:
+      "## list\n\n`client.containers.list(all?: string, env?: string): void`\n\n**get** `/api/containers`\n\nGET /api/containers\n\n### Parameters\n\n- `all?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -737,6 +1211,109 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.containers.create(env?: string, capAdd?: string[], capDrop?: string[], cgroupParent?: string, cmd?: string[], cpuPeriod?: number, cpuQuota?: number, cpusetCpus?: string, cpusetMems?: string, cpuShares?: number, deviceRequests?: object[], devices?: object[], dns?: string[], dnsOptions?: string[], dnsSearch?: string[], domainname?: string, entrypoint?: string[], env?: string[], extraHosts?: string[], groupAdd?: string[], healthcheck?: object, hostname?: string, image?: string, init?: boolean, ipcMode?: string, labels?: object, logDriver?: string, logOptions?: object, macAddress?: string, memory?: number, memoryReservation?: number, memorySwap?: number, memorySwappiness?: number, name?: string, nanoCpus?: number, networkAliases?: string[], networkGwPriority?: number, networkIpv4Address?: string, networkIpv6Address?: string, networkMode?: string, networks?: string[], oomKillDisable?: boolean, pidMode?: string, pidsLimit?: number, ports?: object, privileged?: boolean, readonlyRootfs?: boolean, restartMaxRetries?: number, restartPolicy?: 'no' | 'always' | 'unless-stopped' | 'on-failure', runtime?: string, securityOpt?: string[], shmSize?: number, startAfterCreate?: boolean, stdinOpen?: boolean, stopSignal?: string, stopTimeout?: number, sysctls?: object, tmpfs?: object, tty?: boolean, ulimits?: object[], user?: string, usernsMode?: string, utsMode?: string, volumeBinds?: string[], volumes?: object, workingDir?: string): void`\n\n**post** `/api/containers`\n\nPOST /api/containers\n\n### Parameters\n\n- `env?: string`\n\n- `capAdd?: string[]`\n\n- `capDrop?: string[]`\n\n- `cgroupParent?: string`\n\n- `cmd?: string[]`\n\n- `cpuPeriod?: number`\n\n- `cpuQuota?: number`\n\n- `cpusetCpus?: string`\n\n- `cpusetMems?: string`\n\n- `cpuShares?: number`\n\n- `deviceRequests?: object[]`\n\n- `devices?: object[]`\n\n- `dns?: string[]`\n\n- `dnsOptions?: string[]`\n\n- `dnsSearch?: string[]`\n\n- `domainname?: string`\n\n- `entrypoint?: string[]`\n\n- `env?: string[]`\n\n- `extraHosts?: string[]`\n\n- `groupAdd?: string[]`\n\n- `healthcheck?: object`\n\n- `hostname?: string`\n\n- `image?: string`\n\n- `init?: boolean`\n\n- `ipcMode?: string`\n\n- `labels?: object`\n\n- `logDriver?: string`\n\n- `logOptions?: object`\n\n- `macAddress?: string`\n\n- `memory?: number`\n\n- `memoryReservation?: number`\n\n- `memorySwap?: number`\n\n- `memorySwappiness?: number`\n\n- `name?: string`\n\n- `nanoCpus?: number`\n\n- `networkAliases?: string[]`\n\n- `networkGwPriority?: number`\n\n- `networkIpv4Address?: string`\n\n- `networkIpv6Address?: string`\n\n- `networkMode?: string`\n\n- `networks?: string[]`\n\n- `oomKillDisable?: boolean`\n\n- `pidMode?: string`\n\n- `pidsLimit?: number`\n\n- `ports?: object`\n\n- `privileged?: boolean`\n\n- `readonlyRootfs?: boolean`\n\n- `restartMaxRetries?: number`\n\n- `restartPolicy?: 'no' | 'always' | 'unless-stopped' | 'on-failure'`\n\n- `runtime?: string`\n\n- `securityOpt?: string[]`\n\n- `shmSize?: number`\n\n- `startAfterCreate?: boolean`\n\n- `stdinOpen?: boolean`\n\n- `stopSignal?: string`\n\n- `stopTimeout?: number`\n\n- `sysctls?: object`\n\n- `tmpfs?: object`\n\n- `tty?: boolean`\n\n- `ulimits?: object[]`\n\n- `user?: string`\n\n- `usernsMode?: string`\n\n- `utsMode?: string`\n\n- `volumeBinds?: string[]`\n\n- `volumes?: object`\n\n- `workingDir?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.create();",
+      },
+    },
+  },
+  {
+    name: 'batch_update',
+    endpoint: '/api/containers/batch-update',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/batch-update',
+    description: 'POST /api/containers/batch-update',
+    stainlessPath: '(resource) containers > (method) batch_update',
+    qualified: 'client.containers.batchUpdate',
+    params: ['env?: string;', 'containerIds?: string;'],
+    markdown:
+      "## batch_update\n\n`client.containers.batchUpdate(env?: string, containerIds?: string): void`\n\n**post** `/api/containers/batch-update`\n\nPOST /api/containers/batch-update\n\n### Parameters\n\n- `env?: string`\n\n- `containerIds?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.batchUpdate()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/batch-update \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.batchUpdate',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.batchUpdate();",
+      },
+    },
+  },
+  {
+    name: 'batch_update_stream',
+    endpoint: '/api/containers/batch-update-stream',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/batch-update-stream',
+    description: 'POST /api/containers/batch-update-stream',
+    stainlessPath: '(resource) containers > (method) batch_update_stream',
+    qualified: 'client.containers.batchUpdateStream',
+    params: ['env?: string;'],
+    markdown:
+      "## batch_update_stream\n\n`client.containers.batchUpdateStream(env?: string): void`\n\n**post** `/api/containers/batch-update-stream`\n\nPOST /api/containers/batch-update-stream\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.batchUpdateStream()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/batch-update-stream \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.batchUpdateStream',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.batchUpdateStream();",
+      },
+    },
+  },
+  {
+    name: 'check_updates',
+    endpoint: '/api/containers/check-updates',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/check-updates',
+    description: 'POST /api/containers/check-updates',
+    stainlessPath: '(resource) containers > (method) check_updates',
+    qualified: 'client.containers.checkUpdates',
+    params: ['env?: string;'],
+    markdown:
+      "## check_updates\n\n`client.containers.checkUpdates(env?: string): void`\n\n**post** `/api/containers/check-updates`\n\nPOST /api/containers/check-updates\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.checkUpdates()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/check-updates \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.checkUpdates',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.checkUpdates();",
+      },
+    },
+  },
+  {
+    name: 'list_sizes',
+    endpoint: '/api/containers/sizes',
+    httpMethod: 'get',
+    summary: 'GET /api/containers/sizes',
+    description: 'GET /api/containers/sizes',
+    stainlessPath: '(resource) containers > (method) list_sizes',
+    qualified: 'client.containers.listSizes',
+    params: ['env?: string;'],
+    markdown:
+      "## list_sizes\n\n`client.containers.listSizes(env?: string): void`\n\n**get** `/api/containers/sizes`\n\nGET /api/containers/sizes\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.listSizes()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/sizes \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.listSizes',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.listSizes();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -749,6 +1326,270 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;'],
     markdown:
       "## retrieve\n\n`client.containers.retrieve(id: string, env?: string): void`\n\n**get** `/api/containers/{id}`\n\nGET /api/containers/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.retrieve('id');",
+      },
+    },
+  },
+  {
+    name: 'delete',
+    endpoint: '/api/containers/{id}',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/containers/{id}',
+    description: 'DELETE /api/containers/{id}',
+    stainlessPath: '(resource) containers > (method) delete',
+    qualified: 'client.containers.delete',
+    params: ['id: string;', 'env?: string;', 'force?: string;'],
+    markdown:
+      "## delete\n\n`client.containers.delete(id: string, env?: string, force?: string): void`\n\n**delete** `/api/containers/{id}`\n\nDELETE /api/containers/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.delete('id');",
+      },
+    },
+  },
+  {
+    name: 'exec',
+    endpoint: '/api/containers/{id}/exec',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/exec',
+    description: 'POST /api/containers/{id}/exec',
+    stainlessPath: '(resource) containers > (method) exec',
+    qualified: 'client.containers.exec',
+    params: ['id: string;', 'envId?: string;', 'shell?: string;', 'user?: string;'],
+    markdown:
+      "## exec\n\n`client.containers.exec(id: string, envId?: string, shell?: string, user?: string): void`\n\n**post** `/api/containers/{id}/exec`\n\nPOST /api/containers/{id}/exec\n\n### Parameters\n\n- `id: string`\n\n- `envId?: string`\n\n- `shell?: string`\n\n- `user?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.exec('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/exec \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.exec',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.exec('id');",
+      },
+    },
+  },
+  {
+    name: 'inspect',
+    endpoint: '/api/containers/{id}/inspect',
+    httpMethod: 'get',
+    summary: 'GET /api/containers/{id}/inspect',
+    description: 'GET /api/containers/{id}/inspect',
+    stainlessPath: '(resource) containers > (method) inspect',
+    qualified: 'client.containers.inspect',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## inspect\n\n`client.containers.inspect(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/inspect`\n\nGET /api/containers/{id}/inspect\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.inspect('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/inspect \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.inspect',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.inspect('id');",
+      },
+    },
+  },
+  {
+    name: 'pause',
+    endpoint: '/api/containers/{id}/pause',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/pause',
+    description: 'POST /api/containers/{id}/pause',
+    stainlessPath: '(resource) containers > (method) pause',
+    qualified: 'client.containers.pause',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## pause\n\n`client.containers.pause(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/pause`\n\nPOST /api/containers/{id}/pause\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.pause('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/pause \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.pause',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.pause('id');",
+      },
+    },
+  },
+  {
+    name: 'rename',
+    endpoint: '/api/containers/{id}/rename',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/rename',
+    description: 'POST /api/containers/{id}/rename',
+    stainlessPath: '(resource) containers > (method) rename',
+    qualified: 'client.containers.rename',
+    params: ['id: string;', 'env?: string;', 'name?: string;'],
+    markdown:
+      "## rename\n\n`client.containers.rename(id: string, env?: string, name?: string): void`\n\n**post** `/api/containers/{id}/rename`\n\nPOST /api/containers/{id}/rename\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.rename('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/rename \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.rename',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.rename('id');",
+      },
+    },
+  },
+  {
+    name: 'restart',
+    endpoint: '/api/containers/{id}/restart',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/restart',
+    description: 'POST /api/containers/{id}/restart',
+    stainlessPath: '(resource) containers > (method) restart',
+    qualified: 'client.containers.restart',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## restart\n\n`client.containers.restart(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/restart`\n\nPOST /api/containers/{id}/restart\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.restart('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/restart \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.restart',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.restart('id');",
+      },
+    },
+  },
+  {
+    name: 'list_shells',
+    endpoint: '/api/containers/{id}/shells',
+    httpMethod: 'get',
+    summary: 'GET /api/containers/{id}/shells',
+    description: 'GET /api/containers/{id}/shells',
+    stainlessPath: '(resource) containers > (method) list_shells',
+    qualified: 'client.containers.listShells',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## list_shells\n\n`client.containers.listShells(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/shells`\n\nGET /api/containers/{id}/shells\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.listShells('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/shells \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.listShells',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.listShells('id');",
+      },
+    },
+  },
+  {
+    name: 'start',
+    endpoint: '/api/containers/{id}/start',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/start',
+    description: 'POST /api/containers/{id}/start',
+    stainlessPath: '(resource) containers > (method) start',
+    qualified: 'client.containers.start',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## start\n\n`client.containers.start(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/start`\n\nPOST /api/containers/{id}/start\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.start('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/start \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.start',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.start('id');",
+      },
+    },
+  },
+  {
+    name: 'stop',
+    endpoint: '/api/containers/{id}/stop',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/stop',
+    description: 'POST /api/containers/{id}/stop',
+    stainlessPath: '(resource) containers > (method) stop',
+    qualified: 'client.containers.stop',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## stop\n\n`client.containers.stop(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/stop`\n\nPOST /api/containers/{id}/stop\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.stop('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/stop \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.stop',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.stop('id');",
+      },
+    },
+  },
+  {
+    name: 'top',
+    endpoint: '/api/containers/{id}/top',
+    httpMethod: 'get',
+    summary: 'GET /api/containers/{id}/top',
+    description: 'GET /api/containers/{id}/top',
+    stainlessPath: '(resource) containers > (method) top',
+    qualified: 'client.containers.top',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## top\n\n`client.containers.top(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/top`\n\nGET /api/containers/{id}/top\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.top('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/top \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.top',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.top('id');",
+      },
+    },
+  },
+  {
+    name: 'unpause',
+    endpoint: '/api/containers/{id}/unpause',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/unpause',
+    description: 'POST /api/containers/{id}/unpause',
+    stainlessPath: '(resource) containers > (method) unpause',
+    qualified: 'client.containers.unpause',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## unpause\n\n`client.containers.unpause(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/unpause`\n\nPOST /api/containers/{id}/unpause\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.unpause('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/unpause \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.unpause',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.unpause('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -767,198 +1608,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.containers.update(id: string, env?: string, ...options?: string, repullImage?: string, startAfterUpdate?: string): void`\n\n**post** `/api/containers/{id}/update`\n\nPOST /api/containers/{id}/update\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `...options?: string`\n\n- `repullImage?: string`\n\n- `startAfterUpdate?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/containers',
-    httpMethod: 'get',
-    summary: 'GET /api/containers',
-    description: 'GET /api/containers',
-    stainlessPath: '(resource) containers > (method) list',
-    qualified: 'client.containers.list',
-    params: ['all?: string;', 'env?: string;'],
-    markdown:
-      "## list\n\n`client.containers.list(all?: string, env?: string): void`\n\n**get** `/api/containers`\n\nGET /api/containers\n\n### Parameters\n\n- `all?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.list()\n```",
-  },
-  {
-    name: 'delete',
-    endpoint: '/api/containers/{id}',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/containers/{id}',
-    description: 'DELETE /api/containers/{id}',
-    stainlessPath: '(resource) containers > (method) delete',
-    qualified: 'client.containers.delete',
-    params: ['id: string;', 'env?: string;', 'force?: string;'],
-    markdown:
-      "## delete\n\n`client.containers.delete(id: string, env?: string, force?: string): void`\n\n**delete** `/api/containers/{id}`\n\nDELETE /api/containers/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.delete('id')\n```",
-  },
-  {
-    name: 'batch_update',
-    endpoint: '/api/containers/batch-update',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/batch-update',
-    description: 'POST /api/containers/batch-update',
-    stainlessPath: '(resource) containers > (method) batch_update',
-    qualified: 'client.containers.batchUpdate',
-    params: ['env?: string;', 'containerIds?: string;'],
-    markdown:
-      "## batch_update\n\n`client.containers.batchUpdate(env?: string, containerIds?: string): void`\n\n**post** `/api/containers/batch-update`\n\nPOST /api/containers/batch-update\n\n### Parameters\n\n- `env?: string`\n\n- `containerIds?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.batchUpdate()\n```",
-  },
-  {
-    name: 'batch_update_stream',
-    endpoint: '/api/containers/batch-update-stream',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/batch-update-stream',
-    description: 'POST /api/containers/batch-update-stream',
-    stainlessPath: '(resource) containers > (method) batch_update_stream',
-    qualified: 'client.containers.batchUpdateStream',
-    params: ['env?: string;'],
-    markdown:
-      "## batch_update_stream\n\n`client.containers.batchUpdateStream(env?: string): void`\n\n**post** `/api/containers/batch-update-stream`\n\nPOST /api/containers/batch-update-stream\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.batchUpdateStream()\n```",
-  },
-  {
-    name: 'check_updates',
-    endpoint: '/api/containers/check-updates',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/check-updates',
-    description: 'POST /api/containers/check-updates',
-    stainlessPath: '(resource) containers > (method) check_updates',
-    qualified: 'client.containers.checkUpdates',
-    params: ['env?: string;'],
-    markdown:
-      "## check_updates\n\n`client.containers.checkUpdates(env?: string): void`\n\n**post** `/api/containers/check-updates`\n\nPOST /api/containers/check-updates\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.checkUpdates()\n```",
-  },
-  {
-    name: 'exec',
-    endpoint: '/api/containers/{id}/exec',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/exec',
-    description: 'POST /api/containers/{id}/exec',
-    stainlessPath: '(resource) containers > (method) exec',
-    qualified: 'client.containers.exec',
-    params: ['id: string;', 'envId?: string;', 'shell?: string;', 'user?: string;'],
-    markdown:
-      "## exec\n\n`client.containers.exec(id: string, envId?: string, shell?: string, user?: string): void`\n\n**post** `/api/containers/{id}/exec`\n\nPOST /api/containers/{id}/exec\n\n### Parameters\n\n- `id: string`\n\n- `envId?: string`\n\n- `shell?: string`\n\n- `user?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.exec('id')\n```",
-  },
-  {
-    name: 'inspect',
-    endpoint: '/api/containers/{id}/inspect',
-    httpMethod: 'get',
-    summary: 'GET /api/containers/{id}/inspect',
-    description: 'GET /api/containers/{id}/inspect',
-    stainlessPath: '(resource) containers > (method) inspect',
-    qualified: 'client.containers.inspect',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## inspect\n\n`client.containers.inspect(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/inspect`\n\nGET /api/containers/{id}/inspect\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.inspect('id')\n```",
-  },
-  {
-    name: 'list_shells',
-    endpoint: '/api/containers/{id}/shells',
-    httpMethod: 'get',
-    summary: 'GET /api/containers/{id}/shells',
-    description: 'GET /api/containers/{id}/shells',
-    stainlessPath: '(resource) containers > (method) list_shells',
-    qualified: 'client.containers.listShells',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## list_shells\n\n`client.containers.listShells(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/shells`\n\nGET /api/containers/{id}/shells\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.listShells('id')\n```",
-  },
-  {
-    name: 'list_sizes',
-    endpoint: '/api/containers/sizes',
-    httpMethod: 'get',
-    summary: 'GET /api/containers/sizes',
-    description: 'GET /api/containers/sizes',
-    stainlessPath: '(resource) containers > (method) list_sizes',
-    qualified: 'client.containers.listSizes',
-    params: ['env?: string;'],
-    markdown:
-      "## list_sizes\n\n`client.containers.listSizes(env?: string): void`\n\n**get** `/api/containers/sizes`\n\nGET /api/containers/sizes\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.listSizes()\n```",
-  },
-  {
-    name: 'pause',
-    endpoint: '/api/containers/{id}/pause',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/pause',
-    description: 'POST /api/containers/{id}/pause',
-    stainlessPath: '(resource) containers > (method) pause',
-    qualified: 'client.containers.pause',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## pause\n\n`client.containers.pause(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/pause`\n\nPOST /api/containers/{id}/pause\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.pause('id')\n```",
-  },
-  {
-    name: 'rename',
-    endpoint: '/api/containers/{id}/rename',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/rename',
-    description: 'POST /api/containers/{id}/rename',
-    stainlessPath: '(resource) containers > (method) rename',
-    qualified: 'client.containers.rename',
-    params: ['id: string;', 'env?: string;', 'name?: string;'],
-    markdown:
-      "## rename\n\n`client.containers.rename(id: string, env?: string, name?: string): void`\n\n**post** `/api/containers/{id}/rename`\n\nPOST /api/containers/{id}/rename\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.rename('id')\n```",
-  },
-  {
-    name: 'restart',
-    endpoint: '/api/containers/{id}/restart',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/restart',
-    description: 'POST /api/containers/{id}/restart',
-    stainlessPath: '(resource) containers > (method) restart',
-    qualified: 'client.containers.restart',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## restart\n\n`client.containers.restart(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/restart`\n\nPOST /api/containers/{id}/restart\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.restart('id')\n```",
-  },
-  {
-    name: 'start',
-    endpoint: '/api/containers/{id}/start',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/start',
-    description: 'POST /api/containers/{id}/start',
-    stainlessPath: '(resource) containers > (method) start',
-    qualified: 'client.containers.start',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## start\n\n`client.containers.start(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/start`\n\nPOST /api/containers/{id}/start\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.start('id')\n```",
-  },
-  {
-    name: 'stop',
-    endpoint: '/api/containers/{id}/stop',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/stop',
-    description: 'POST /api/containers/{id}/stop',
-    stainlessPath: '(resource) containers > (method) stop',
-    qualified: 'client.containers.stop',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## stop\n\n`client.containers.stop(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/stop`\n\nPOST /api/containers/{id}/stop\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.stop('id')\n```",
-  },
-  {
-    name: 'top',
-    endpoint: '/api/containers/{id}/top',
-    httpMethod: 'get',
-    summary: 'GET /api/containers/{id}/top',
-    description: 'GET /api/containers/{id}/top',
-    stainlessPath: '(resource) containers > (method) top',
-    qualified: 'client.containers.top',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## top\n\n`client.containers.top(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/top`\n\nGET /api/containers/{id}/top\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.top('id')\n```",
-  },
-  {
-    name: 'unpause',
-    endpoint: '/api/containers/{id}/unpause',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/unpause',
-    description: 'POST /api/containers/{id}/unpause',
-    stainlessPath: '(resource) containers > (method) unpause',
-    qualified: 'client.containers.unpause',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## unpause\n\n`client.containers.unpause(id: string, env?: string): void`\n\n**post** `/api/containers/{id}/unpause`\n\nPOST /api/containers/{id}/unpause\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.unpause('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/update \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.update('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -971,6 +1631,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## list\n\n`client.containers.pendingUpdates.list(env?: string): void`\n\n**get** `/api/containers/pending-updates`\n\nGET /api/containers/pending-updates\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.pendingUpdates.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/pending-updates \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.pendingUpdates.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.pendingUpdates.list();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -983,18 +1654,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['containerId?: string;', 'env?: string;'],
     markdown:
       "## delete\n\n`client.containers.pendingUpdates.delete(containerId?: string, env?: string): void`\n\n**delete** `/api/containers/pending-updates`\n\nDELETE /api/containers/pending-updates\n\n### Parameters\n\n- `containerId?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.pendingUpdates.delete()\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/containers/{id}/stats',
-    httpMethod: 'get',
-    summary: 'GET /api/containers/{id}/stats',
-    description: 'GET /api/containers/{id}/stats',
-    stainlessPath: '(resource) containers.stats > (method) retrieve',
-    qualified: 'client.containers.stats.retrieve',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## retrieve\n\n`client.containers.stats.retrieve(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/stats`\n\nGET /api/containers/{id}/stats\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.stats.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/pending-updates \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.pendingUpdates.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.pendingUpdates.delete();",
+      },
+    },
   },
   {
     name: 'list',
@@ -1007,18 +1677,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['debug?: string;', 'env?: string;'],
     markdown:
       "## list\n\n`client.containers.stats.list(debug?: string, env?: string): void`\n\n**get** `/api/containers/stats`\n\nGET /api/containers/stats\n\n### Parameters\n\n- `debug?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.stats.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/stats \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.stats.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.stats.list();",
+      },
+    },
   },
   {
-    name: 'create',
-    endpoint: '/api/containers/{id}/files/create',
-    httpMethod: 'post',
-    summary: 'POST /api/containers/{id}/files/create',
-    description: 'POST /api/containers/{id}/files/create',
-    stainlessPath: '(resource) containers.files > (method) create',
-    qualified: 'client.containers.files.create',
-    params: ['id: string;', 'env?: string;', 'path?: string;', 'type?: string;'],
+    name: 'retrieve',
+    endpoint: '/api/containers/{id}/stats',
+    httpMethod: 'get',
+    summary: 'GET /api/containers/{id}/stats',
+    description: 'GET /api/containers/{id}/stats',
+    stainlessPath: '(resource) containers.stats > (method) retrieve',
+    qualified: 'client.containers.stats.retrieve',
+    params: ['id: string;', 'env?: string;'],
     markdown:
-      "## create\n\n`client.containers.files.create(id: string, env?: string, path?: string, type?: string): void`\n\n**post** `/api/containers/{id}/files/create`\n\nPOST /api/containers/{id}/files/create\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n- `type?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.create('id')\n```",
+      "## retrieve\n\n`client.containers.stats.retrieve(id: string, env?: string): void`\n\n**get** `/api/containers/{id}/stats`\n\nGET /api/containers/{id}/stats\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.stats.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/stats \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.stats.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.stats.retrieve('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -1031,18 +1723,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'path?: string;', 'simpleLs?: string;'],
     markdown:
       "## list\n\n`client.containers.files.list(id: string, env?: string, path?: string, simpleLs?: string): void`\n\n**get** `/api/containers/{id}/files`\n\nGET /api/containers/{id}/files\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n- `simpleLs?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.list('id')\n```",
-  },
-  {
-    name: 'delete',
-    endpoint: '/api/containers/{id}/files/delete',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/containers/{id}/files/delete',
-    description: 'DELETE /api/containers/{id}/files/delete',
-    stainlessPath: '(resource) containers.files > (method) delete',
-    qualified: 'client.containers.files.delete',
-    params: ['id: string;', 'env?: string;', 'path?: string;'],
-    markdown:
-      "## delete\n\n`client.containers.files.delete(id: string, env?: string, path?: string): void`\n\n**delete** `/api/containers/{id}/files/delete`\n\nDELETE /api/containers/{id}/files/delete\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.list('id');",
+      },
+    },
   },
   {
     name: 'chmod',
@@ -1055,6 +1746,63 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'mode?: string;', 'path?: string;', 'recursive?: string;'],
     markdown:
       "## chmod\n\n`client.containers.files.chmod(id: string, env?: string, mode?: string, path?: string, recursive?: string): void`\n\n**post** `/api/containers/{id}/files/chmod`\n\nPOST /api/containers/{id}/files/chmod\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `mode?: string`\n\n- `path?: string`\n\n- `recursive?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.chmod('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/chmod \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.chmod',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.chmod('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/containers/{id}/files/create',
+    httpMethod: 'post',
+    summary: 'POST /api/containers/{id}/files/create',
+    description: 'POST /api/containers/{id}/files/create',
+    stainlessPath: '(resource) containers.files > (method) create',
+    qualified: 'client.containers.files.create',
+    params: ['id: string;', 'env?: string;', 'path?: string;', 'type?: string;'],
+    markdown:
+      "## create\n\n`client.containers.files.create(id: string, env?: string, path?: string, type?: string): void`\n\n**post** `/api/containers/{id}/files/create`\n\nPOST /api/containers/{id}/files/create\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n- `type?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/create \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.create('id');",
+      },
+    },
+  },
+  {
+    name: 'delete',
+    endpoint: '/api/containers/{id}/files/delete',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/containers/{id}/files/delete',
+    description: 'DELETE /api/containers/{id}/files/delete',
+    stainlessPath: '(resource) containers.files > (method) delete',
+    qualified: 'client.containers.files.delete',
+    params: ['id: string;', 'env?: string;', 'path?: string;'],
+    markdown:
+      "## delete\n\n`client.containers.files.delete(id: string, env?: string, path?: string): void`\n\n**delete** `/api/containers/{id}/files/delete`\n\nDELETE /api/containers/{id}/files/delete\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/delete \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.delete('id');",
+      },
+    },
   },
   {
     name: 'download',
@@ -1067,6 +1815,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'format?: string;', 'path?: string;'],
     markdown:
       "## download\n\n`client.containers.files.download(id: string, env?: string, format?: string, path?: string): void`\n\n**get** `/api/containers/{id}/files/download`\n\nGET /api/containers/{id}/files/download\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `format?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.download('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/download \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.download',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.download('id');",
+      },
+    },
   },
   {
     name: 'rename',
@@ -1079,6 +1838,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'newPath?: string;', 'oldPath?: string;'],
     markdown:
       "## rename\n\n`client.containers.files.rename(id: string, env?: string, newPath?: string, oldPath?: string): void`\n\n**post** `/api/containers/{id}/files/rename`\n\nPOST /api/containers/{id}/files/rename\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `newPath?: string`\n\n- `oldPath?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.rename('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/rename \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.rename',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.rename('id');",
+      },
+    },
   },
   {
     name: 'upload',
@@ -1091,6 +1861,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'path?: string;'],
     markdown:
       "## upload\n\n`client.containers.files.upload(id: string, env?: string, path?: string): void`\n\n**post** `/api/containers/{id}/files/upload`\n\nPOST /api/containers/{id}/files/upload\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.upload('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/upload \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.upload',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.upload('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1103,6 +1884,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'path?: string;'],
     markdown:
       "## retrieve\n\n`client.containers.files.content.retrieve(id: string, env?: string, path?: string): void`\n\n**get** `/api/containers/{id}/files/content`\n\nGET /api/containers/{id}/files/content\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.content.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/content \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.content.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.content.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1115,6 +1907,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'path?: string;', 'content?: string;'],
     markdown:
       "## update\n\n`client.containers.files.content.update(id: string, env?: string, path?: string, content?: string): void`\n\n**put** `/api/containers/{id}/files/content`\n\nPUT /api/containers/{id}/files/content\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `path?: string`\n\n- `content?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.files.content.update('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/files/content \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.files.content.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.files.content.update('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1127,6 +1930,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'tail?: string;'],
     markdown:
       "## retrieve\n\n`client.containers.logs.retrieve(id: string, env?: string, tail?: string): void`\n\n**get** `/api/containers/{id}/logs`\n\nGET /api/containers/{id}/logs\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `tail?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.logs.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/logs \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.logs.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.logs.retrieve('id');",
+      },
+    },
   },
   {
     name: 'stream',
@@ -1139,6 +1953,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'tail?: string;'],
     markdown:
       "## stream\n\n`client.containers.logs.stream(id: string, env?: string, tail?: string): void`\n\n**get** `/api/containers/{id}/logs/stream`\n\nGET /api/containers/{id}/logs/stream\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `tail?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.containers.logs.stream('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/containers/$ID/logs/stream \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.containers.logs.stream',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.containers.logs.stream('id');",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/dashboard/preferences',
+    httpMethod: 'get',
+    summary: 'GET /api/dashboard/preferences',
+    description: 'GET /api/dashboard/preferences',
+    stainlessPath: '(resource) dashboard.preferences > (method) retrieve',
+    qualified: 'client.dashboard.preferences.retrieve',
+    markdown:
+      "## retrieve\n\n`client.dashboard.preferences.retrieve(): void`\n\n**get** `/api/dashboard/preferences`\n\nGET /api/dashboard/preferences\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dashboard.preferences.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/dashboard/preferences \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.dashboard.preferences.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.dashboard.preferences.retrieve();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1151,17 +1998,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['gridLayout?: string;'],
     markdown:
       "## create\n\n`client.dashboard.preferences.create(gridLayout?: string): void`\n\n**post** `/api/dashboard/preferences`\n\nPOST /api/dashboard/preferences\n\n### Parameters\n\n- `gridLayout?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dashboard.preferences.create()\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/dashboard/preferences',
-    httpMethod: 'get',
-    summary: 'GET /api/dashboard/preferences',
-    description: 'GET /api/dashboard/preferences',
-    stainlessPath: '(resource) dashboard.preferences > (method) retrieve',
-    qualified: 'client.dashboard.preferences.retrieve',
-    markdown:
-      "## retrieve\n\n`client.dashboard.preferences.retrieve(): void`\n\n**get** `/api/dashboard/preferences`\n\nGET /api/dashboard/preferences\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dashboard.preferences.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/dashboard/preferences \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.dashboard.preferences.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.dashboard.preferences.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1174,6 +2021,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## retrieve\n\n`client.dashboard.stats.retrieve(env?: string): void`\n\n**get** `/api/dashboard/stats`\n\nGET /api/dashboard/stats\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dashboard.stats.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/dashboard/stats \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.dashboard.stats.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.dashboard.stats.retrieve();",
+      },
+    },
   },
   {
     name: 'stream',
@@ -1185,6 +2043,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.dashboard.stats.stream',
     markdown:
       "## stream\n\n`client.dashboard.stats.stream(): void`\n\n**get** `/api/dashboard/stats/stream`\n\nGET /api/dashboard/stats/stream\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dashboard.stats.stream()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/dashboard/stats/stream \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.dashboard.stats.stream',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.dashboard.stats.stream();",
+      },
+    },
   },
   {
     name: 'list',
@@ -1196,6 +2065,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.dependencies.list',
     markdown:
       "## list\n\n`client.dependencies.list(): void`\n\n**get** `/api/dependencies`\n\nGET /api/dependencies\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.dependencies.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/dependencies \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.dependencies.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.dependencies.list();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/environments',
+    httpMethod: 'get',
+    summary: 'GET /api/environments',
+    description: 'GET /api/environments',
+    stainlessPath: '(resource) environments > (method) list',
+    qualified: 'client.environments.list',
+    markdown:
+      "## list\n\n`client.environments.list(): void`\n\n**get** `/api/environments`\n\nGET /api/environments\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1226,6 +2128,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.environments.create(collectActivity?: string, collectMetrics?: string, connectionType?: string, hawserToken?: string, highlightChanges?: string, host?: string, icon?: string, labels?: string, name?: string, port?: string, protocol?: string, publicIp?: string, socketPath?: string, tlsCa?: string, tlsCert?: string, tlsKey?: string, tlsSkipVerify?: string): void`\n\n**post** `/api/environments`\n\nPOST /api/environments\n\n### Parameters\n\n- `collectActivity?: string`\n\n- `collectMetrics?: string`\n\n- `connectionType?: string`\n\n- `hawserToken?: string`\n\n- `highlightChanges?: string`\n\n- `host?: string`\n\n- `icon?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n- `port?: string`\n\n- `protocol?: string`\n\n- `publicIp?: string`\n\n- `socketPath?: string`\n\n- `tlsCa?: string`\n\n- `tlsCert?: string`\n\n- `tlsKey?: string`\n\n- `tlsSkipVerify?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.create();",
+      },
+    },
+  },
+  {
+    name: 'detect_socket',
+    endpoint: '/api/environments/detect-socket',
+    httpMethod: 'get',
+    summary: 'GET /api/environments/detect-socket',
+    description: 'GET /api/environments/detect-socket',
+    stainlessPath: '(resource) environments > (method) detect_socket',
+    qualified: 'client.environments.detectSocket',
+    markdown:
+      "## detect_socket\n\n`client.environments.detectSocket(): void`\n\n**get** `/api/environments/detect-socket`\n\nGET /api/environments/detect-socket\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.detectSocket()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/detect-socket \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.detectSocket',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.detectSocket();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1238,6 +2173,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.environments.retrieve(id: string): void`\n\n**get** `/api/environments/{id}`\n\nGET /api/environments/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1269,17 +2215,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.environments.update(id: string, collectActivity?: string, collectMetrics?: string, connectionType?: string, hawserToken?: string, highlightChanges?: string, host?: string, icon?: string, labels?: string, name?: string, port?: string, protocol?: string, publicIp?: string, socketPath?: string, tlsCa?: string, tlsCert?: string, tlsKey?: string, tlsSkipVerify?: string): void`\n\n**put** `/api/environments/{id}`\n\nPUT /api/environments/{id}\n\n### Parameters\n\n- `id: string`\n\n- `collectActivity?: string`\n\n- `collectMetrics?: string`\n\n- `connectionType?: string`\n\n- `hawserToken?: string`\n\n- `highlightChanges?: string`\n\n- `host?: string`\n\n- `icon?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n- `port?: string`\n\n- `protocol?: string`\n\n- `publicIp?: string`\n\n- `socketPath?: string`\n\n- `tlsCa?: string`\n\n- `tlsCert?: string`\n\n- `tlsKey?: string`\n\n- `tlsSkipVerify?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/environments',
-    httpMethod: 'get',
-    summary: 'GET /api/environments',
-    description: 'GET /api/environments',
-    stainlessPath: '(resource) environments > (method) list',
-    qualified: 'client.environments.list',
-    markdown:
-      "## list\n\n`client.environments.list(): void`\n\n**get** `/api/environments`\n\nGET /api/environments\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1292,17 +2238,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.environments.delete(id: string): void`\n\n**delete** `/api/environments/{id}`\n\nDELETE /api/environments/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.delete('id')\n```",
-  },
-  {
-    name: 'detect_socket',
-    endpoint: '/api/environments/detect-socket',
-    httpMethod: 'get',
-    summary: 'GET /api/environments/detect-socket',
-    description: 'GET /api/environments/detect-socket',
-    stainlessPath: '(resource) environments > (method) detect_socket',
-    qualified: 'client.environments.detectSocket',
-    markdown:
-      "## detect_socket\n\n`client.environments.detectSocket(): void`\n\n**get** `/api/environments/detect-socket`\n\nGET /api/environments/detect-socket\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.detectSocket()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.delete('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -1314,6 +2260,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.environments.test.create',
     markdown:
       "## create\n\n`client.environments.test.create(): void`\n\n**post** `/api/environments/test`\n\nPOST /api/environments/test\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.test.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.test.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.test.create();",
+      },
+    },
   },
   {
     name: 'run',
@@ -1326,6 +2283,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## run\n\n`client.environments.test.run(id: string): void`\n\n**post** `/api/environments/{id}/test`\n\nPOST /api/environments/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.test.run('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.test.run',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.test.run('id');",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/environments/{id}/disk-warning',
+    httpMethod: 'get',
+    summary: 'GET /api/environments/{id}/disk-warning',
+    description: 'GET /api/environments/{id}/disk-warning',
+    stainlessPath: '(resource) environments.disk_warning > (method) retrieve',
+    qualified: 'client.environments.diskWarning.retrieve',
+    params: ['id: string;'],
+    markdown:
+      "## retrieve\n\n`client.environments.diskWarning.retrieve(id: string): void`\n\n**get** `/api/environments/{id}/disk-warning`\n\nGET /api/environments/{id}/disk-warning\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.diskWarning.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/disk-warning \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.diskWarning.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.diskWarning.retrieve('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -1344,30 +2335,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.environments.diskWarning.create(id: string, enabled?: string, mode?: string, threshold?: string, thresholdGb?: string): void`\n\n**post** `/api/environments/{id}/disk-warning`\n\nPOST /api/environments/{id}/disk-warning\n\n### Parameters\n\n- `id: string`\n\n- `enabled?: string`\n\n- `mode?: string`\n\n- `threshold?: string`\n\n- `thresholdGb?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.diskWarning.create('id')\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/environments/{id}/disk-warning',
-    httpMethod: 'get',
-    summary: 'GET /api/environments/{id}/disk-warning',
-    description: 'GET /api/environments/{id}/disk-warning',
-    stainlessPath: '(resource) environments.disk_warning > (method) retrieve',
-    qualified: 'client.environments.diskWarning.retrieve',
-    params: ['id: string;'],
-    markdown:
-      "## retrieve\n\n`client.environments.diskWarning.retrieve(id: string): void`\n\n**get** `/api/environments/{id}/disk-warning`\n\nGET /api/environments/{id}/disk-warning\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.diskWarning.retrieve('id')\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/environments/{id}/image-prune',
-    httpMethod: 'post',
-    summary: 'POST /api/environments/{id}/image-prune',
-    description: 'POST /api/environments/{id}/image-prune',
-    stainlessPath: '(resource) environments.image_prune > (method) create',
-    qualified: 'client.environments.imagePrune.create',
-    params: ['id: string;', 'cronExpression?: string;', 'enabled?: string;', 'pruneMode?: string;'],
-    markdown:
-      "## create\n\n`client.environments.imagePrune.create(id: string, cronExpression?: string, enabled?: string, pruneMode?: string): void`\n\n**post** `/api/environments/{id}/image-prune`\n\nPOST /api/environments/{id}/image-prune\n\n### Parameters\n\n- `id: string`\n\n- `cronExpression?: string`\n\n- `enabled?: string`\n\n- `pruneMode?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.imagePrune.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/disk-warning \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.diskWarning.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.diskWarning.create('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1380,6 +2358,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.environments.imagePrune.retrieve(id: string): void`\n\n**get** `/api/environments/{id}/image-prune`\n\nGET /api/environments/{id}/image-prune\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.imagePrune.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/image-prune \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.imagePrune.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.imagePrune.retrieve('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/environments/{id}/image-prune',
+    httpMethod: 'post',
+    summary: 'POST /api/environments/{id}/image-prune',
+    description: 'POST /api/environments/{id}/image-prune',
+    stainlessPath: '(resource) environments.image_prune > (method) create',
+    qualified: 'client.environments.imagePrune.create',
+    params: ['id: string;', 'cronExpression?: string;', 'enabled?: string;', 'pruneMode?: string;'],
+    markdown:
+      "## create\n\n`client.environments.imagePrune.create(id: string, cronExpression?: string, enabled?: string, pruneMode?: string): void`\n\n**post** `/api/environments/{id}/image-prune`\n\nPOST /api/environments/{id}/image-prune\n\n### Parameters\n\n- `id: string`\n\n- `cronExpression?: string`\n\n- `enabled?: string`\n\n- `pruneMode?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.imagePrune.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/image-prune \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.imagePrune.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.imagePrune.create('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1392,42 +2404,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## update\n\n`client.environments.imagePrune.update(id: string): void`\n\n**put** `/api/environments/{id}/image-prune`\n\nPUT /api/environments/{id}/image-prune\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.imagePrune.update('id')\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/environments/{id}/notifications',
-    httpMethod: 'post',
-    summary: 'POST /api/environments/{id}/notifications',
-    description: 'POST /api/environments/{id}/notifications',
-    stainlessPath: '(resource) environments.notifications > (method) create',
-    qualified: 'client.environments.notifications.create',
-    params: ['id: string;', 'enabled?: string;', 'eventTypes?: string;', 'notificationId?: string;'],
-    markdown:
-      "## create\n\n`client.environments.notifications.create(id: string, enabled?: string, eventTypes?: string, notificationId?: string): void`\n\n**post** `/api/environments/{id}/notifications`\n\nPOST /api/environments/{id}/notifications\n\n### Parameters\n\n- `id: string`\n\n- `enabled?: string`\n\n- `eventTypes?: string`\n\n- `notificationId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.create('id')\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/environments/{id}/notifications/{notificationId}',
-    httpMethod: 'get',
-    summary: 'GET /api/environments/{id}/notifications/{notificationId}',
-    description: 'GET /api/environments/{id}/notifications/{notificationId}',
-    stainlessPath: '(resource) environments.notifications > (method) retrieve',
-    qualified: 'client.environments.notifications.retrieve',
-    params: ['id: string;', 'notificationId: string;'],
-    markdown:
-      "## retrieve\n\n`client.environments.notifications.retrieve(id: string, notificationId: string): void`\n\n**get** `/api/environments/{id}/notifications/{notificationId}`\n\nGET /api/environments/{id}/notifications/{notificationId}\n\n### Parameters\n\n- `id: string`\n\n- `notificationId: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.retrieve('notificationId', { id: 'id' })\n```",
-  },
-  {
-    name: 'update',
-    endpoint: '/api/environments/{id}/notifications/{notificationId}',
-    httpMethod: 'put',
-    summary: 'PUT /api/environments/{id}/notifications/{notificationId}',
-    description: 'PUT /api/environments/{id}/notifications/{notificationId}',
-    stainlessPath: '(resource) environments.notifications > (method) update',
-    qualified: 'client.environments.notifications.update',
-    params: ['id: string;', 'notificationId: string;', 'enabled?: string;', 'eventTypes?: string;'],
-    markdown:
-      "## update\n\n`client.environments.notifications.update(id: string, notificationId: string, enabled?: string, eventTypes?: string): void`\n\n**put** `/api/environments/{id}/notifications/{notificationId}`\n\nPUT /api/environments/{id}/notifications/{notificationId}\n\n### Parameters\n\n- `id: string`\n\n- `notificationId: string`\n\n- `enabled?: string`\n\n- `eventTypes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.update('notificationId', { id: 'id' })\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/image-prune \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.imagePrune.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.imagePrune.update('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -1440,6 +2427,86 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## list\n\n`client.environments.notifications.list(id: string): void`\n\n**get** `/api/environments/{id}/notifications`\n\nGET /api/environments/{id}/notifications\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.list('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/notifications \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.notifications.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.notifications.list('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/environments/{id}/notifications',
+    httpMethod: 'post',
+    summary: 'POST /api/environments/{id}/notifications',
+    description: 'POST /api/environments/{id}/notifications',
+    stainlessPath: '(resource) environments.notifications > (method) create',
+    qualified: 'client.environments.notifications.create',
+    params: ['id: string;', 'enabled?: string;', 'eventTypes?: string;', 'notificationId?: string;'],
+    markdown:
+      "## create\n\n`client.environments.notifications.create(id: string, enabled?: string, eventTypes?: string, notificationId?: string): void`\n\n**post** `/api/environments/{id}/notifications`\n\nPOST /api/environments/{id}/notifications\n\n### Parameters\n\n- `id: string`\n\n- `enabled?: string`\n\n- `eventTypes?: string`\n\n- `notificationId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/notifications \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.notifications.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.notifications.create('id');",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/environments/{id}/notifications/{notificationId}',
+    httpMethod: 'get',
+    summary: 'GET /api/environments/{id}/notifications/{notificationId}',
+    description: 'GET /api/environments/{id}/notifications/{notificationId}',
+    stainlessPath: '(resource) environments.notifications > (method) retrieve',
+    qualified: 'client.environments.notifications.retrieve',
+    params: ['id: string;', 'notificationId: string;'],
+    markdown:
+      "## retrieve\n\n`client.environments.notifications.retrieve(id: string, notificationId: string): void`\n\n**get** `/api/environments/{id}/notifications/{notificationId}`\n\nGET /api/environments/{id}/notifications/{notificationId}\n\n### Parameters\n\n- `id: string`\n\n- `notificationId: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.retrieve('notificationId', { id: 'id' })\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/notifications/$NOTIFICATION_ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.notifications.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.notifications.retrieve('notificationId', { id: 'id' });",
+      },
+    },
+  },
+  {
+    name: 'update',
+    endpoint: '/api/environments/{id}/notifications/{notificationId}',
+    httpMethod: 'put',
+    summary: 'PUT /api/environments/{id}/notifications/{notificationId}',
+    description: 'PUT /api/environments/{id}/notifications/{notificationId}',
+    stainlessPath: '(resource) environments.notifications > (method) update',
+    qualified: 'client.environments.notifications.update',
+    params: ['id: string;', 'notificationId: string;', 'enabled?: string;', 'eventTypes?: string;'],
+    markdown:
+      "## update\n\n`client.environments.notifications.update(id: string, notificationId: string, enabled?: string, eventTypes?: string): void`\n\n**put** `/api/environments/{id}/notifications/{notificationId}`\n\nPUT /api/environments/{id}/notifications/{notificationId}\n\n### Parameters\n\n- `id: string`\n\n- `notificationId: string`\n\n- `enabled?: string`\n\n- `eventTypes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.update('notificationId', { id: 'id' })\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/notifications/$NOTIFICATION_ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.notifications.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.notifications.update('notificationId', { id: 'id' });",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1452,6 +2519,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'notificationId: string;'],
     markdown:
       "## delete\n\n`client.environments.notifications.delete(id: string, notificationId: string): void`\n\n**delete** `/api/environments/{id}/notifications/{notificationId}`\n\nDELETE /api/environments/{id}/notifications/{notificationId}\n\n### Parameters\n\n- `id: string`\n\n- `notificationId: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.notifications.delete('notificationId', { id: 'id' })\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/notifications/$NOTIFICATION_ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.notifications.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.notifications.delete('notificationId', { id: 'id' });",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1464,6 +2542,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.environments.timezone.retrieve(id: string): void`\n\n**get** `/api/environments/{id}/timezone`\n\nGET /api/environments/{id}/timezone\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.timezone.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/timezone \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.timezone.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.timezone.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1476,6 +2565,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'timezone?: string;'],
     markdown:
       "## update\n\n`client.environments.timezone.update(id: string, timezone?: string): void`\n\n**post** `/api/environments/{id}/timezone`\n\nPOST /api/environments/{id}/timezone\n\n### Parameters\n\n- `id: string`\n\n- `timezone?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.timezone.update('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/timezone \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.timezone.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.timezone.update('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1488,6 +2588,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.environments.updateCheck.retrieve(id: string): void`\n\n**get** `/api/environments/{id}/update-check`\n\nGET /api/environments/{id}/update-check\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.updateCheck.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/update-check \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.updateCheck.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.updateCheck.retrieve('id');",
+      },
+    },
   },
   {
     name: 'run',
@@ -1506,6 +2617,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## run\n\n`client.environments.updateCheck.run(id: string, autoUpdate?: string, cron?: string, enabled?: string, vulnerabilityCriteria?: string): void`\n\n**post** `/api/environments/{id}/update-check`\n\nPOST /api/environments/{id}/update-check\n\n### Parameters\n\n- `id: string`\n\n- `autoUpdate?: string`\n\n- `cron?: string`\n\n- `enabled?: string`\n\n- `vulnerabilityCriteria?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.environments.updateCheck.run('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/environments/$ID/update-check \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.environments.updateCheck.run',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.environments.updateCheck.run('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -1518,6 +2640,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## list\n\n`client.events.list(env?: string): void`\n\n**get** `/api/events`\n\nGET /api/events\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.events.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/events \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.events.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.events.list();",
+      },
+    },
   },
   {
     name: 'create_preview_env',
@@ -1537,6 +2670,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create_preview_env\n\n`client.git.createPreviewEnv(branch?: string, composePath?: string, credentialId?: string, envFilePath?: string, repositoryId?: string, url?: string): void`\n\n**post** `/api/git/preview-env`\n\nPOST /api/git/preview-env\n\n### Parameters\n\n- `branch?: string`\n\n- `composePath?: string`\n\n- `credentialId?: string`\n\n- `envFilePath?: string`\n\n- `repositoryId?: string`\n\n- `url?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.createPreviewEnv()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/preview-env \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.createPreviewEnv',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.createPreviewEnv();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/git/credentials',
+    httpMethod: 'get',
+    summary: 'GET /api/git/credentials',
+    description: 'GET /api/git/credentials',
+    stainlessPath: '(resource) git.credentials > (method) list',
+    qualified: 'client.git.credentials.list',
+    markdown:
+      "## list\n\n`client.git.credentials.list(): void`\n\n**get** `/api/git/credentials`\n\nGET /api/git/credentials\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/credentials \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.credentials.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.credentials.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1556,6 +2722,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.git.credentials.create(authType?: string, name?: string, password?: string, sshPassphrase?: string, sshPrivateKey?: string, username?: string): void`\n\n**post** `/api/git/credentials`\n\nPOST /api/git/credentials\n\n### Parameters\n\n- `authType?: string`\n\n- `name?: string`\n\n- `password?: string`\n\n- `sshPassphrase?: string`\n\n- `sshPrivateKey?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/credentials \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.credentials.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.credentials.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1568,6 +2745,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.git.credentials.retrieve(id: string): void`\n\n**get** `/api/git/credentials/{id}`\n\nGET /api/git/credentials/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/credentials/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.credentials.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.credentials.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1588,17 +2776,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.git.credentials.update(id: string, authType?: string, name?: string, password?: string, sshPassphrase?: string, sshPrivateKey?: string, username?: string): void`\n\n**put** `/api/git/credentials/{id}`\n\nPUT /api/git/credentials/{id}\n\n### Parameters\n\n- `id: string`\n\n- `authType?: string`\n\n- `name?: string`\n\n- `password?: string`\n\n- `sshPassphrase?: string`\n\n- `sshPrivateKey?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/git/credentials',
-    httpMethod: 'get',
-    summary: 'GET /api/git/credentials',
-    description: 'GET /api/git/credentials',
-    stainlessPath: '(resource) git.credentials > (method) list',
-    qualified: 'client.git.credentials.list',
-    markdown:
-      "## list\n\n`client.git.credentials.list(): void`\n\n**get** `/api/git/credentials`\n\nGET /api/git/credentials\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/credentials/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.credentials.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.credentials.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1611,6 +2799,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.git.credentials.delete(id: string): void`\n\n**delete** `/api/git/credentials/{id}`\n\nDELETE /api/git/credentials/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.credentials.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/credentials/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.credentials.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.credentials.delete('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/git/repositories',
+    httpMethod: 'get',
+    summary: 'GET /api/git/repositories',
+    description: 'GET /api/git/repositories',
+    stainlessPath: '(resource) git.repositories > (method) list',
+    qualified: 'client.git.repositories.list',
+    markdown:
+      "## list\n\n`client.git.repositories.list(): void`\n\n**get** `/api/git/repositories`\n\nGET /api/git/repositories\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1623,6 +2844,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['branch?: string;', 'credentialId?: string;', 'name?: string;', 'url?: string;'],
     markdown:
       "## create\n\n`client.git.repositories.create(branch?: string, credentialId?: string, name?: string, url?: string): void`\n\n**post** `/api/git/repositories`\n\nPOST /api/git/repositories\n\n### Parameters\n\n- `branch?: string`\n\n- `credentialId?: string`\n\n- `name?: string`\n\n- `url?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1635,6 +2867,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.git.repositories.retrieve(id: string): void`\n\n**get** `/api/git/repositories/{id}`\n\nGET /api/git/repositories/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1647,17 +2890,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'branch?: string;', 'credentialId?: string;', 'name?: string;', 'url?: string;'],
     markdown:
       "## update\n\n`client.git.repositories.update(id: string, branch?: string, credentialId?: string, name?: string, url?: string): void`\n\n**put** `/api/git/repositories/{id}`\n\nPUT /api/git/repositories/{id}\n\n### Parameters\n\n- `id: string`\n\n- `branch?: string`\n\n- `credentialId?: string`\n\n- `name?: string`\n\n- `url?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/git/repositories',
-    httpMethod: 'get',
-    summary: 'GET /api/git/repositories',
-    description: 'GET /api/git/repositories',
-    stainlessPath: '(resource) git.repositories > (method) list',
-    qualified: 'client.git.repositories.list',
-    markdown:
-      "## list\n\n`client.git.repositories.list(): void`\n\n**get** `/api/git/repositories`\n\nGET /api/git/repositories\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1670,6 +2913,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.git.repositories.delete(id: string): void`\n\n**delete** `/api/git/repositories/{id}`\n\nDELETE /api/git/repositories/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.delete('id');",
+      },
+    },
   },
   {
     name: 'deploy',
@@ -1682,6 +2936,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## deploy\n\n`client.git.repositories.deploy(id: string): void`\n\n**post** `/api/git/repositories/{id}/deploy`\n\nPOST /api/git/repositories/{id}/deploy\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.deploy('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID/deploy \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.deploy',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.deploy('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -1694,6 +2959,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['branch?: string;', 'credentialId?: string;', 'url?: string;'],
     markdown:
       "## create\n\n`client.git.repositories.test.create(branch?: string, credentialId?: string, url?: string): void`\n\n**post** `/api/git/repositories/test`\n\nPOST /api/git/repositories/test\n\n### Parameters\n\n- `branch?: string`\n\n- `credentialId?: string`\n\n- `url?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.test.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.test.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.test.create();",
+      },
+    },
   },
   {
     name: 'run',
@@ -1706,6 +2982,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## run\n\n`client.git.repositories.test.run(id: string): void`\n\n**post** `/api/git/repositories/{id}/test`\n\nPOST /api/git/repositories/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.test.run('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.test.run',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.test.run('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -1718,6 +3005,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## create\n\n`client.git.repositories.sync.create(id: string): void`\n\n**post** `/api/git/repositories/{id}/sync`\n\nPOST /api/git/repositories/{id}/sync\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.sync.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID/sync \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.sync.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.sync.create('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1730,6 +3028,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.git.repositories.sync.retrieve(id: string): void`\n\n**get** `/api/git/repositories/{id}/sync`\n\nGET /api/git/repositories/{id}/sync\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.repositories.sync.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/repositories/$ID/sync \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.repositories.sync.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.repositories.sync.retrieve('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/git/stacks',
+    httpMethod: 'get',
+    summary: 'GET /api/git/stacks',
+    description: 'GET /api/git/stacks',
+    stainlessPath: '(resource) git.stacks > (method) list',
+    qualified: 'client.git.stacks.list',
+    params: ['env?: string;'],
+    markdown:
+      "## list\n\n`client.git.stacks.list(env?: string): void`\n\n**get** `/api/git/stacks`\n\nGET /api/git/stacks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1759,6 +3091,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.git.stacks.create(autoUpdate?: string, autoUpdateCron?: string, autoUpdateSchedule?: string, branch?: string, composePath?: string, credentialId?: string, deployNow?: string, envFilePath?: string, environmentId?: string, envVars?: string, repoName?: string, repositoryId?: string, stackName?: string, url?: string, webhookEnabled?: string, webhookSecret?: string): void`\n\n**post** `/api/git/stacks`\n\nPOST /api/git/stacks\n\n### Parameters\n\n- `autoUpdate?: string`\n\n- `autoUpdateCron?: string`\n\n- `autoUpdateSchedule?: string`\n\n- `branch?: string`\n\n- `composePath?: string`\n\n- `credentialId?: string`\n\n- `deployNow?: string`\n\n- `envFilePath?: string`\n\n- `environmentId?: string`\n\n- `envVars?: string`\n\n- `repoName?: string`\n\n- `repositoryId?: string`\n\n- `stackName?: string`\n\n- `url?: string`\n\n- `webhookEnabled?: string`\n\n- `webhookSecret?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1771,6 +3114,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.git.stacks.retrieve(id: string): void`\n\n**get** `/api/git/stacks/{id}`\n\nGET /api/git/stacks/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1795,18 +3149,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.git.stacks.update(id: string, autoUpdate?: string, autoUpdateCron?: string, autoUpdateSchedule?: string, composePath?: string, deployNow?: string, envFilePath?: string, envVars?: string, stackName?: string, webhookEnabled?: string, webhookSecret?: string): void`\n\n**put** `/api/git/stacks/{id}`\n\nPUT /api/git/stacks/{id}\n\n### Parameters\n\n- `id: string`\n\n- `autoUpdate?: string`\n\n- `autoUpdateCron?: string`\n\n- `autoUpdateSchedule?: string`\n\n- `composePath?: string`\n\n- `deployNow?: string`\n\n- `envFilePath?: string`\n\n- `envVars?: string`\n\n- `stackName?: string`\n\n- `webhookEnabled?: string`\n\n- `webhookSecret?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/git/stacks',
-    httpMethod: 'get',
-    summary: 'GET /api/git/stacks',
-    description: 'GET /api/git/stacks',
-    stainlessPath: '(resource) git.stacks > (method) list',
-    qualified: 'client.git.stacks.list',
-    params: ['env?: string;'],
-    markdown:
-      "## list\n\n`client.git.stacks.list(env?: string): void`\n\n**get** `/api/git/stacks`\n\nGET /api/git/stacks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1819,6 +3172,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.git.stacks.delete(id: string): void`\n\n**delete** `/api/git/stacks/{id}`\n\nDELETE /api/git/stacks/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.delete('id');",
+      },
+    },
   },
   {
     name: 'deploy',
@@ -1831,6 +3195,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## deploy\n\n`client.git.stacks.deploy(id: string): void`\n\n**post** `/api/git/stacks/{id}/deploy`\n\nPOST /api/git/stacks/{id}/deploy\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.deploy('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/deploy \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.deploy',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.deploy('id');",
+      },
+    },
   },
   {
     name: 'deploy_stream',
@@ -1843,6 +3218,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## deploy_stream\n\n`client.git.stacks.deployStream(id: string): void`\n\n**post** `/api/git/stacks/{id}/deploy-stream`\n\nPOST /api/git/stacks/{id}/deploy-stream\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.deployStream('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/deploy-stream \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.deployStream',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.deployStream('id');",
+      },
+    },
   },
   {
     name: 'sync',
@@ -1855,6 +3241,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## sync\n\n`client.git.stacks.sync(id: string): void`\n\n**post** `/api/git/stacks/{id}/sync`\n\nPOST /api/git/stacks/{id}/sync\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.sync('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/sync \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.sync',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.sync('id');",
+      },
+    },
   },
   {
     name: 'test',
@@ -1867,18 +3264,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## test\n\n`client.git.stacks.test(id: string): void`\n\n**post** `/api/git/stacks/{id}/test`\n\nPOST /api/git/stacks/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.test('id')\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/git/stacks/{id}/env-files',
-    httpMethod: 'post',
-    summary: 'POST /api/git/stacks/{id}/env-files',
-    description: 'POST /api/git/stacks/{id}/env-files',
-    stainlessPath: '(resource) git.stacks.env_files > (method) create',
-    qualified: 'client.git.stacks.envFiles.create',
-    params: ['id: string;', 'path?: string;'],
-    markdown:
-      "## create\n\n`client.git.stacks.envFiles.create(id: string, path?: string): void`\n\n**post** `/api/git/stacks/{id}/env-files`\n\nPOST /api/git/stacks/{id}/env-files\n\n### Parameters\n\n- `id: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.envFiles.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.test',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.test('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -1891,6 +3287,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## list\n\n`client.git.stacks.envFiles.list(id: string): void`\n\n**get** `/api/git/stacks/{id}/env-files`\n\nGET /api/git/stacks/{id}/env-files\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.envFiles.list('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/env-files \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.envFiles.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.envFiles.list('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/git/stacks/{id}/env-files',
+    httpMethod: 'post',
+    summary: 'POST /api/git/stacks/{id}/env-files',
+    description: 'POST /api/git/stacks/{id}/env-files',
+    stainlessPath: '(resource) git.stacks.env_files > (method) create',
+    qualified: 'client.git.stacks.envFiles.create',
+    params: ['id: string;', 'path?: string;'],
+    markdown:
+      "## create\n\n`client.git.stacks.envFiles.create(id: string, path?: string): void`\n\n**post** `/api/git/stacks/{id}/env-files`\n\nPOST /api/git/stacks/{id}/env-files\n\n### Parameters\n\n- `id: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.envFiles.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/env-files \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.envFiles.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.envFiles.create('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -1903,6 +3333,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## create\n\n`client.git.stacks.webhook.create(id: string): void`\n\n**post** `/api/git/stacks/{id}/webhook`\n\nPOST /api/git/stacks/{id}/webhook\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.webhook.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/webhook \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.webhook.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.webhook.create('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1915,18 +3356,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'secret?: string;'],
     markdown:
       "## retrieve\n\n`client.git.stacks.webhook.retrieve(id: string, secret?: string): void`\n\n**get** `/api/git/stacks/{id}/webhook`\n\nGET /api/git/stacks/{id}/webhook\n\n### Parameters\n\n- `id: string`\n\n- `secret?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.stacks.webhook.retrieve('id')\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/git/webhook/{id}',
-    httpMethod: 'get',
-    summary: 'GET /api/git/webhook/{id}',
-    description: 'GET /api/git/webhook/{id}',
-    stainlessPath: '(resource) git.webhook > (method) retrieve',
-    qualified: 'client.git.webhook.retrieve',
-    params: ['id: string;', 'secret?: string;'],
-    markdown:
-      "## retrieve\n\n`client.git.webhook.retrieve(id: string, secret?: string): void`\n\n**get** `/api/git/webhook/{id}`\n\nGET /api/git/webhook/{id}\n\n### Parameters\n\n- `id: string`\n\n- `secret?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.webhook.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/stacks/$ID/webhook \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.stacks.webhook.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.stacks.webhook.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -1939,17 +3379,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'ref?: string;'],
     markdown:
       "## update\n\n`client.git.webhook.update(id: string, ref?: string): void`\n\n**post** `/api/git/webhook/{id}`\n\nPOST /api/git/webhook/{id}\n\n### Parameters\n\n- `id: string`\n\n- `ref?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.webhook.update('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/webhook/$ID \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.webhook.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.webhook.update('id');",
+      },
+    },
   },
   {
-    name: 'create',
-    endpoint: '/api/hawser/connect',
-    httpMethod: 'post',
-    summary: 'POST /api/hawser/connect',
-    description: 'POST /api/hawser/connect',
-    stainlessPath: '(resource) hawser.connect > (method) create',
-    qualified: 'client.hawser.connect.create',
+    name: 'retrieve',
+    endpoint: '/api/git/webhook/{id}',
+    httpMethod: 'get',
+    summary: 'GET /api/git/webhook/{id}',
+    description: 'GET /api/git/webhook/{id}',
+    stainlessPath: '(resource) git.webhook > (method) retrieve',
+    qualified: 'client.git.webhook.retrieve',
+    params: ['id: string;', 'secret?: string;'],
     markdown:
-      "## create\n\n`client.hawser.connect.create(): void`\n\n**post** `/api/hawser/connect`\n\nPOST /api/hawser/connect\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.connect.create()\n```",
+      "## retrieve\n\n`client.git.webhook.retrieve(id: string, secret?: string): void`\n\n**get** `/api/git/webhook/{id}`\n\nGET /api/git/webhook/{id}\n\n### Parameters\n\n- `id: string`\n\n- `secret?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.git.webhook.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/git/webhook/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.git.webhook.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.git.webhook.retrieve('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -1961,6 +3424,61 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.hawser.connect.retrieve',
     markdown:
       "## retrieve\n\n`client.hawser.connect.retrieve(): void`\n\n**get** `/api/hawser/connect`\n\nGET /api/hawser/connect\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.connect.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/hawser/connect \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.hawser.connect.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.hawser.connect.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/hawser/connect',
+    httpMethod: 'post',
+    summary: 'POST /api/hawser/connect',
+    description: 'POST /api/hawser/connect',
+    stainlessPath: '(resource) hawser.connect > (method) create',
+    qualified: 'client.hawser.connect.create',
+    markdown:
+      "## create\n\n`client.hawser.connect.create(): void`\n\n**post** `/api/hawser/connect`\n\nPOST /api/hawser/connect\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.connect.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/hawser/connect \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.hawser.connect.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.hawser.connect.create();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/hawser/tokens',
+    httpMethod: 'get',
+    summary: 'GET /api/hawser/tokens',
+    description: 'GET /api/hawser/tokens',
+    stainlessPath: '(resource) hawser.tokens > (method) list',
+    qualified: 'client.hawser.tokens.list',
+    markdown:
+      "## list\n\n`client.hawser.tokens.list(): void`\n\n**get** `/api/hawser/tokens`\n\nGET /api/hawser/tokens\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.tokens.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/hawser/tokens \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.hawser.tokens.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.hawser.tokens.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -1973,17 +3491,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['environmentId?: string;', 'expiresAt?: string;', 'name?: string;', 'rawToken?: string;'],
     markdown:
       "## create\n\n`client.hawser.tokens.create(environmentId?: string, expiresAt?: string, name?: string, rawToken?: string): void`\n\n**post** `/api/hawser/tokens`\n\nPOST /api/hawser/tokens\n\n### Parameters\n\n- `environmentId?: string`\n\n- `expiresAt?: string`\n\n- `name?: string`\n\n- `rawToken?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.tokens.create()\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/hawser/tokens',
-    httpMethod: 'get',
-    summary: 'GET /api/hawser/tokens',
-    description: 'GET /api/hawser/tokens',
-    stainlessPath: '(resource) hawser.tokens > (method) list',
-    qualified: 'client.hawser.tokens.list',
-    markdown:
-      "## list\n\n`client.hawser.tokens.list(): void`\n\n**get** `/api/hawser/tokens`\n\nGET /api/hawser/tokens\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.tokens.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/hawser/tokens \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.hawser.tokens.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.hawser.tokens.create();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -1996,6 +3514,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id?: string;'],
     markdown:
       "## delete\n\n`client.hawser.tokens.delete(id?: string): void`\n\n**delete** `/api/hawser/tokens`\n\nDELETE /api/hawser/tokens\n\n### Parameters\n\n- `id?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.hawser.tokens.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/hawser/tokens \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.hawser.tokens.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.hawser.tokens.delete();",
+      },
+    },
   },
   {
     name: 'check',
@@ -2007,6 +3536,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.health.check',
     markdown:
       "## check\n\n`client.health.check(): void`\n\n**get** `/api/health`\n\nGET /api/health\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.health.check()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/health \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.health.check',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.health.check();",
+      },
+    },
   },
   {
     name: 'check_database',
@@ -2018,6 +3558,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.health.checkDatabase',
     markdown:
       "## check_database\n\n`client.health.checkDatabase(): void`\n\n**get** `/api/health/database`\n\nGET /api/health/database\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.health.checkDatabase()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/health/database \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.health.checkDatabase',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.health.checkDatabase();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2030,6 +3581,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## retrieve\n\n`client.host.retrieve(env?: string): void`\n\n**get** `/api/host`\n\nGET /api/host\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.host.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/host \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.host.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.host.retrieve();",
+      },
+    },
   },
   {
     name: 'list',
@@ -2042,42 +3604,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## list\n\n`client.images.list(env?: string): void`\n\n**get** `/api/images`\n\nGET /api/images\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.list()\n```",
-  },
-  {
-    name: 'delete',
-    endpoint: '/api/images/{id}',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/images/{id}',
-    description: 'DELETE /api/images/{id}',
-    stainlessPath: '(resource) images > (method) delete',
-    qualified: 'client.images.delete',
-    params: ['id: string;', 'env?: string;', 'force?: string;'],
-    markdown:
-      "## delete\n\n`client.images.delete(id: string, env?: string, force?: string): void`\n\n**delete** `/api/images/{id}`\n\nDELETE /api/images/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.delete('id')\n```",
-  },
-  {
-    name: 'export',
-    endpoint: '/api/images/{id}/export',
-    httpMethod: 'get',
-    summary: 'GET /api/images/{id}/export',
-    description: 'GET /api/images/{id}/export',
-    stainlessPath: '(resource) images > (method) export',
-    qualified: 'client.images.export',
-    params: ['id: string;', 'compress?: string;', 'env?: string;'],
-    markdown:
-      "## export\n\n`client.images.export(id: string, compress?: string, env?: string): void`\n\n**get** `/api/images/{id}/export`\n\nGET /api/images/{id}/export\n\n### Parameters\n\n- `id: string`\n\n- `compress?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.export('id')\n```",
-  },
-  {
-    name: 'history',
-    endpoint: '/api/images/{id}/history',
-    httpMethod: 'get',
-    summary: 'GET /api/images/{id}/history',
-    description: 'GET /api/images/{id}/history',
-    stainlessPath: '(resource) images > (method) history',
-    qualified: 'client.images.history',
-    params: ['id: string;', 'env?: string;'],
-    markdown:
-      "## history\n\n`client.images.history(id: string, env?: string): void`\n\n**get** `/api/images/{id}/history`\n\nGET /api/images/{id}/history\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.history('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.list();",
+      },
+    },
   },
   {
     name: 'pull',
@@ -2090,6 +3627,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'image?: string;', 'scanAfterPull?: string;'],
     markdown:
       "## pull\n\n`client.images.pull(env?: string, image?: string, scanAfterPull?: string): void`\n\n**post** `/api/images/pull`\n\nPOST /api/images/pull\n\n### Parameters\n\n- `env?: string`\n\n- `image?: string`\n\n- `scanAfterPull?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.pull()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/pull \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.pull',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.pull();",
+      },
+    },
   },
   {
     name: 'push',
@@ -2108,6 +3656,86 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## push\n\n`client.images.push(env?: string, imageId?: string, imageName?: string, newTag?: string, registryId?: string): void`\n\n**post** `/api/images/push`\n\nPOST /api/images/push\n\n### Parameters\n\n- `env?: string`\n\n- `imageId?: string`\n\n- `imageName?: string`\n\n- `newTag?: string`\n\n- `registryId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.push()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/push \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.push',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.push();",
+      },
+    },
+  },
+  {
+    name: 'delete',
+    endpoint: '/api/images/{id}',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/images/{id}',
+    description: 'DELETE /api/images/{id}',
+    stainlessPath: '(resource) images > (method) delete',
+    qualified: 'client.images.delete',
+    params: ['id: string;', 'env?: string;', 'force?: string;'],
+    markdown:
+      "## delete\n\n`client.images.delete(id: string, env?: string, force?: string): void`\n\n**delete** `/api/images/{id}`\n\nDELETE /api/images/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.delete('id');",
+      },
+    },
+  },
+  {
+    name: 'export',
+    endpoint: '/api/images/{id}/export',
+    httpMethod: 'get',
+    summary: 'GET /api/images/{id}/export',
+    description: 'GET /api/images/{id}/export',
+    stainlessPath: '(resource) images > (method) export',
+    qualified: 'client.images.export',
+    params: ['id: string;', 'compress?: string;', 'env?: string;'],
+    markdown:
+      "## export\n\n`client.images.export(id: string, compress?: string, env?: string): void`\n\n**get** `/api/images/{id}/export`\n\nGET /api/images/{id}/export\n\n### Parameters\n\n- `id: string`\n\n- `compress?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.export('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/$ID/export \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.export',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.export('id');",
+      },
+    },
+  },
+  {
+    name: 'history',
+    endpoint: '/api/images/{id}/history',
+    httpMethod: 'get',
+    summary: 'GET /api/images/{id}/history',
+    description: 'GET /api/images/{id}/history',
+    stainlessPath: '(resource) images > (method) history',
+    qualified: 'client.images.history',
+    params: ['id: string;', 'env?: string;'],
+    markdown:
+      "## history\n\n`client.images.history(id: string, env?: string): void`\n\n**get** `/api/images/{id}/history`\n\nGET /api/images/{id}/history\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.history('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/$ID/history \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.history',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.history('id');",
+      },
+    },
   },
   {
     name: 'tag',
@@ -2120,6 +3748,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'repo?: string;', 'tag?: string;'],
     markdown:
       "## tag\n\n`client.images.tag(id: string, env?: string, repo?: string, tag?: string): void`\n\n**post** `/api/images/{id}/tag`\n\nPOST /api/images/{id}/tag\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `repo?: string`\n\n- `tag?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.tag('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/$ID/tag \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.tag',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.tag('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -2132,6 +3771,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'imageName?: string;', 'scanner?: string;'],
     markdown:
       "## create\n\n`client.images.scan.create(env?: string, imageName?: string, scanner?: string): void`\n\n**post** `/api/images/scan`\n\nPOST /api/images/scan\n\n### Parameters\n\n- `env?: string`\n\n- `imageName?: string`\n\n- `scanner?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.scan.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/scan \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.scan.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.scan.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2144,6 +3794,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'image?: string;', 'scanner?: string;'],
     markdown:
       "## retrieve\n\n`client.images.scan.retrieve(env?: string, image?: string, scanner?: string): void`\n\n**get** `/api/images/scan`\n\nGET /api/images/scan\n\n### Parameters\n\n- `env?: string`\n\n- `image?: string`\n\n- `scanner?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.images.scan.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/images/scan \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.images.scan.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.images.scan.retrieve();",
+      },
+    },
   },
   {
     name: 'retrieve_license',
@@ -2156,6 +3817,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['format?: string;'],
     markdown:
       "## retrieve_license\n\n`client.legal.retrieveLicense(format?: string): void`\n\n**get** `/api/legal/license`\n\nGET /api/legal/license\n\n### Parameters\n\n- `format?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.legal.retrieveLicense()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/legal/license \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.legal.retrieveLicense',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.legal.retrieveLicense();",
+      },
+    },
   },
   {
     name: 'retrieve_privacy',
@@ -2168,6 +3840,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['format?: string;'],
     markdown:
       "## retrieve_privacy\n\n`client.legal.retrievePrivacy(format?: string): void`\n\n**get** `/api/legal/privacy`\n\nGET /api/legal/privacy\n\n### Parameters\n\n- `format?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.legal.retrievePrivacy()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/legal/privacy \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.legal.retrievePrivacy',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.legal.retrievePrivacy();",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/license',
+    httpMethod: 'get',
+    summary: 'GET /api/license',
+    description: 'GET /api/license',
+    stainlessPath: '(resource) license > (method) retrieve',
+    qualified: 'client.license.retrieve',
+    markdown:
+      "## retrieve\n\n`client.license.retrieve(): void`\n\n**get** `/api/license`\n\nGET /api/license\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.license.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/license \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.license.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.license.retrieve();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2180,17 +3885,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['key?: string;', 'name?: string;'],
     markdown:
       "## create\n\n`client.license.create(key?: string, name?: string): void`\n\n**post** `/api/license`\n\nPOST /api/license\n\n### Parameters\n\n- `key?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.license.create()\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/license',
-    httpMethod: 'get',
-    summary: 'GET /api/license',
-    description: 'GET /api/license',
-    stainlessPath: '(resource) license > (method) retrieve',
-    qualified: 'client.license.retrieve',
-    markdown:
-      "## retrieve\n\n`client.license.retrieve(): void`\n\n**get** `/api/license`\n\nGET /api/license\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.license.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/license \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.license.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.license.create();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2202,6 +3907,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.license.delete',
     markdown:
       "## delete\n\n`client.license.delete(): void`\n\n**delete** `/api/license`\n\nDELETE /api/license\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.license.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/license \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.license.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.license.delete();",
+      },
+    },
   },
   {
     name: 'retrieve_merged',
@@ -2214,6 +3930,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['containers?: string;', 'env?: string;', 'tail?: string;'],
     markdown:
       "## retrieve_merged\n\n`client.logs.retrieveMerged(containers?: string, env?: string, tail?: string): void`\n\n**get** `/api/logs/merged`\n\nGET /api/logs/merged\n\n### Parameters\n\n- `containers?: string`\n\n- `env?: string`\n\n- `tail?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.logs.retrieveMerged()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/logs/merged \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.logs.retrieveMerged',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.logs.retrieveMerged();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2226,6 +3953,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'limit?: string;'],
     markdown:
       "## retrieve\n\n`client.metrics.retrieve(env?: string, limit?: string): void`\n\n**get** `/api/metrics`\n\nGET /api/metrics\n\n### Parameters\n\n- `env?: string`\n\n- `limit?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.metrics.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/metrics \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.metrics.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.metrics.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/networks',
+    httpMethod: 'get',
+    summary: 'GET /api/networks',
+    description: 'GET /api/networks',
+    stainlessPath: '(resource) networks > (method) list',
+    qualified: 'client.networks.list',
+    params: ['env?: string;'],
+    markdown:
+      "## list\n\n`client.networks.list(env?: string): void`\n\n**get** `/api/networks`\n\nGET /api/networks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2249,6 +4010,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.networks.create(env?: string, attachable?: string, driver?: string, enableIPv6?: string, ingress?: string, internal?: string, ipam?: string, labels?: string, name?: string, options?: string): void`\n\n**post** `/api/networks`\n\nPOST /api/networks\n\n### Parameters\n\n- `env?: string`\n\n- `attachable?: string`\n\n- `driver?: string`\n\n- `enableIPv6?: string`\n\n- `ingress?: string`\n\n- `internal?: string`\n\n- `ipam?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n- `options?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2261,18 +4033,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;'],
     markdown:
       "## retrieve\n\n`client.networks.retrieve(id: string, env?: string): void`\n\n**get** `/api/networks/{id}`\n\nGET /api/networks/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.retrieve('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/networks',
-    httpMethod: 'get',
-    summary: 'GET /api/networks',
-    description: 'GET /api/networks',
-    stainlessPath: '(resource) networks > (method) list',
-    qualified: 'client.networks.list',
-    params: ['env?: string;'],
-    markdown:
-      "## list\n\n`client.networks.list(env?: string): void`\n\n**get** `/api/networks`\n\nGET /api/networks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.retrieve('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2285,6 +4056,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;'],
     markdown:
       "## delete\n\n`client.networks.delete(id: string, env?: string): void`\n\n**delete** `/api/networks/{id}`\n\nDELETE /api/networks/{id}\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.delete('id');",
+      },
+    },
   },
   {
     name: 'connect',
@@ -2297,6 +4079,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;', 'containerId?: string;', 'containerName?: string;'],
     markdown:
       "## connect\n\n`client.networks.connect(id: string, env?: string, containerId?: string, containerName?: string): void`\n\n**post** `/api/networks/{id}/connect`\n\nPOST /api/networks/{id}/connect\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `containerId?: string`\n\n- `containerName?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.connect('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks/$ID/connect \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.connect',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.connect('id');",
+      },
+    },
   },
   {
     name: 'disconnect',
@@ -2315,6 +4108,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## disconnect\n\n`client.networks.disconnect(id: string, env?: string, containerId?: string, containerName?: string, force?: string): void`\n\n**post** `/api/networks/{id}/disconnect`\n\nPOST /api/networks/{id}/disconnect\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n- `containerId?: string`\n\n- `containerName?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.disconnect('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks/$ID/disconnect \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.disconnect',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.disconnect('id');",
+      },
+    },
   },
   {
     name: 'inspect',
@@ -2327,6 +4131,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'env?: string;'],
     markdown:
       "## inspect\n\n`client.networks.inspect(id: string, env?: string): void`\n\n**get** `/api/networks/{id}/inspect`\n\nGET /api/networks/{id}/inspect\n\n### Parameters\n\n- `id: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.networks.inspect('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/networks/$ID/inspect \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.networks.inspect',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.networks.inspect('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/notifications',
+    httpMethod: 'get',
+    summary: 'GET /api/notifications',
+    description: 'GET /api/notifications',
+    stainlessPath: '(resource) notifications > (method) list',
+    qualified: 'client.notifications.list',
+    markdown:
+      "## list\n\n`client.notifications.list(): void`\n\n**get** `/api/notifications`\n\nGET /api/notifications\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2346,6 +4183,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.notifications.create(config?: string, enabled?: string, event_types?: string, eventTypes?: string, name?: string, type?: string): void`\n\n**post** `/api/notifications`\n\nPOST /api/notifications\n\n### Parameters\n\n- `config?: string`\n\n- `enabled?: string`\n\n- `event_types?: string`\n\n- `eventTypes?: string`\n\n- `name?: string`\n\n- `type?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2358,6 +4206,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.notifications.retrieve(id: string): void`\n\n**get** `/api/notifications/{id}`\n\nGET /api/notifications/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -2377,17 +4236,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.notifications.update(id: string, config?: string, enabled?: string, event_types?: string, eventTypes?: string, name?: string): void`\n\n**put** `/api/notifications/{id}`\n\nPUT /api/notifications/{id}\n\n### Parameters\n\n- `id: string`\n\n- `config?: string`\n\n- `enabled?: string`\n\n- `event_types?: string`\n\n- `eventTypes?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/notifications',
-    httpMethod: 'get',
-    summary: 'GET /api/notifications',
-    description: 'GET /api/notifications',
-    stainlessPath: '(resource) notifications > (method) list',
-    qualified: 'client.notifications.list',
-    markdown:
-      "## list\n\n`client.notifications.list(): void`\n\n**get** `/api/notifications`\n\nGET /api/notifications\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2400,6 +4259,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.notifications.delete(id: string): void`\n\n**delete** `/api/notifications/{id}`\n\nDELETE /api/notifications/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.delete('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -2412,6 +4282,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['config?: string;', 'name?: string;', 'type?: string;'],
     markdown:
       "## create\n\n`client.notifications.test.create(config?: string, name?: string, type?: string): void`\n\n**post** `/api/notifications/test`\n\nPOST /api/notifications/test\n\n### Parameters\n\n- `config?: string`\n\n- `name?: string`\n\n- `type?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.test.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.test.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.test.create();",
+      },
+    },
   },
   {
     name: 'run',
@@ -2424,6 +4305,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## run\n\n`client.notifications.test.run(id: string): void`\n\n**post** `/api/notifications/{id}/test`\n\nPOST /api/notifications/{id}/test\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.test.run('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/$ID/test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.test.run',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.test.run('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -2436,6 +4328,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['environmentId?: string;', 'eventType?: string;', 'payload?: string;'],
     markdown:
       "## create\n\n`client.notifications.triggerTest.create(environmentId?: string, eventType?: string, payload?: string): void`\n\n**post** `/api/notifications/trigger-test`\n\nPOST /api/notifications/trigger-test\n\n### Parameters\n\n- `environmentId?: string`\n\n- `eventType?: string`\n\n- `payload?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.triggerTest.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/trigger-test \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.triggerTest.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.triggerTest.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2447,6 +4350,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.notifications.triggerTest.retrieve',
     markdown:
       "## retrieve\n\n`client.notifications.triggerTest.retrieve(): void`\n\n**get** `/api/notifications/trigger-test`\n\nGET /api/notifications/trigger-test\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.notifications.triggerTest.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/notifications/trigger-test \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.notifications.triggerTest.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.notifications.triggerTest.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/preferences/favorite-groups',
+    httpMethod: 'get',
+    summary: 'GET /api/preferences/favorite-groups',
+    description: 'GET /api/preferences/favorite-groups',
+    stainlessPath: '(resource) preferences.favorite_groups > (method) list',
+    qualified: 'client.preferences.favoriteGroups.list',
+    params: ['env?: string;'],
+    markdown:
+      "## list\n\n`client.preferences.favoriteGroups.list(env?: string): void`\n\n**get** `/api/preferences/favorite-groups`\n\nGET /api/preferences/favorite-groups\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favoriteGroups.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/favorite-groups \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.favoriteGroups.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.favoriteGroups.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2466,30 +4403,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.preferences.favoriteGroups.create(action?: string, containers?: string, environmentId?: string, groups?: string, name?: string, newName?: string): void`\n\n**post** `/api/preferences/favorite-groups`\n\nPOST /api/preferences/favorite-groups\n\n### Parameters\n\n- `action?: string`\n\n- `containers?: string`\n\n- `environmentId?: string`\n\n- `groups?: string`\n\n- `name?: string`\n\n- `newName?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favoriteGroups.create()\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/preferences/favorite-groups',
-    httpMethod: 'get',
-    summary: 'GET /api/preferences/favorite-groups',
-    description: 'GET /api/preferences/favorite-groups',
-    stainlessPath: '(resource) preferences.favorite_groups > (method) list',
-    qualified: 'client.preferences.favoriteGroups.list',
-    params: ['env?: string;'],
-    markdown:
-      "## list\n\n`client.preferences.favoriteGroups.list(env?: string): void`\n\n**get** `/api/preferences/favorite-groups`\n\nGET /api/preferences/favorite-groups\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favoriteGroups.list()\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/preferences/favorites',
-    httpMethod: 'post',
-    summary: 'POST /api/preferences/favorites',
-    description: 'POST /api/preferences/favorites',
-    stainlessPath: '(resource) preferences.favorites > (method) create',
-    qualified: 'client.preferences.favorites.create',
-    params: ['action?: string;', 'containerName?: string;', 'environmentId?: string;', 'favorites?: string;'],
-    markdown:
-      "## create\n\n`client.preferences.favorites.create(action?: string, containerName?: string, environmentId?: string, favorites?: string): void`\n\n**post** `/api/preferences/favorites`\n\nPOST /api/preferences/favorites\n\n### Parameters\n\n- `action?: string`\n\n- `containerName?: string`\n\n- `environmentId?: string`\n\n- `favorites?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favorites.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/favorite-groups \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.favoriteGroups.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.favoriteGroups.create();",
+      },
+    },
   },
   {
     name: 'list',
@@ -2502,6 +4426,62 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## list\n\n`client.preferences.favorites.list(env?: string): void`\n\n**get** `/api/preferences/favorites`\n\nGET /api/preferences/favorites\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favorites.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/favorites \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.favorites.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.favorites.list();",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/preferences/favorites',
+    httpMethod: 'post',
+    summary: 'POST /api/preferences/favorites',
+    description: 'POST /api/preferences/favorites',
+    stainlessPath: '(resource) preferences.favorites > (method) create',
+    qualified: 'client.preferences.favorites.create',
+    params: ['action?: string;', 'containerName?: string;', 'environmentId?: string;', 'favorites?: string;'],
+    markdown:
+      "## create\n\n`client.preferences.favorites.create(action?: string, containerName?: string, environmentId?: string, favorites?: string): void`\n\n**post** `/api/preferences/favorites`\n\nPOST /api/preferences/favorites\n\n### Parameters\n\n- `action?: string`\n\n- `containerName?: string`\n\n- `environmentId?: string`\n\n- `favorites?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.favorites.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/favorites \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.favorites.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.favorites.create();",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/preferences/grid',
+    httpMethod: 'get',
+    summary: 'GET /api/preferences/grid',
+    description: 'GET /api/preferences/grid',
+    stainlessPath: '(resource) preferences.grid > (method) retrieve',
+    qualified: 'client.preferences.grid.retrieve',
+    markdown:
+      "## retrieve\n\n`client.preferences.grid.retrieve(): void`\n\n**get** `/api/preferences/grid`\n\nGET /api/preferences/grid\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.grid.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/grid \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.grid.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.grid.retrieve();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2514,17 +4494,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['columns?: string;', 'gridId?: string;'],
     markdown:
       "## create\n\n`client.preferences.grid.create(columns?: string, gridId?: string): void`\n\n**post** `/api/preferences/grid`\n\nPOST /api/preferences/grid\n\n### Parameters\n\n- `columns?: string`\n\n- `gridId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.grid.create()\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/preferences/grid',
-    httpMethod: 'get',
-    summary: 'GET /api/preferences/grid',
-    description: 'GET /api/preferences/grid',
-    stainlessPath: '(resource) preferences.grid > (method) retrieve',
-    qualified: 'client.preferences.grid.retrieve',
-    markdown:
-      "## retrieve\n\n`client.preferences.grid.retrieve(): void`\n\n**get** `/api/preferences/grid`\n\nGET /api/preferences/grid\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.grid.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/grid \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.grid.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.grid.create();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2537,6 +4517,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['gridId?: string;'],
     markdown:
       "## delete\n\n`client.preferences.grid.delete(gridId?: string): void`\n\n**delete** `/api/preferences/grid`\n\nDELETE /api/preferences/grid\n\n### Parameters\n\n- `gridId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.preferences.grid.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/preferences/grid \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.preferences.grid.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.preferences.grid.delete();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2548,6 +4539,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.profile.retrieve',
     markdown:
       "## retrieve\n\n`client.profile.retrieve(): void`\n\n**get** `/api/profile`\n\nGET /api/profile\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.retrieve();",
+      },
+    },
   },
   {
     name: 'update',
@@ -2565,17 +4567,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.profile.update(currentPassword?: string, displayName?: string, email?: string, newPassword?: string): void`\n\n**put** `/api/profile`\n\nPUT /api/profile\n\n### Parameters\n\n- `currentPassword?: string`\n\n- `displayName?: string`\n\n- `email?: string`\n\n- `newPassword?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.update()\n```",
-  },
-  {
-    name: 'delete',
-    endpoint: '/api/profile/avatar',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/profile/avatar',
-    description: 'DELETE /api/profile/avatar',
-    stainlessPath: '(resource) profile.avatar > (method) delete',
-    qualified: 'client.profile.avatar.delete',
-    markdown:
-      "## delete\n\n`client.profile.avatar.delete(): void`\n\n**delete** `/api/profile/avatar`\n\nDELETE /api/profile/avatar\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.avatar.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.update();",
+      },
+    },
   },
   {
     name: 'upload',
@@ -2588,6 +4590,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['avatar?: string;'],
     markdown:
       "## upload\n\n`client.profile.avatar.upload(avatar?: string): void`\n\n**post** `/api/profile/avatar`\n\nPOST /api/profile/avatar\n\n### Parameters\n\n- `avatar?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.avatar.upload()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile/avatar \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.avatar.upload',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.avatar.upload();",
+      },
+    },
+  },
+  {
+    name: 'delete',
+    endpoint: '/api/profile/avatar',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/profile/avatar',
+    description: 'DELETE /api/profile/avatar',
+    stainlessPath: '(resource) profile.avatar > (method) delete',
+    qualified: 'client.profile.avatar.delete',
+    markdown:
+      "## delete\n\n`client.profile.avatar.delete(): void`\n\n**delete** `/api/profile/avatar`\n\nDELETE /api/profile/avatar\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.avatar.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile/avatar \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.avatar.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.avatar.delete();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2599,6 +4634,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.profile.preferences.retrieve',
     markdown:
       "## retrieve\n\n`client.profile.preferences.retrieve(): void`\n\n**get** `/api/profile/preferences`\n\nGET /api/profile/preferences\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.preferences.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile/preferences \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.preferences.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.preferences.retrieve();",
+      },
+    },
   },
   {
     name: 'update',
@@ -2619,6 +4665,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.profile.preferences.update(darkTheme?: string, editorFont?: string, font?: string, fontSize?: string, gridFontSize?: string, lightTheme?: string, terminalFont?: string): void`\n\n**put** `/api/profile/preferences`\n\nPUT /api/profile/preferences\n\n### Parameters\n\n- `darkTheme?: string`\n\n- `editorFont?: string`\n\n- `font?: string`\n\n- `fontSize?: string`\n\n- `gridFontSize?: string`\n\n- `lightTheme?: string`\n\n- `terminalFont?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.profile.preferences.update()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/profile/preferences \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.profile.preferences.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.profile.preferences.update();",
+      },
+    },
   },
   {
     name: 'prune_all',
@@ -2631,6 +4688,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## prune_all\n\n`client.prune.pruneAll(env?: string): void`\n\n**post** `/api/prune/all`\n\nPOST /api/prune/all\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.prune.pruneAll()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/prune/all \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.prune.pruneAll',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.prune.pruneAll();",
+      },
+    },
   },
   {
     name: 'prune_containers',
@@ -2643,6 +4711,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## prune_containers\n\n`client.prune.pruneContainers(env?: string): void`\n\n**post** `/api/prune/containers`\n\nPOST /api/prune/containers\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.prune.pruneContainers()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/prune/containers \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.prune.pruneContainers',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.prune.pruneContainers();",
+      },
+    },
   },
   {
     name: 'prune_images',
@@ -2655,6 +4734,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['dangling?: string;', 'env?: string;'],
     markdown:
       "## prune_images\n\n`client.prune.pruneImages(dangling?: string, env?: string): void`\n\n**post** `/api/prune/images`\n\nPOST /api/prune/images\n\n### Parameters\n\n- `dangling?: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.prune.pruneImages()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/prune/images \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.prune.pruneImages',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.prune.pruneImages();",
+      },
+    },
   },
   {
     name: 'prune_networks',
@@ -2667,6 +4757,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## prune_networks\n\n`client.prune.pruneNetworks(env?: string): void`\n\n**post** `/api/prune/networks`\n\nPOST /api/prune/networks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.prune.pruneNetworks()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/prune/networks \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.prune.pruneNetworks',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.prune.pruneNetworks();",
+      },
+    },
   },
   {
     name: 'prune_volumes',
@@ -2679,6 +4780,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## prune_volumes\n\n`client.prune.pruneVolumes(env?: string): void`\n\n**post** `/api/prune/volumes`\n\nPOST /api/prune/volumes\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.prune.pruneVolumes()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/prune/volumes \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.prune.pruneVolumes',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.prune.pruneVolumes();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/roles',
+    httpMethod: 'get',
+    summary: 'GET /api/roles',
+    description: 'GET /api/roles',
+    stainlessPath: '(resource) roles > (method) list',
+    qualified: 'client.roles.list',
+    markdown:
+      "## list\n\n`client.roles.list(): void`\n\n**get** `/api/roles`\n\nGET /api/roles\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/roles \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.roles.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.roles.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2691,6 +4825,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['description?: string;', 'environmentIds?: string;', 'name?: string;', 'permissions?: string;'],
     markdown:
       "## create\n\n`client.roles.create(description?: string, environmentIds?: string, name?: string, permissions?: string): void`\n\n**post** `/api/roles`\n\nPOST /api/roles\n\n### Parameters\n\n- `description?: string`\n\n- `environmentIds?: string`\n\n- `name?: string`\n\n- `permissions?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/roles \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.roles.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.roles.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2703,6 +4848,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.roles.retrieve(id: string): void`\n\n**get** `/api/roles/{id}`\n\nGET /api/roles/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/roles/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.roles.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.roles.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -2715,17 +4871,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## update\n\n`client.roles.update(id: string): void`\n\n**put** `/api/roles/{id}`\n\nPUT /api/roles/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/roles',
-    httpMethod: 'get',
-    summary: 'GET /api/roles',
-    description: 'GET /api/roles',
-    stainlessPath: '(resource) roles > (method) list',
-    qualified: 'client.roles.list',
-    markdown:
-      "## list\n\n`client.roles.list(): void`\n\n**get** `/api/roles`\n\nGET /api/roles\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/roles/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.roles.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.roles.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2738,6 +4894,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.roles.delete(id: string): void`\n\n**delete** `/api/roles/{id}`\n\nDELETE /api/roles/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.roles.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/roles/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.roles.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.roles.delete('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -2749,6 +4916,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.schedules.list',
     markdown:
       "## list\n\n`client.schedules.list(): void`\n\n**get** `/api/schedules`\n\nGET /api/schedules\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.list();",
+      },
+    },
+  },
+  {
+    name: 'stream',
+    endpoint: '/api/schedules/stream',
+    httpMethod: 'get',
+    summary: 'GET /api/schedules/stream',
+    description: 'GET /api/schedules/stream',
+    stainlessPath: '(resource) schedules > (method) stream',
+    qualified: 'client.schedules.stream',
+    markdown:
+      "## stream\n\n`client.schedules.stream(): void`\n\n**get** `/api/schedules/stream`\n\nGET /api/schedules/stream\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.stream()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/stream \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.stream',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.stream();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2761,6 +4961,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['type: string;', 'id: string;'],
     markdown:
       "## delete\n\n`client.schedules.delete(type: string, id: string): void`\n\n**delete** `/api/schedules/{type}/{id}`\n\nDELETE /api/schedules/{type}/{id}\n\n### Parameters\n\n- `type: string`\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.delete('id', { type: 'type' })\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/$TYPE/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.delete('id', { type: 'type' });",
+      },
+    },
   },
   {
     name: 'run',
@@ -2773,17 +4984,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['type: string;', 'id: string;'],
     markdown:
       "## run\n\n`client.schedules.run(type: string, id: string): void`\n\n**post** `/api/schedules/{type}/{id}/run`\n\nPOST /api/schedules/{type}/{id}/run\n\n### Parameters\n\n- `type: string`\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.run('id', { type: 'type' })\n```",
-  },
-  {
-    name: 'stream',
-    endpoint: '/api/schedules/stream',
-    httpMethod: 'get',
-    summary: 'GET /api/schedules/stream',
-    description: 'GET /api/schedules/stream',
-    stainlessPath: '(resource) schedules > (method) stream',
-    qualified: 'client.schedules.stream',
-    markdown:
-      "## stream\n\n`client.schedules.stream(): void`\n\n**get** `/api/schedules/stream`\n\nGET /api/schedules/stream\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.stream()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/$TYPE/$ID/run \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.run',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.run('id', { type: 'type' });",
+      },
+    },
   },
   {
     name: 'toggle',
@@ -2796,18 +5007,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['type: string;', 'id: string;'],
     markdown:
       "## toggle\n\n`client.schedules.toggle(type: string, id: string): void`\n\n**post** `/api/schedules/{type}/{id}/toggle`\n\nPOST /api/schedules/{type}/{id}/toggle\n\n### Parameters\n\n- `type: string`\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.toggle('id', { type: 'type' })\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/schedules/executions/{id}',
-    httpMethod: 'get',
-    summary: 'GET /api/schedules/executions/{id}',
-    description: 'GET /api/schedules/executions/{id}',
-    stainlessPath: '(resource) schedules.executions > (method) retrieve',
-    qualified: 'client.schedules.executions.retrieve',
-    params: ['id: string;'],
-    markdown:
-      "## retrieve\n\n`client.schedules.executions.retrieve(id: string): void`\n\n**get** `/api/schedules/executions/{id}`\n\nGET /api/schedules/executions/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.executions.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/$TYPE/$ID/toggle \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.toggle',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.toggle('id', { type: 'type' });",
+      },
+    },
   },
   {
     name: 'list',
@@ -2831,6 +5041,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## list\n\n`client.schedules.executions.list(environmentId?: string, fromDate?: string, limit?: string, offset?: string, scheduleId?: string, scheduleType?: string, status?: string, statuses?: string, toDate?: string, triggeredBy?: string): void`\n\n**get** `/api/schedules/executions`\n\nGET /api/schedules/executions\n\n### Parameters\n\n- `environmentId?: string`\n\n- `fromDate?: string`\n\n- `limit?: string`\n\n- `offset?: string`\n\n- `scheduleId?: string`\n\n- `scheduleType?: string`\n\n- `status?: string`\n\n- `statuses?: string`\n\n- `toDate?: string`\n\n- `triggeredBy?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.executions.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/executions \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.executions.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.executions.list();",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/schedules/executions/{id}',
+    httpMethod: 'get',
+    summary: 'GET /api/schedules/executions/{id}',
+    description: 'GET /api/schedules/executions/{id}',
+    stainlessPath: '(resource) schedules.executions > (method) retrieve',
+    qualified: 'client.schedules.executions.retrieve',
+    params: ['id: string;'],
+    markdown:
+      "## retrieve\n\n`client.schedules.executions.retrieve(id: string): void`\n\n**get** `/api/schedules/executions/{id}`\n\nGET /api/schedules/executions/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.executions.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/executions/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.executions.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.executions.retrieve('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -2843,6 +5087,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.schedules.executions.delete(id: string): void`\n\n**delete** `/api/schedules/executions/{id}`\n\nDELETE /api/schedules/executions/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.executions.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/executions/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.executions.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.executions.delete('id');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -2854,6 +5109,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.schedules.settings.retrieve',
     markdown:
       "## retrieve\n\n`client.schedules.settings.retrieve(): void`\n\n**get** `/api/schedules/settings`\n\nGET /api/schedules/settings\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.settings.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/settings \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.settings.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.settings.retrieve();",
+      },
+    },
   },
   {
     name: 'update',
@@ -2866,6 +5132,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['hideSystemJobs?: string;'],
     markdown:
       "## update\n\n`client.schedules.settings.update(hideSystemJobs?: string): void`\n\n**put** `/api/schedules/settings`\n\nPUT /api/schedules/settings\n\n### Parameters\n\n- `hideSystemJobs?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.settings.update()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/settings \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.settings.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.settings.update();",
+      },
+    },
   },
   {
     name: 'toggle',
@@ -2878,29 +5155,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## toggle\n\n`client.schedules.system.toggle(id: string): void`\n\n**post** `/api/schedules/system/{id}/toggle`\n\nPOST /api/schedules/system/{id}/toggle\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.schedules.system.toggle('id')\n```",
-  },
-  {
-    name: 'check_status',
-    endpoint: '/api/self-update/check',
-    httpMethod: 'get',
-    summary: 'GET /api/self-update/check',
-    description: 'GET /api/self-update/check',
-    stainlessPath: '(resource) self_update > (method) check_status',
-    qualified: 'client.selfUpdate.checkStatus',
-    markdown:
-      "## check_status\n\n`client.selfUpdate.checkStatus(): void`\n\n**get** `/api/self-update/check`\n\nGET /api/self-update/check\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.selfUpdate.checkStatus()\n```",
-  },
-  {
-    name: 'get_progress',
-    endpoint: '/api/self-update/progress',
-    httpMethod: 'get',
-    summary: 'GET /api/self-update/progress',
-    description: 'GET /api/self-update/progress',
-    stainlessPath: '(resource) self_update > (method) get_progress',
-    qualified: 'client.selfUpdate.getProgress',
-    params: ['id?: string;'],
-    markdown:
-      "## get_progress\n\n`client.selfUpdate.getProgress(id?: string): void`\n\n**get** `/api/self-update/progress`\n\nGET /api/self-update/progress\n\n### Parameters\n\n- `id?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.selfUpdate.getProgress()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/schedules/system/$ID/toggle \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.schedules.system.toggle',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.schedules.system.toggle('id');",
+      },
+    },
   },
   {
     name: 'initiate',
@@ -2913,6 +5178,62 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['newImage?: string;'],
     markdown:
       "## initiate\n\n`client.selfUpdate.initiate(newImage?: string): void`\n\n**post** `/api/self-update`\n\nPOST /api/self-update\n\n### Parameters\n\n- `newImage?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.selfUpdate.initiate()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/self-update \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.selfUpdate.initiate',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.selfUpdate.initiate();",
+      },
+    },
+  },
+  {
+    name: 'check_status',
+    endpoint: '/api/self-update/check',
+    httpMethod: 'get',
+    summary: 'GET /api/self-update/check',
+    description: 'GET /api/self-update/check',
+    stainlessPath: '(resource) self_update > (method) check_status',
+    qualified: 'client.selfUpdate.checkStatus',
+    markdown:
+      "## check_status\n\n`client.selfUpdate.checkStatus(): void`\n\n**get** `/api/self-update/check`\n\nGET /api/self-update/check\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.selfUpdate.checkStatus()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/self-update/check \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.selfUpdate.checkStatus',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.selfUpdate.checkStatus();",
+      },
+    },
+  },
+  {
+    name: 'get_progress',
+    endpoint: '/api/self-update/progress',
+    httpMethod: 'get',
+    summary: 'GET /api/self-update/progress',
+    description: 'GET /api/self-update/progress',
+    stainlessPath: '(resource) self_update > (method) get_progress',
+    qualified: 'client.selfUpdate.getProgress',
+    params: ['id?: string;'],
+    markdown:
+      "## get_progress\n\n`client.selfUpdate.getProgress(id?: string): void`\n\n**get** `/api/self-update/progress`\n\nGET /api/self-update/progress\n\n### Parameters\n\n- `id?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.selfUpdate.getProgress()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/self-update/progress \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.selfUpdate.getProgress',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.selfUpdate.getProgress();",
+      },
+    },
   },
   {
     name: 'retrieve_theme',
@@ -2924,6 +5245,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.settings.retrieveTheme',
     markdown:
       "## retrieve_theme\n\n`client.settings.retrieveTheme(): void`\n\n**get** `/api/settings/theme`\n\nGET /api/settings/theme\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.retrieveTheme()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/theme \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.retrieveTheme',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.retrieveTheme();",
+      },
+    },
+  },
+  {
+    name: 'retrieve',
+    endpoint: '/api/settings/general',
+    httpMethod: 'get',
+    summary: 'GET /api/settings/general',
+    description: 'GET /api/settings/general',
+    stainlessPath: '(resource) settings.general > (method) retrieve',
+    qualified: 'client.settings.general.retrieve',
+    markdown:
+      "## retrieve\n\n`client.settings.general.retrieve(): void`\n\n**get** `/api/settings/general`\n\nGET /api/settings/general\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.general.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/general \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.general.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.general.retrieve();",
+      },
+    },
   },
   {
     name: 'create',
@@ -2965,29 +5319,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.settings.general.create(confirmDestructive?: string, darkTheme?: string, dateFormat?: string, defaultGrypeArgs?: string, defaultTimezone?: string, defaultTrivyArgs?: string, downloadFormat?: string, editorFont?: string, eventCleanupCron?: string, eventCleanupEnabled?: string, eventCollectionMode?: string, eventPollInterval?: string, eventRetentionDays?: string, externalStackPaths?: string, font?: string, fontSize?: string, gridFontSize?: string, highlightUpdates?: string, lightTheme?: string, logBufferSizeKb?: string, metricsCollectionInterval?: string, primaryStackLocation?: string, scheduleCleanupCron?: string, scheduleCleanupEnabled?: string, scheduleRetentionDays?: string, showStoppedContainers?: string, terminalFont?: string, timeFormat?: string): void`\n\n**post** `/api/settings/general`\n\nPOST /api/settings/general\n\n### Parameters\n\n- `confirmDestructive?: string`\n\n- `darkTheme?: string`\n\n- `dateFormat?: string`\n\n- `defaultGrypeArgs?: string`\n\n- `defaultTimezone?: string`\n\n- `defaultTrivyArgs?: string`\n\n- `downloadFormat?: string`\n\n- `editorFont?: string`\n\n- `eventCleanupCron?: string`\n\n- `eventCleanupEnabled?: string`\n\n- `eventCollectionMode?: string`\n\n- `eventPollInterval?: string`\n\n- `eventRetentionDays?: string`\n\n- `externalStackPaths?: string`\n\n- `font?: string`\n\n- `fontSize?: string`\n\n- `gridFontSize?: string`\n\n- `highlightUpdates?: string`\n\n- `lightTheme?: string`\n\n- `logBufferSizeKb?: string`\n\n- `metricsCollectionInterval?: string`\n\n- `primaryStackLocation?: string`\n\n- `scheduleCleanupCron?: string`\n\n- `scheduleCleanupEnabled?: string`\n\n- `scheduleRetentionDays?: string`\n\n- `showStoppedContainers?: string`\n\n- `terminalFont?: string`\n\n- `timeFormat?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.general.create()\n```",
-  },
-  {
-    name: 'retrieve',
-    endpoint: '/api/settings/general',
-    httpMethod: 'get',
-    summary: 'GET /api/settings/general',
-    description: 'GET /api/settings/general',
-    stainlessPath: '(resource) settings.general > (method) retrieve',
-    qualified: 'client.settings.general.retrieve',
-    markdown:
-      "## retrieve\n\n`client.settings.general.retrieve(): void`\n\n**get** `/api/settings/general`\n\nGET /api/settings/general\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.general.retrieve()\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/settings/scanner',
-    httpMethod: 'post',
-    summary: 'POST /api/settings/scanner',
-    description: 'POST /api/settings/scanner',
-    stainlessPath: '(resource) settings.scanner > (method) create',
-    qualified: 'client.settings.scanner.create',
-    params: ['envId?: string;', 'grypeArgs?: string;', 'scanner?: string;', 'trivyArgs?: string;'],
-    markdown:
-      "## create\n\n`client.settings.scanner.create(envId?: string, grypeArgs?: string, scanner?: string, trivyArgs?: string): void`\n\n**post** `/api/settings/scanner`\n\nPOST /api/settings/scanner\n\n### Parameters\n\n- `envId?: string`\n\n- `grypeArgs?: string`\n\n- `scanner?: string`\n\n- `trivyArgs?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.scanner.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/general \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.general.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.general.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3000,6 +5342,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['checkUpdates?: string;', 'env?: string;', 'settingsOnly?: string;'],
     markdown:
       "## retrieve\n\n`client.settings.scanner.retrieve(checkUpdates?: string, env?: string, settingsOnly?: string): void`\n\n**get** `/api/settings/scanner`\n\nGET /api/settings/scanner\n\n### Parameters\n\n- `checkUpdates?: string`\n\n- `env?: string`\n\n- `settingsOnly?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.scanner.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/scanner \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.scanner.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.scanner.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/settings/scanner',
+    httpMethod: 'post',
+    summary: 'POST /api/settings/scanner',
+    description: 'POST /api/settings/scanner',
+    stainlessPath: '(resource) settings.scanner > (method) create',
+    qualified: 'client.settings.scanner.create',
+    params: ['envId?: string;', 'grypeArgs?: string;', 'scanner?: string;', 'trivyArgs?: string;'],
+    markdown:
+      "## create\n\n`client.settings.scanner.create(envId?: string, grypeArgs?: string, scanner?: string, trivyArgs?: string): void`\n\n**post** `/api/settings/scanner`\n\nPOST /api/settings/scanner\n\n### Parameters\n\n- `envId?: string`\n\n- `grypeArgs?: string`\n\n- `scanner?: string`\n\n- `trivyArgs?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.scanner.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/scanner \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.scanner.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.scanner.create();",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3012,6 +5388,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'removeImages?: string;', 'scanner?: string;'],
     markdown:
       "## delete\n\n`client.settings.scanner.delete(env?: string, removeImages?: string, scanner?: string): void`\n\n**delete** `/api/settings/scanner`\n\nDELETE /api/settings/scanner\n\n### Parameters\n\n- `env?: string`\n\n- `removeImages?: string`\n\n- `scanner?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.settings.scanner.delete()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/settings/scanner \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.settings.scanner.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.settings.scanner.delete();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/stacks',
+    httpMethod: 'get',
+    summary: 'GET /api/stacks',
+    description: 'GET /api/stacks',
+    stainlessPath: '(resource) stacks > (method) list',
+    qualified: 'client.stacks.list',
+    params: ['env?: string;'],
+    markdown:
+      "## list\n\n`client.stacks.list(env?: string): void`\n\n**get** `/api/stacks`\n\nGET /api/stacks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -3033,30 +5443,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.stacks.create(env?: string, compose?: string, composePath?: string, envPath?: string, envVars?: string, name?: string, rawEnvContent?: string, start?: string): void`\n\n**post** `/api/stacks`\n\nPOST /api/stacks\n\n### Parameters\n\n- `env?: string`\n\n- `compose?: string`\n\n- `composePath?: string`\n\n- `envPath?: string`\n\n- `envVars?: string`\n\n- `name?: string`\n\n- `rawEnvContent?: string`\n\n- `start?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.create()\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/stacks',
-    httpMethod: 'get',
-    summary: 'GET /api/stacks',
-    description: 'GET /api/stacks',
-    stainlessPath: '(resource) stacks > (method) list',
-    qualified: 'client.stacks.list',
-    params: ['env?: string;'],
-    markdown:
-      "## list\n\n`client.stacks.list(env?: string): void`\n\n**get** `/api/stacks`\n\nGET /api/stacks\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.list()\n```",
-  },
-  {
-    name: 'delete',
-    endpoint: '/api/stacks/{name}',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/stacks/{name}',
-    description: 'DELETE /api/stacks/{name}',
-    stainlessPath: '(resource) stacks > (method) delete',
-    qualified: 'client.stacks.delete',
-    params: ['name: string;', 'env?: string;', 'force?: string;'],
-    markdown:
-      "## delete\n\n`client.stacks.delete(name: string, env?: string, force?: string): void`\n\n**delete** `/api/stacks/{name}`\n\nDELETE /api/stacks/{name}\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.delete('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.create();",
+      },
+    },
   },
   {
     name: 'adopt',
@@ -3069,30 +5466,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['environmentId?: string;', 'stacks?: string;'],
     markdown:
       "## adopt\n\n`client.stacks.adopt(environmentId?: string, stacks?: string): void`\n\n**post** `/api/stacks/adopt`\n\nPOST /api/stacks/adopt\n\n### Parameters\n\n- `environmentId?: string`\n\n- `stacks?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.adopt()\n```",
-  },
-  {
-    name: 'check_path_change',
-    endpoint: '/api/stacks/{name}/check-path-change',
-    httpMethod: 'post',
-    summary: 'POST /api/stacks/{name}/check-path-change',
-    description: 'POST /api/stacks/{name}/check-path-change',
-    stainlessPath: '(resource) stacks > (method) check_path_change',
-    qualified: 'client.stacks.checkPathChange',
-    params: ['name: string;', 'env?: string;', 'newComposePath?: string;'],
-    markdown:
-      "## check_path_change\n\n`client.stacks.checkPathChange(name: string, env?: string, newComposePath?: string): void`\n\n**post** `/api/stacks/{name}/check-path-change`\n\nPOST /api/stacks/{name}/check-path-change\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `newComposePath?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.checkPathChange('name')\n```",
-  },
-  {
-    name: 'down',
-    endpoint: '/api/stacks/{name}/down',
-    httpMethod: 'post',
-    summary: 'POST /api/stacks/{name}/down',
-    description: 'POST /api/stacks/{name}/down',
-    stainlessPath: '(resource) stacks > (method) down',
-    qualified: 'client.stacks.down',
-    params: ['name: string;', 'env?: string;', 'removeVolumes?: string;'],
-    markdown:
-      "## down\n\n`client.stacks.down(name: string, env?: string, removeVolumes?: string): void`\n\n**post** `/api/stacks/{name}/down`\n\nPOST /api/stacks/{name}/down\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `removeVolumes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.down('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/adopt \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.adopt',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.adopt();",
+      },
+    },
   },
   {
     name: 'get_base_path',
@@ -3104,6 +5488,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     qualified: 'client.stacks.getBasePath',
     markdown:
       "## get_base_path\n\n`client.stacks.getBasePath(): void`\n\n**get** `/api/stacks/base-path`\n\nGET /api/stacks/base-path\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.getBasePath()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/base-path \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.getBasePath',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.getBasePath();",
+      },
+    },
   },
   {
     name: 'get_default_path',
@@ -3116,6 +5511,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'location?: string;', 'name?: string;'],
     markdown:
       "## get_default_path\n\n`client.stacks.getDefaultPath(env?: string, location?: string, name?: string): void`\n\n**get** `/api/stacks/default-path`\n\nGET /api/stacks/default-path\n\n### Parameters\n\n- `env?: string`\n\n- `location?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.getDefaultPath()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/default-path \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.getDefaultPath',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.getDefaultPath();",
+      },
+    },
   },
   {
     name: 'get_path_hints',
@@ -3128,6 +5534,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;', 'name?: string;'],
     markdown:
       "## get_path_hints\n\n`client.stacks.getPathHints(env?: string, name?: string): void`\n\n**get** `/api/stacks/path-hints`\n\nGET /api/stacks/path-hints\n\n### Parameters\n\n- `env?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.getPathHints()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/path-hints \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.getPathHints',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.getPathHints();",
+      },
+    },
+  },
+  {
+    name: 'scan',
+    endpoint: '/api/stacks/scan',
+    httpMethod: 'post',
+    summary: 'POST /api/stacks/scan',
+    description: 'POST /api/stacks/scan',
+    stainlessPath: '(resource) stacks > (method) scan',
+    qualified: 'client.stacks.scan',
+    params: ['path?: string;'],
+    markdown:
+      "## scan\n\n`client.stacks.scan(path?: string): void`\n\n**post** `/api/stacks/scan`\n\nPOST /api/stacks/scan\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.scan()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/scan \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.scan',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.scan();",
+      },
+    },
   },
   {
     name: 'get_sources',
@@ -3140,6 +5580,109 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## get_sources\n\n`client.stacks.getSources(env?: string): void`\n\n**get** `/api/stacks/sources`\n\nGET /api/stacks/sources\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.getSources()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/sources \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.getSources',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.getSources();",
+      },
+    },
+  },
+  {
+    name: 'validate_path',
+    endpoint: '/api/stacks/validate-path',
+    httpMethod: 'post',
+    summary: 'POST /api/stacks/validate-path',
+    description: 'POST /api/stacks/validate-path',
+    stainlessPath: '(resource) stacks > (method) validate_path',
+    qualified: 'client.stacks.validatePath',
+    params: ['path?: string;'],
+    markdown:
+      "## validate_path\n\n`client.stacks.validatePath(path?: string): void`\n\n**post** `/api/stacks/validate-path`\n\nPOST /api/stacks/validate-path\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.validatePath()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/validate-path \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.validatePath',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.validatePath();",
+      },
+    },
+  },
+  {
+    name: 'delete',
+    endpoint: '/api/stacks/{name}',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/stacks/{name}',
+    description: 'DELETE /api/stacks/{name}',
+    stainlessPath: '(resource) stacks > (method) delete',
+    qualified: 'client.stacks.delete',
+    params: ['name: string;', 'env?: string;', 'force?: string;'],
+    markdown:
+      "## delete\n\n`client.stacks.delete(name: string, env?: string, force?: string): void`\n\n**delete** `/api/stacks/{name}`\n\nDELETE /api/stacks/{name}\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.delete('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.delete('name');",
+      },
+    },
+  },
+  {
+    name: 'check_path_change',
+    endpoint: '/api/stacks/{name}/check-path-change',
+    httpMethod: 'post',
+    summary: 'POST /api/stacks/{name}/check-path-change',
+    description: 'POST /api/stacks/{name}/check-path-change',
+    stainlessPath: '(resource) stacks > (method) check_path_change',
+    qualified: 'client.stacks.checkPathChange',
+    params: ['name: string;', 'env?: string;', 'newComposePath?: string;'],
+    markdown:
+      "## check_path_change\n\n`client.stacks.checkPathChange(name: string, env?: string, newComposePath?: string): void`\n\n**post** `/api/stacks/{name}/check-path-change`\n\nPOST /api/stacks/{name}/check-path-change\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `newComposePath?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.checkPathChange('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/check-path-change \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.checkPathChange',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.checkPathChange('name');",
+      },
+    },
+  },
+  {
+    name: 'down',
+    endpoint: '/api/stacks/{name}/down',
+    httpMethod: 'post',
+    summary: 'POST /api/stacks/{name}/down',
+    description: 'POST /api/stacks/{name}/down',
+    stainlessPath: '(resource) stacks > (method) down',
+    qualified: 'client.stacks.down',
+    params: ['name: string;', 'env?: string;', 'removeVolumes?: string;'],
+    markdown:
+      "## down\n\n`client.stacks.down(name: string, env?: string, removeVolumes?: string): void`\n\n**post** `/api/stacks/{name}/down`\n\nPOST /api/stacks/{name}/down\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `removeVolumes?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.down('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/down \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.down',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.down('name');",
+      },
+    },
   },
   {
     name: 'relocate',
@@ -3158,6 +5701,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## relocate\n\n`client.stacks.relocate(name: string, env?: string, newComposePath?: string, newEnvPath?: string, oldDir?: string): void`\n\n**post** `/api/stacks/{name}/relocate`\n\nPOST /api/stacks/{name}/relocate\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `newComposePath?: string`\n\n- `newEnvPath?: string`\n\n- `oldDir?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.relocate('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/relocate \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.relocate',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.relocate('name');",
+      },
+    },
   },
   {
     name: 'restart',
@@ -3170,18 +5724,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## restart\n\n`client.stacks.restart(name: string, env?: string): void`\n\n**post** `/api/stacks/{name}/restart`\n\nPOST /api/stacks/{name}/restart\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.restart('name')\n```",
-  },
-  {
-    name: 'scan',
-    endpoint: '/api/stacks/scan',
-    httpMethod: 'post',
-    summary: 'POST /api/stacks/scan',
-    description: 'POST /api/stacks/scan',
-    stainlessPath: '(resource) stacks > (method) scan',
-    qualified: 'client.stacks.scan',
-    params: ['path?: string;'],
-    markdown:
-      "## scan\n\n`client.stacks.scan(path?: string): void`\n\n**post** `/api/stacks/scan`\n\nPOST /api/stacks/scan\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.scan()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/restart \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.restart',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.restart('name');",
+      },
+    },
   },
   {
     name: 'start',
@@ -3194,6 +5747,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## start\n\n`client.stacks.start(name: string, env?: string): void`\n\n**post** `/api/stacks/{name}/start`\n\nPOST /api/stacks/{name}/start\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.start('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/start \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.start',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.start('name');",
+      },
+    },
   },
   {
     name: 'stop',
@@ -3206,18 +5770,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## stop\n\n`client.stacks.stop(name: string, env?: string): void`\n\n**post** `/api/stacks/{name}/stop`\n\nPOST /api/stacks/{name}/stop\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.stop('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/stop \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.stop',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.stop('name');",
+      },
+    },
   },
   {
-    name: 'validate_path',
-    endpoint: '/api/stacks/validate-path',
-    httpMethod: 'post',
-    summary: 'POST /api/stacks/validate-path',
-    description: 'POST /api/stacks/validate-path',
-    stainlessPath: '(resource) stacks > (method) validate_path',
-    qualified: 'client.stacks.validatePath',
-    params: ['path?: string;'],
+    name: 'get',
+    endpoint: '/api/stacks/{name}/compose',
+    httpMethod: 'get',
+    summary: 'GET /api/stacks/{name}/compose',
+    description: 'GET /api/stacks/{name}/compose',
+    stainlessPath: '(resource) stacks.compose > (method) get',
+    qualified: 'client.stacks.compose.get',
+    params: ['name: string;', 'env?: string;'],
     markdown:
-      "## validate_path\n\n`client.stacks.validatePath(path?: string): void`\n\n**post** `/api/stacks/validate-path`\n\nPOST /api/stacks/validate-path\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.validatePath()\n```",
+      "## get\n\n`client.stacks.compose.get(name: string, env?: string): void`\n\n**get** `/api/stacks/{name}/compose`\n\nGET /api/stacks/{name}/compose\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.compose.get('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/compose \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.compose.get',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.compose.get('name');",
+      },
+    },
   },
   {
     name: 'update',
@@ -3240,30 +5826,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.stacks.compose.update(name: string, env?: string, composePath?: string, content?: string, envPath?: string, moveFromDir?: string, oldComposePath?: string, oldEnvPath?: string, restart = false?: string): void`\n\n**put** `/api/stacks/{name}/compose`\n\nPUT /api/stacks/{name}/compose\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `composePath?: string`\n\n- `content?: string`\n\n- `envPath?: string`\n\n- `moveFromDir?: string`\n\n- `oldComposePath?: string`\n\n- `oldEnvPath?: string`\n\n- `restart = false?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.compose.update('name')\n```",
-  },
-  {
-    name: 'get',
-    endpoint: '/api/stacks/{name}/compose',
-    httpMethod: 'get',
-    summary: 'GET /api/stacks/{name}/compose',
-    description: 'GET /api/stacks/{name}/compose',
-    stainlessPath: '(resource) stacks.compose > (method) get',
-    qualified: 'client.stacks.compose.get',
-    params: ['name: string;', 'env?: string;'],
-    markdown:
-      "## get\n\n`client.stacks.compose.get(name: string, env?: string): void`\n\n**get** `/api/stacks/{name}/compose`\n\nGET /api/stacks/{name}/compose\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.compose.get('name')\n```",
-  },
-  {
-    name: 'update',
-    endpoint: '/api/stacks/{name}/env',
-    httpMethod: 'put',
-    summary: 'PUT /api/stacks/{name}/env',
-    description: 'PUT /api/stacks/{name}/env',
-    stainlessPath: '(resource) stacks.env > (method) update',
-    qualified: 'client.stacks.env.update',
-    params: ['name: string;', 'env?: string;', 'variables?: string;'],
-    markdown:
-      "## update\n\n`client.stacks.env.update(name: string, env?: string, variables?: string): void`\n\n**put** `/api/stacks/{name}/env`\n\nPUT /api/stacks/{name}/env\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `variables?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.update('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/compose \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.compose.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.compose.update('name');",
+      },
+    },
   },
   {
     name: 'get',
@@ -3276,6 +5849,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## get\n\n`client.stacks.env.get(name: string, env?: string): void`\n\n**get** `/api/stacks/{name}/env`\n\nGET /api/stacks/{name}/env\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.get('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/env \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.env.get',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.env.get('name');",
+      },
+    },
+  },
+  {
+    name: 'update',
+    endpoint: '/api/stacks/{name}/env',
+    httpMethod: 'put',
+    summary: 'PUT /api/stacks/{name}/env',
+    description: 'PUT /api/stacks/{name}/env',
+    stainlessPath: '(resource) stacks.env > (method) update',
+    qualified: 'client.stacks.env.update',
+    params: ['name: string;', 'env?: string;', 'variables?: string;'],
+    markdown:
+      "## update\n\n`client.stacks.env.update(name: string, env?: string, variables?: string): void`\n\n**put** `/api/stacks/{name}/env`\n\nPUT /api/stacks/{name}/env\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `variables?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.update('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/env \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.env.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.env.update('name');",
+      },
+    },
   },
   {
     name: 'validate',
@@ -3288,18 +5895,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'compose?: string;', 'variables?: string;'],
     markdown:
       "## validate\n\n`client.stacks.env.validate(name: string, env?: string, compose?: string, variables?: string): void`\n\n**post** `/api/stacks/{name}/env/validate`\n\nPOST /api/stacks/{name}/env/validate\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `compose?: string`\n\n- `variables?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.validate('name')\n```",
-  },
-  {
-    name: 'update',
-    endpoint: '/api/stacks/{name}/env/raw',
-    httpMethod: 'put',
-    summary: 'PUT /api/stacks/{name}/env/raw',
-    description: 'PUT /api/stacks/{name}/env/raw',
-    stainlessPath: '(resource) stacks.env.raw > (method) update',
-    qualified: 'client.stacks.env.raw.update',
-    params: ['name: string;', 'env?: string;', 'content?: string;'],
-    markdown:
-      "## update\n\n`client.stacks.env.raw.update(name: string, env?: string, content?: string): void`\n\n**put** `/api/stacks/{name}/env/raw`\n\nPUT /api/stacks/{name}/env/raw\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `content?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.raw.update('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/env/validate \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.env.validate',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.env.validate('name');",
+      },
+    },
   },
   {
     name: 'get',
@@ -3312,6 +5918,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## get\n\n`client.stacks.env.raw.get(name: string, env?: string): void`\n\n**get** `/api/stacks/{name}/env/raw`\n\nGET /api/stacks/{name}/env/raw\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.raw.get('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/env/raw \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.env.raw.get',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.env.raw.get('name');",
+      },
+    },
+  },
+  {
+    name: 'update',
+    endpoint: '/api/stacks/{name}/env/raw',
+    httpMethod: 'put',
+    summary: 'PUT /api/stacks/{name}/env/raw',
+    description: 'PUT /api/stacks/{name}/env/raw',
+    stainlessPath: '(resource) stacks.env.raw > (method) update',
+    qualified: 'client.stacks.env.raw.update',
+    params: ['name: string;', 'env?: string;', 'content?: string;'],
+    markdown:
+      "## update\n\n`client.stacks.env.raw.update(name: string, env?: string, content?: string): void`\n\n**put** `/api/stacks/{name}/env/raw`\n\nPUT /api/stacks/{name}/env/raw\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `content?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.stacks.env.raw.update('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/stacks/$NAME/env/raw \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.stacks.env.raw.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.stacks.env.raw.update('name');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3324,6 +5964,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## retrieve\n\n`client.system.retrieve(env?: string): void`\n\n**get** `/api/system`\n\nGET /api/system\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.system.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/system \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.system.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.system.retrieve();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3336,6 +5987,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['env?: string;'],
     markdown:
       "## retrieve\n\n`client.system.disk.retrieve(env?: string): void`\n\n**get** `/api/system/disk`\n\nGET /api/system/disk\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.system.disk.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/system/disk \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.system.disk.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.system.disk.retrieve();",
+      },
+    },
   },
   {
     name: 'list',
@@ -3348,6 +6010,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['path?: string;'],
     markdown:
       "## list\n\n`client.system.files.list(path?: string): void`\n\n**get** `/api/system/files`\n\nGET /api/system/files\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.system.files.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/system/files \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.system.files.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.system.files.list();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3360,6 +6033,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['path?: string;'],
     markdown:
       "## retrieve\n\n`client.system.files.content.retrieve(path?: string): void`\n\n**get** `/api/system/files/content`\n\nGET /api/system/files/content\n\n### Parameters\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.system.files.content.retrieve()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/system/files/content \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.system.files.content.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.system.files.content.retrieve();",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/users',
+    httpMethod: 'get',
+    summary: 'GET /api/users',
+    description: 'GET /api/users',
+    stainlessPath: '(resource) users > (method) list',
+    qualified: 'client.users.list',
+    markdown:
+      "## list\n\n`client.users.list(): void`\n\n**get** `/api/users`\n\nGET /api/users\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -3372,6 +6078,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['displayName?: string;', 'email?: string;', 'password?: string;', 'username?: string;'],
     markdown:
       "## create\n\n`client.users.create(displayName?: string, email?: string, password?: string, username?: string): void`\n\n**post** `/api/users`\n\nPOST /api/users\n\n### Parameters\n\n- `displayName?: string`\n\n- `email?: string`\n\n- `password?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3384,6 +6101,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.users.retrieve(id: string): void`\n\n**get** `/api/users/{id}`\n\nGET /api/users/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -3405,17 +6133,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.users.update(id: string, confirmDisableAuth?: string, displayName?: string, email?: string, isActive?: string, isAdmin?: string, password?: string, username?: string): void`\n\n**put** `/api/users/{id}`\n\nPUT /api/users/{id}\n\n### Parameters\n\n- `id: string`\n\n- `confirmDisableAuth?: string`\n\n- `displayName?: string`\n\n- `email?: string`\n\n- `isActive?: string`\n\n- `isAdmin?: string`\n\n- `password?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/users',
-    httpMethod: 'get',
-    summary: 'GET /api/users',
-    description: 'GET /api/users',
-    stainlessPath: '(resource) users > (method) list',
-    qualified: 'client.users.list',
-    markdown:
-      "## list\n\n`client.users.list(): void`\n\n**get** `/api/users`\n\nGET /api/users\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3428,6 +6156,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'confirmDisableAuth?: string;'],
     markdown:
       "## delete\n\n`client.users.delete(id: string, confirmDisableAuth?: string): void`\n\n**delete** `/api/users/{id}`\n\nDELETE /api/users/{id}\n\n### Parameters\n\n- `id: string`\n\n- `confirmDisableAuth?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.delete('id');",
+      },
+    },
   },
   {
     name: 'create',
@@ -3440,6 +6179,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;', 'token?: string;', 'action?: string;'],
     markdown:
       "## create\n\n`client.users.mfa.create(id: string, token?: string, action?: string): void`\n\n**post** `/api/users/{id}/mfa`\n\nPOST /api/users/{id}/mfa\n\n### Parameters\n\n- `id: string`\n\n- `token?: string`\n\n- `action?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.mfa.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID/mfa \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.mfa.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.mfa.create('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3452,18 +6202,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.users.mfa.delete(id: string): void`\n\n**delete** `/api/users/{id}/mfa`\n\nDELETE /api/users/{id}/mfa\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.mfa.delete('id')\n```",
-  },
-  {
-    name: 'create',
-    endpoint: '/api/users/{id}/roles',
-    httpMethod: 'post',
-    summary: 'POST /api/users/{id}/roles',
-    description: 'POST /api/users/{id}/roles',
-    stainlessPath: '(resource) users.roles > (method) create',
-    qualified: 'client.users.roles.create',
-    params: ['id: string;', 'environmentId?: string;', 'roleId?: string;'],
-    markdown:
-      "## create\n\n`client.users.roles.create(id: string, environmentId?: string, roleId?: string): void`\n\n**post** `/api/users/{id}/roles`\n\nPOST /api/users/{id}/roles\n\n### Parameters\n\n- `id: string`\n\n- `environmentId?: string`\n\n- `roleId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.roles.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID/mfa \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.mfa.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.mfa.delete('id');",
+      },
+    },
   },
   {
     name: 'list',
@@ -3476,6 +6225,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## list\n\n`client.users.roles.list(id: string): void`\n\n**get** `/api/users/{id}/roles`\n\nGET /api/users/{id}/roles\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.roles.list('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID/roles \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.roles.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.roles.list('id');",
+      },
+    },
+  },
+  {
+    name: 'create',
+    endpoint: '/api/users/{id}/roles',
+    httpMethod: 'post',
+    summary: 'POST /api/users/{id}/roles',
+    description: 'POST /api/users/{id}/roles',
+    stainlessPath: '(resource) users.roles > (method) create',
+    qualified: 'client.users.roles.create',
+    params: ['id: string;', 'environmentId?: string;', 'roleId?: string;'],
+    markdown:
+      "## create\n\n`client.users.roles.create(id: string, environmentId?: string, roleId?: string): void`\n\n**post** `/api/users/{id}/roles`\n\nPOST /api/users/{id}/roles\n\n### Parameters\n\n- `id: string`\n\n- `environmentId?: string`\n\n- `roleId?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.roles.create('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID/roles \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.roles.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.roles.create('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3488,6 +6271,40 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.users.roles.delete(id: string): void`\n\n**delete** `/api/users/{id}/roles`\n\nDELETE /api/users/{id}/roles\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.users.roles.delete('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/users/$ID/roles \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.users.roles.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.users.roles.delete('id');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/volumes',
+    httpMethod: 'get',
+    summary: 'GET /api/volumes',
+    description: 'GET /api/volumes',
+    stainlessPath: '(resource) volumes > (method) list',
+    qualified: 'client.volumes.list',
+    params: ['env?: string;'],
+    markdown:
+      "## list\n\n`client.volumes.list(env?: string): void`\n\n**get** `/api/volumes`\n\nGET /api/volumes\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -3506,6 +6323,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.volumes.create(env?: string, driver?: string, driverOpts?: string, labels?: string, name?: string): void`\n\n**post** `/api/volumes`\n\nPOST /api/volumes\n\n### Parameters\n\n- `env?: string`\n\n- `driver?: string`\n\n- `driverOpts?: string`\n\n- `labels?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3518,18 +6346,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## retrieve\n\n`client.volumes.retrieve(name: string, env?: string): void`\n\n**get** `/api/volumes/{name}`\n\nGET /api/volumes/{name}\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.retrieve('name')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/volumes',
-    httpMethod: 'get',
-    summary: 'GET /api/volumes',
-    description: 'GET /api/volumes',
-    stainlessPath: '(resource) volumes > (method) list',
-    qualified: 'client.volumes.list',
-    params: ['env?: string;'],
-    markdown:
-      "## list\n\n`client.volumes.list(env?: string): void`\n\n**get** `/api/volumes`\n\nGET /api/volumes\n\n### Parameters\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.retrieve('name');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3542,6 +6369,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'force?: string;'],
     markdown:
       "## delete\n\n`client.volumes.delete(name: string, env?: string, force?: string): void`\n\n**delete** `/api/volumes/{name}`\n\nDELETE /api/volumes/{name}\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `force?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.delete('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.delete('name');",
+      },
+    },
   },
   {
     name: 'clone',
@@ -3554,6 +6392,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'name?: string;'],
     markdown:
       "## clone\n\n`client.volumes.clone(name: string, env?: string, name?: string): void`\n\n**post** `/api/volumes/{name}/clone`\n\nPOST /api/volumes/{name}/clone\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `name?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.clone('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/clone \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.clone',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.clone('name');",
+      },
+    },
   },
   {
     name: 'export',
@@ -3566,6 +6415,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'format?: string;', 'path?: string;'],
     markdown:
       "## export\n\n`client.volumes.export(name: string, env?: string, format?: string, path?: string): void`\n\n**get** `/api/volumes/{name}/export`\n\nGET /api/volumes/{name}/export\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `format?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.export('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/export \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.export',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.export('name');",
+      },
+    },
   },
   {
     name: 'inspect',
@@ -3578,6 +6438,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## inspect\n\n`client.volumes.inspect(name: string, env?: string): void`\n\n**get** `/api/volumes/{name}/inspect`\n\nGET /api/volumes/{name}/inspect\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.inspect('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/inspect \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.inspect',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.inspect('name');",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3590,6 +6461,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'path?: string;'],
     markdown:
       "## retrieve\n\n`client.volumes.browse.retrieve(name: string, env?: string, path?: string): void`\n\n**get** `/api/volumes/{name}/browse`\n\nGET /api/volumes/{name}/browse\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.browse.retrieve('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/browse \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.browse.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.browse.retrieve('name');",
+      },
+    },
   },
   {
     name: 'content',
@@ -3602,6 +6484,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;', 'path?: string;'],
     markdown:
       "## content\n\n`client.volumes.browse.content(name: string, env?: string, path?: string): void`\n\n**get** `/api/volumes/{name}/browse/content`\n\nGET /api/volumes/{name}/browse/content\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n- `path?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.browse.content('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/browse/content \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.browse.content',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.browse.content('name');",
+      },
+    },
   },
   {
     name: 'release',
@@ -3614,6 +6507,39 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['name: string;', 'env?: string;'],
     markdown:
       "## release\n\n`client.volumes.browse.release(name: string, env?: string): void`\n\n**post** `/api/volumes/{name}/browse/release`\n\nPOST /api/volumes/{name}/browse/release\n\n### Parameters\n\n- `name: string`\n\n- `env?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.volumes.browse.release('name')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/volumes/$NAME/browse/release \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.volumes.browse.release',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.volumes.browse.release('name');",
+      },
+    },
+  },
+  {
+    name: 'list',
+    endpoint: '/api/registries',
+    httpMethod: 'get',
+    summary: 'GET /api/registries',
+    description: 'GET /api/registries',
+    stainlessPath: '(resource) registries > (method) list',
+    qualified: 'client.registries.list',
+    markdown:
+      "## list\n\n`client.registries.list(): void`\n\n**get** `/api/registries`\n\nGET /api/registries\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.list',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.list();",
+      },
+    },
   },
   {
     name: 'create',
@@ -3632,6 +6558,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## create\n\n`client.registries.create(isDefault?: string, name?: string, password?: string, url?: string, username?: string): void`\n\n**post** `/api/registries`\n\nPOST /api/registries\n\n### Parameters\n\n- `isDefault?: string`\n\n- `name?: string`\n\n- `password?: string`\n\n- `url?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.create()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.create',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.create();",
+      },
+    },
   },
   {
     name: 'retrieve',
@@ -3644,6 +6581,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## retrieve\n\n`client.registries.retrieve(id: string): void`\n\n**get** `/api/registries/{id}`\n\nGET /api/registries/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.retrieve('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries/$ID \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.retrieve',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.retrieve('id');",
+      },
+    },
   },
   {
     name: 'update',
@@ -3663,17 +6611,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     ],
     markdown:
       "## update\n\n`client.registries.update(id: string, isDefault?: string, name?: string, password?: string, url?: string, username?: string): void`\n\n**put** `/api/registries/{id}`\n\nPUT /api/registries/{id}\n\n### Parameters\n\n- `id: string`\n\n- `isDefault?: string`\n\n- `name?: string`\n\n- `password?: string`\n\n- `url?: string`\n\n- `username?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.update('id')\n```",
-  },
-  {
-    name: 'list',
-    endpoint: '/api/registries',
-    httpMethod: 'get',
-    summary: 'GET /api/registries',
-    description: 'GET /api/registries',
-    stainlessPath: '(resource) registries > (method) list',
-    qualified: 'client.registries.list',
-    markdown:
-      "## list\n\n`client.registries.list(): void`\n\n**get** `/api/registries`\n\nGET /api/registries\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.list()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries/$ID \\\n    -X PUT \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.update',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.update('id');",
+      },
+    },
   },
   {
     name: 'delete',
@@ -3686,54 +6634,17 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## delete\n\n`client.registries.delete(id: string): void`\n\n**delete** `/api/registries/{id}`\n\nDELETE /api/registries/{id}\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.delete('id')\n```",
-  },
-  {
-    name: 'delete_image',
-    endpoint: '/api/registry/image',
-    httpMethod: 'delete',
-    summary: 'DELETE /api/registry/image',
-    description: 'DELETE /api/registry/image',
-    stainlessPath: '(resource) registries > (method) delete_image',
-    qualified: 'client.registries.deleteImage',
-    params: ['image?: string;', 'registry?: string;', 'tag?: string;'],
-    markdown:
-      "## delete_image\n\n`client.registries.deleteImage(image?: string, registry?: string, tag?: string): void`\n\n**delete** `/api/registry/image`\n\nDELETE /api/registry/image\n\n### Parameters\n\n- `image?: string`\n\n- `registry?: string`\n\n- `tag?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.deleteImage()\n```",
-  },
-  {
-    name: 'list_catalog',
-    endpoint: '/api/registry/catalog',
-    httpMethod: 'get',
-    summary: 'GET /api/registry/catalog',
-    description: 'GET /api/registry/catalog',
-    stainlessPath: '(resource) registries > (method) list_catalog',
-    qualified: 'client.registries.listCatalog',
-    params: ['last?: string;', 'registry?: string;'],
-    markdown:
-      "## list_catalog\n\n`client.registries.listCatalog(last?: string, registry?: string): void`\n\n**get** `/api/registry/catalog`\n\nGET /api/registry/catalog\n\n### Parameters\n\n- `last?: string`\n\n- `registry?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.listCatalog()\n```",
-  },
-  {
-    name: 'list_tags',
-    endpoint: '/api/registry/tags',
-    httpMethod: 'get',
-    summary: 'GET /api/registry/tags',
-    description: 'GET /api/registry/tags',
-    stainlessPath: '(resource) registries > (method) list_tags',
-    qualified: 'client.registries.listTags',
-    params: ['image?: string;', 'page?: string;', 'pageSize?: string;', 'registry?: string;'],
-    markdown:
-      "## list_tags\n\n`client.registries.listTags(image?: string, page?: string, pageSize?: string, registry?: string): void`\n\n**get** `/api/registry/tags`\n\nGET /api/registry/tags\n\n### Parameters\n\n- `image?: string`\n\n- `page?: string`\n\n- `pageSize?: string`\n\n- `registry?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.listTags()\n```",
-  },
-  {
-    name: 'search',
-    endpoint: '/api/registry/search',
-    httpMethod: 'get',
-    summary: 'GET /api/registry/search',
-    description: 'GET /api/registry/search',
-    stainlessPath: '(resource) registries > (method) search',
-    qualified: 'client.registries.search',
-    params: ['limit?: string;', 'registry?: string;', 'term?: string;'],
-    markdown:
-      "## search\n\n`client.registries.search(limit?: string, registry?: string, term?: string): void`\n\n**get** `/api/registry/search`\n\nGET /api/registry/search\n\n### Parameters\n\n- `limit?: string`\n\n- `registry?: string`\n\n- `term?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.search()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries/$ID \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.delete',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.delete('id');",
+      },
+    },
   },
   {
     name: 'set_default',
@@ -3746,10 +6657,119 @@ const EMBEDDED_METHODS: MethodEntry[] = [
     params: ['id: string;'],
     markdown:
       "## set_default\n\n`client.registries.setDefault(id: string): void`\n\n**post** `/api/registries/{id}/default`\n\nPOST /api/registries/{id}/default\n\n### Parameters\n\n- `id: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.setDefault('id')\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registries/$ID/default \\\n    -X POST \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.setDefault',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.setDefault('id');",
+      },
+    },
+  },
+  {
+    name: 'list_catalog',
+    endpoint: '/api/registry/catalog',
+    httpMethod: 'get',
+    summary: 'GET /api/registry/catalog',
+    description: 'GET /api/registry/catalog',
+    stainlessPath: '(resource) registries > (method) list_catalog',
+    qualified: 'client.registries.listCatalog',
+    params: ['last?: string;', 'registry?: string;'],
+    markdown:
+      "## list_catalog\n\n`client.registries.listCatalog(last?: string, registry?: string): void`\n\n**get** `/api/registry/catalog`\n\nGET /api/registry/catalog\n\n### Parameters\n\n- `last?: string`\n\n- `registry?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.listCatalog()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registry/catalog \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.listCatalog',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.listCatalog();",
+      },
+    },
+  },
+  {
+    name: 'delete_image',
+    endpoint: '/api/registry/image',
+    httpMethod: 'delete',
+    summary: 'DELETE /api/registry/image',
+    description: 'DELETE /api/registry/image',
+    stainlessPath: '(resource) registries > (method) delete_image',
+    qualified: 'client.registries.deleteImage',
+    params: ['image?: string;', 'registry?: string;', 'tag?: string;'],
+    markdown:
+      "## delete_image\n\n`client.registries.deleteImage(image?: string, registry?: string, tag?: string): void`\n\n**delete** `/api/registry/image`\n\nDELETE /api/registry/image\n\n### Parameters\n\n- `image?: string`\n\n- `registry?: string`\n\n- `tag?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.deleteImage()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registry/image \\\n    -X DELETE \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.deleteImage',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.deleteImage();",
+      },
+    },
+  },
+  {
+    name: 'search',
+    endpoint: '/api/registry/search',
+    httpMethod: 'get',
+    summary: 'GET /api/registry/search',
+    description: 'GET /api/registry/search',
+    stainlessPath: '(resource) registries > (method) search',
+    qualified: 'client.registries.search',
+    params: ['limit?: string;', 'registry?: string;', 'term?: string;'],
+    markdown:
+      "## search\n\n`client.registries.search(limit?: string, registry?: string, term?: string): void`\n\n**get** `/api/registry/search`\n\nGET /api/registry/search\n\n### Parameters\n\n- `limit?: string`\n\n- `registry?: string`\n\n- `term?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.search()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registry/search \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.search',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.search();",
+      },
+    },
+  },
+  {
+    name: 'list_tags',
+    endpoint: '/api/registry/tags',
+    httpMethod: 'get',
+    summary: 'GET /api/registry/tags',
+    description: 'GET /api/registry/tags',
+    stainlessPath: '(resource) registries > (method) list_tags',
+    qualified: 'client.registries.listTags',
+    params: ['image?: string;', 'page?: string;', 'pageSize?: string;', 'registry?: string;'],
+    markdown:
+      "## list_tags\n\n`client.registries.listTags(image?: string, page?: string, pageSize?: string, registry?: string): void`\n\n**get** `/api/registry/tags`\n\nGET /api/registry/tags\n\n### Parameters\n\n- `image?: string`\n\n- `page?: string`\n\n- `pageSize?: string`\n\n- `registry?: string`\n\n### Example\n\n```typescript\nimport Test2w from 'test2w';\n\nconst client = new Test2w();\n\nawait client.registries.listTags()\n```",
+    perLanguage: {
+      http: {
+        example:
+          'curl https://dhand.hades175.com/api/registry/tags \\\n    -H "Authorization: Bearer $TEST2W_API_KEY"',
+      },
+      typescript: {
+        method: 'client.registries.listTags',
+        example:
+          "import Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.registries.listTags();",
+      },
+    },
   },
 ];
 
-const EMBEDDED_READMES: { language: string; content: string }[] = [];
+const EMBEDDED_READMES: { language: string; content: string }[] = [
+  {
+    language: 'typescript',
+    content:
+      "# Test2w TypeScript API Library\n\n[![NPM version](https://img.shields.io/npm/v/test2w.svg?label=npm%20(stable))](https://npmjs.org/package/test2w) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/test2w)\n\nThis library provides convenient access to the Test2w REST API from server-side TypeScript or JavaScript.\n\n\n\nThe full API of this library can be found in [api.md](api.md).\n\nIt is generated with [Stainless](https://www.stainless.com/).\n\n## MCP Server\n\nUse the Test2w MCP Server to enable AI assistants to interact with this API, allowing them to explore endpoints, make test requests, and use documentation to help integrate this SDK into your application.\n\n[![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en-US/install-mcp?name=test2w-mcp&config=eyJjb21tYW5kIjoibnB4IiwiYXJncyI6WyIteSIsInRlc3Qydy1tY3AiXSwiZW52Ijp7IlRFU1QyV19BUElfS0VZIjoiTXkgQVBJIEtleSJ9fQ)\n[![Install in VS Code](https://img.shields.io/badge/_-Add_to_VS_Code-blue?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHBhdGggZmlsbD0iI0VFRSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMzAuMjM1IDM5Ljg4NGEyLjQ5MSAyLjQ5MSAwIDAgMS0xLjc4MS0uNzNMMTIuNyAyNC43OGwtMy40NiAyLjYyNC0zLjQwNiAyLjU4MmExLjY2NSAxLjY2NSAwIDAgMS0xLjA4Mi4zMzggMS42NjQgMS42NjQgMCAwIDEtMS4wNDYtLjQzMWwtMi4yLTJhMS42NjYgMS42NjYgMCAwIDEgMC0yLjQ2M0w3LjQ1OCAyMCA0LjY3IDE3LjQ1MyAxLjUwNyAxNC41N2ExLjY2NSAxLjY2NSAwIDAgMSAwLTIuNDYzbDIuMi0yYTEuNjY1IDEuNjY1IDAgMCAxIDIuMTMtLjA5N2w2Ljg2MyA1LjIwOUwyOC40NTIuODQ0YTIuNDg4IDIuNDg4IDAgMCAxIDEuODQxLS43MjljLjM1MS4wMDkuNjk5LjA5MSAxLjAxOS4yNDVsOC4yMzYgMy45NjFhMi41IDIuNSAwIDAgMSAxLjQxNSAyLjI1M3YuMDk5LS4wNDVWMzMuMzd2LS4wNDUuMDk1YTIuNTAxIDIuNTAxIDAgMCAxLTEuNDE2IDIuMjU3bC04LjIzNSAzLjk2MWEyLjQ5MiAyLjQ5MiAwIDAgMS0xLjA3Ny4yNDZabS43MTYtMjguOTQ3LTExLjk0OCA5LjA2MiAxMS45NTIgOS4wNjUtLjAwNC0xOC4xMjdaIi8+PC9zdmc+)](https://vscode.stainless.com/mcp/%7B%22name%22%3A%22test2w-mcp%22%2C%22command%22%3A%22npx%22%2C%22args%22%3A%5B%22-y%22%2C%22test2w-mcp%22%5D%2C%22env%22%3A%7B%22TEST2W_API_KEY%22%3A%22My%20API%20Key%22%7D%7D)\n\n> Note: You may need to set environment variables in your MCP client.\n\n## Installation\n\n```sh\nnpm install test2w\n```\n\n\n\n## Usage\n\nThe full API of this library can be found in [api.md](api.md).\n\n<!-- prettier-ignore -->\n```js\nimport Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.list();\n```\n\n\n\n### Request & Response types\n\nThis library includes TypeScript definitions for all request params and response fields. You may import and use them like so:\n\n<!-- prettier-ignore -->\n```ts\nimport Test2w from 'test2w';\n\nconst client = new Test2w({\n  apiKey: process.env['TEST2W_API_KEY'], // This is the default and can be omitted\n});\n\nawait client.activity.list();\n```\n\nDocumentation for each method, request param, and response field are available in docstrings and will appear on hover in most modern editors.\n\n\n\n\n\n## Handling errors\n\nWhen the library is unable to connect to the API,\nor if the API returns a non-success status code (i.e., 4xx or 5xx response),\na subclass of `APIError` will be thrown:\n\n<!-- prettier-ignore -->\n```ts\nconst response = await client.activity.list().catch(async (err) => {\n  if (err instanceof Test2w.APIError) {\n    console.log(err.status); // 400\n    console.log(err.name); // BadRequestError\n    console.log(err.headers); // {server: 'nginx', ...}\n  } else {\n    throw err;\n  }\n});\n```\n\nError codes are as follows:\n\n| Status Code | Error Type                 |\n| ----------- | -------------------------- |\n| 400         | `BadRequestError`          |\n| 401         | `AuthenticationError`      |\n| 403         | `PermissionDeniedError`    |\n| 404         | `NotFoundError`            |\n| 422         | `UnprocessableEntityError` |\n| 429         | `RateLimitError`           |\n| >=500       | `InternalServerError`      |\n| N/A         | `APIConnectionError`       |\n\n### Retries\n\nCertain errors will be automatically retried 2 times by default, with a short exponential backoff.\nConnection errors (for example, due to a network connectivity problem), 408 Request Timeout, 409 Conflict,\n429 Rate Limit, and >=500 Internal errors will all be retried by default.\n\nYou can use the `maxRetries` option to configure or disable this:\n\n<!-- prettier-ignore -->\n```js\n// Configure the default for all requests:\nconst client = new Test2w({\n  maxRetries: 0, // default is 2\n});\n\n// Or, configure per-request:\nawait client.activity.list({\n  maxRetries: 5,\n});\n```\n\n### Timeouts\n\nRequests time out after 1 minute by default. You can configure this with a `timeout` option:\n\n<!-- prettier-ignore -->\n```ts\n// Configure the default for all requests:\nconst client = new Test2w({\n  timeout: 20 * 1000, // 20 seconds (default is 1 minute)\n});\n\n// Override per-request:\nawait client.activity.list({\n  timeout: 5 * 1000,\n});\n```\n\nOn timeout, an `APIConnectionTimeoutError` is thrown.\n\nNote that requests which time out will be [retried twice by default](#retries).\n\n\n\n\n\n## Advanced Usage\n\n### Accessing raw Response data (e.g., headers)\n\nThe \"raw\" `Response` returned by `fetch()` can be accessed through the `.asResponse()` method on the `APIPromise` type that all methods return.\nThis method returns as soon as the headers for a successful response are received and does not consume the response body, so you are free to write custom parsing or streaming logic.\n\nYou can also use the `.withResponse()` method to get the raw `Response` along with the parsed data.\nUnlike `.asResponse()` this method consumes the body, returning once it is parsed.\n\n<!-- prettier-ignore -->\n```ts\nconst client = new Test2w();\n\nconst response = await client.activity.list().asResponse();\nconsole.log(response.headers.get('X-My-Header'));\nconsole.log(response.statusText); // access the underlying Response object\n\nconst { data: result, response: raw } = await client.activity.list().withResponse();\nconsole.log(raw.headers.get('X-My-Header'));\nconsole.log(result);\n```\n\n### Logging\n\n> [!IMPORTANT]\n> All log messages are intended for debugging only. The format and content of log messages\n> may change between releases.\n\n#### Log levels\n\nThe log level can be configured in two ways:\n\n1. Via the `TEST2W_LOG` environment variable\n2. Using the `logLevel` client option (overrides the environment variable if set)\n\n```ts\nimport Test2w from 'test2w';\n\nconst client = new Test2w({\n  logLevel: 'debug', // Show all log messages\n});\n```\n\nAvailable log levels, from most to least verbose:\n\n- `'debug'` - Show debug messages, info, warnings, and errors\n- `'info'` - Show info messages, warnings, and errors\n- `'warn'` - Show warnings and errors (default)\n- `'error'` - Show only errors\n- `'off'` - Disable all logging\n\nAt the `'debug'` level, all HTTP requests and responses are logged, including headers and bodies.\nSome authentication-related headers are redacted, but sensitive data in request and response bodies\nmay still be visible.\n\n#### Custom logger\n\nBy default, this library logs to `globalThis.console`. You can also provide a custom logger.\nMost logging libraries are supported, including [pino](https://www.npmjs.com/package/pino), [winston](https://www.npmjs.com/package/winston), [bunyan](https://www.npmjs.com/package/bunyan), [consola](https://www.npmjs.com/package/consola), [signale](https://www.npmjs.com/package/signale), and [@std/log](https://jsr.io/@std/log). If your logger doesn't work, please open an issue.\n\nWhen providing a custom logger, the `logLevel` option still controls which messages are emitted, messages\nbelow the configured level will not be sent to your logger.\n\n```ts\nimport Test2w from 'test2w';\nimport pino from 'pino';\n\nconst logger = pino();\n\nconst client = new Test2w({\n  logger: logger.child({ name: 'Test2w' }),\n  logLevel: 'debug', // Send all messages to pino, allowing it to filter\n});\n```\n\n### Making custom/undocumented requests\n\nThis library is typed for convenient access to the documented API. If you need to access undocumented\nendpoints, params, or response properties, the library can still be used.\n\n#### Undocumented endpoints\n\nTo make requests to undocumented endpoints, you can use `client.get`, `client.post`, and other HTTP verbs.\nOptions on the client, such as retries, will be respected when making these requests.\n\n```ts\nawait client.post('/some/path', {\n  body: { some_prop: 'foo' },\n  query: { some_query_arg: 'bar' },\n});\n```\n\n#### Undocumented request params\n\nTo make requests using undocumented parameters, you may use `// @ts-expect-error` on the undocumented\nparameter. This library doesn't validate at runtime that the request matches the type, so any extra values you\nsend will be sent as-is.\n\n```ts\nclient.activity.list({\n  // ...\n  // @ts-expect-error baz is not yet public\n  baz: 'undocumented option',\n});\n```\n\nFor requests with the `GET` verb, any extra params will be in the query, all other requests will send the\nextra param in the body.\n\nIf you want to explicitly send an extra argument, you can do so with the `query`, `body`, and `headers` request\noptions.\n\n#### Undocumented response properties\n\nTo access undocumented response properties, you may access the response object with `// @ts-expect-error` on\nthe response object, or cast the response object to the requisite type. Like the request params, we do not\nvalidate or strip extra properties from the response from the API.\n\n### Customizing the fetch client\n\nBy default, this library expects a global `fetch` function is defined.\n\nIf you want to use a different `fetch` function, you can either polyfill the global:\n\n```ts\nimport fetch from 'my-fetch';\n\nglobalThis.fetch = fetch;\n```\n\nOr pass it to the client:\n\n```ts\nimport Test2w from 'test2w';\nimport fetch from 'my-fetch';\n\nconst client = new Test2w({ fetch });\n```\n\n### Fetch options\n\nIf you want to set custom `fetch` options without overriding the `fetch` function, you can provide a `fetchOptions` object when instantiating the client or making a request. (Request-specific options override client options.)\n\n```ts\nimport Test2w from 'test2w';\n\nconst client = new Test2w({\n  fetchOptions: {\n    // `RequestInit` options\n  },\n});\n```\n\n#### Configuring proxies\n\nTo modify proxy behavior, you can provide custom `fetchOptions` that add runtime-specific proxy\noptions to requests:\n\n<img src=\"https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/node.svg\" align=\"top\" width=\"18\" height=\"21\"> **Node** <sup>[[docs](https://github.com/nodejs/undici/blob/main/docs/docs/api/ProxyAgent.md#example---proxyagent-with-fetch)]</sup>\n\n```ts\nimport Test2w from 'test2w';\nimport * as undici from 'undici';\n\nconst proxyAgent = new undici.ProxyAgent('http://localhost:8888');\nconst client = new Test2w({\n  fetchOptions: {\n    dispatcher: proxyAgent,\n  },\n});\n```\n\n<img src=\"https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/bun.svg\" align=\"top\" width=\"18\" height=\"21\"> **Bun** <sup>[[docs](https://bun.sh/guides/http/proxy)]</sup>\n\n```ts\nimport Test2w from 'test2w';\n\nconst client = new Test2w({\n  fetchOptions: {\n    proxy: 'http://localhost:8888',\n  },\n});\n```\n\n<img src=\"https://raw.githubusercontent.com/stainless-api/sdk-assets/refs/heads/main/deno.svg\" align=\"top\" width=\"18\" height=\"21\"> **Deno** <sup>[[docs](https://docs.deno.com/api/deno/~/Deno.createHttpClient)]</sup>\n\n```ts\nimport Test2w from 'npm:test2w';\n\nconst httpClient = Deno.createHttpClient({ proxy: { url: 'http://localhost:8888' } });\nconst client = new Test2w({\n  fetchOptions: {\n    client: httpClient,\n  },\n});\n```\n\n## Frequently Asked Questions\n\n## Semantic versioning\n\nThis package generally follows [SemVer](https://semver.org/spec/v2.0.0.html) conventions, though certain backwards-incompatible changes may be released as minor versions:\n\n1. Changes that only affect static types, without breaking runtime behavior.\n2. Changes to library internals which are technically public but not intended or documented for external use. _(Please open a GitHub issue to let us know if you are relying on such internals.)_\n3. Changes that we do not expect to impact the vast majority of users in practice.\n\nWe take backwards-compatibility seriously and work hard to ensure you can rely on a smooth upgrade experience.\n\nWe are keen for your feedback; please open an [issue](https://www.github.com/johnglavan71/MCP-Productions/issues) with questions, bugs, or suggestions.\n\n## Requirements\n\nTypeScript >= 4.9 is supported.\n\nThe following runtimes are supported:\n\n- Web browsers (Up-to-date Chrome, Firefox, Safari, Edge, and more)\n- Node.js 20 LTS or later ([non-EOL](https://endoflife.date/nodejs)) versions.\n- Deno v1.28.0 or higher.\n- Bun 1.0 or later.\n- Cloudflare Workers.\n- Vercel Edge Runtime.\n- Jest 28 or greater with the `\"node\"` environment (`\"jsdom\"` is not supported at this time).\n- Nitro v2.6 or greater.\n\nNote that React Native is not supported at this time.\n\nIf you are interested in other runtime environments, please open or upvote an issue on GitHub.\n\n## Contributing\n\nSee [the contributing documentation](./CONTRIBUTING.md).\n",
+  },
+];
 
 const INDEX_OPTIONS = {
   fields: [

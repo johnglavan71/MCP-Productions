@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource prune', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneAll', async () => {
     const responsePromise = client.prune.pruneAll();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource prune', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneAll: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(client.prune.pruneAll({ env: 'env' }, { path: '/_stainless_unknown_path' })).rejects.toThrow(
@@ -28,7 +28,7 @@ describe('resource prune', () => {
     );
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneContainers', async () => {
     const responsePromise = client.prune.pruneContainers();
     const rawResponse = await responsePromise.asResponse();
@@ -40,7 +40,7 @@ describe('resource prune', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneContainers: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -48,7 +48,7 @@ describe('resource prune', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneImages', async () => {
     const responsePromise = client.prune.pruneImages();
     const rawResponse = await responsePromise.asResponse();
@@ -60,7 +60,7 @@ describe('resource prune', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneImages: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -68,7 +68,7 @@ describe('resource prune', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneNetworks', async () => {
     const responsePromise = client.prune.pruneNetworks();
     const rawResponse = await responsePromise.asResponse();
@@ -80,7 +80,7 @@ describe('resource prune', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneNetworks: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -88,7 +88,7 @@ describe('resource prune', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneVolumes', async () => {
     const responsePromise = client.prune.pruneVolumes();
     const rawResponse = await responsePromise.asResponse();
@@ -100,7 +100,7 @@ describe('resource prune', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('pruneVolumes: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

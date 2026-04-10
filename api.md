@@ -656,7 +656,7 @@ Methods:
 - <code title="get /api/volumes/{name}">client.volumes.<a href="./src/resources/volumes/volumes.ts">retrieve</a>(name, { ...params }) -> void</code>
 - <code title="get /api/volumes">client.volumes.<a href="./src/resources/volumes/volumes.ts">list</a>({ ...params }) -> void</code>
 - <code title="delete /api/volumes/{name}">client.volumes.<a href="./src/resources/volumes/volumes.ts">delete</a>(name, { ...params }) -> void</code>
-- <code title="post /api/volumes/{name}/clone">client.volumes.<a href="./src/resources/volumes/volumes.ts">clone</a>(pathName, { ...params }) -> void</code>
+- <code title="post /api/volumes/{name}/clone">client.volumes.<a href="./src/resources/volumes/volumes.ts">clone</a>(name, { ...params }) -> void</code>
 - <code title="get /api/volumes/{name}/export">client.volumes.<a href="./src/resources/volumes/volumes.ts">export</a>(name, { ...params }) -> void</code>
 - <code title="get /api/volumes/{name}/inspect">client.volumes.<a href="./src/resources/volumes/volumes.ts">inspect</a>(name, { ...params }) -> void</code>
 

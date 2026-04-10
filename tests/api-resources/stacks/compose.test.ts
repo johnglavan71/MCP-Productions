@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource compose', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update', async () => {
     const responsePromise = client.stacks.compose.update('name');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource compose', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('update: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -41,7 +41,7 @@ describe('resource compose', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('get', async () => {
     const responsePromise = client.stacks.compose.get('name');
     const rawResponse = await responsePromise.asResponse();
@@ -53,7 +53,7 @@ describe('resource compose', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('get: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

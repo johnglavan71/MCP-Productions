@@ -70,12 +70,12 @@ export class Volumes extends APIResource {
    * POST /api/volumes/{name}/clone
    */
   clone(
-    pathName: string,
+    name: string,
     params: VolumeCloneParams | null | undefined = {},
     options?: RequestOptions,
   ): APIPromise<void> {
     const { env, ...body } = params ?? {};
-    return this._client.post(path`/api/volumes/${pathName}/clone`, {
+    return this._client.post(path`/api/volumes/${name}/clone`, {
       query: { env },
       body,
       ...options,
@@ -164,7 +164,7 @@ export interface VolumeCloneParams {
   /**
    * Body param
    */
-  body_name?: string;
+  name?: string;
 }
 
 export interface VolumeExportParams {

@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource selfUpdate', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('checkStatus', async () => {
     const responsePromise = client.selfUpdate.checkStatus();
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource selfUpdate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getProgress', async () => {
     const responsePromise = client.selfUpdate.getProgress();
     const rawResponse = await responsePromise.asResponse();
@@ -32,7 +32,7 @@ describe('resource selfUpdate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('getProgress: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(
@@ -40,7 +40,7 @@ describe('resource selfUpdate', () => {
     ).rejects.toThrow(Test2w.NotFoundError);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate', async () => {
     const responsePromise = client.selfUpdate.initiate();
     const rawResponse = await responsePromise.asResponse();
@@ -52,7 +52,7 @@ describe('resource selfUpdate', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('initiate: request options and params are passed correctly', async () => {
     // ensure the request options are being passed correctly by passing an invalid HTTP method in order to cause an error
     await expect(

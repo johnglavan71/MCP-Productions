@@ -8,7 +8,7 @@ const client = new Test2w({
 });
 
 describe('resource sync', () => {
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('create', async () => {
     const responsePromise = client.git.repositories.sync.create('id');
     const rawResponse = await responsePromise.asResponse();
@@ -20,7 +20,7 @@ describe('resource sync', () => {
     expect(dataAndResponse.response).toBe(rawResponse);
   });
 
-  // Prism tests are disabled
+  // Mock server tests are disabled
   test.skip('retrieve', async () => {
     const responsePromise = client.git.repositories.sync.retrieve('id');
     const rawResponse = await responsePromise.asResponse();
